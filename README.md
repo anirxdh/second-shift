@@ -4,7 +4,7 @@
 
 When a field technician calls out sick, Second Shift re-plans the whole crew's day across **Slack, Google Sheets, Google Calendar, and Gmail**, then proves the new day is right.
 
-**▶ Demo video (1:45):** [watch the demo](https://github.com/anirxdh/second-shift/raw/main/video/release/second-shift-demo-v2.mp4) (subtitled) · [no-subtitles version](https://github.com/anirxdh/second-shift/raw/main/video/release/second-shift-demo-v2-nosubs.mp4) · [captions .srt](video/release/second-shift-demo-v2.srt)
+**▶ Demo video (1:45):** [watch on YouTube](https://youtu.be/ZyVJ2nfkAkc) · [download (subtitled)](https://github.com/anirxdh/second-shift/raw/main/video/release/second-shift-demo-v2.mp4) · [no-subtitles version](https://github.com/anirxdh/second-shift/raw/main/video/release/second-shift-demo-v2-nosubs.mp4) · [captions .srt](video/release/second-shift-demo-v2.srt)
 
 Built for the Multi-App AI Agent Hackathon, September 13, 2026.
 
@@ -60,22 +60,22 @@ Editable sources: [architecture](docs/diagrams/architecture.excalidraw) · [agen
 |---|---|---|
 | Reliability scenarios (crash mid-run, rate limits, stale calendar, double approve, prompt injection, what-if never writes, ...) | **30/30 pass** | `uv run python -m evals.run` → [REPORT](evals/REPORT.md) |
 | Message understanding (real Slack phrasings, incl. injection and vague messages) | **15/15** on `gpt-4.1-mini` (14/15 before one rule fix) | `uv run python -m evals.llm_eval` → [REPORT](evals/LLM_REPORT.md) |
-| Live run on real Google + Slack | **36/36** read-back checks, every run from a clean seed, ~26 s, 0 retries | see Setup |
-| Adapter unit tests (Google, Slack, Gmail guard) | **74 pass** | `uv run pytest -q` |
+| Live run on real Google + Slack | **36/36** read-back checks, every run from a clean seed, about 30 to 40 s, 0 retries | see Setup |
+| All tests: 30 scenarios + 74 adapter unit tests (Google, Slack, Gmail guard) | **104 pass** | `uv run pytest -q` |
 | Single points of failure today | Marco, Jordan, Wei | `uv run python -m evals.preparedness` → [REPORT](evals/PREPAREDNESS.md) |
 
 Every scenario runs the same engine, solver, checker, and ledger as the live system, against in-memory apps that inject faults. Every live run leaves a step-by-step trace in the dashboard.
 
 ## Setup
 
-**1 minute, no accounts (in-memory apps):**
+**1 minute, no accounts (in-memory apps; needs Python 3.12 and [uv](https://docs.astral.sh/uv/)):**
 
 ```bash
 uv sync
 uv run uvicorn second_shift.server:app --port 8000
 ```
 
-Open http://localhost:8000, pick Marco under *Plan manually*, click **Plan**, then **Approve**.
+Open http://localhost:8000, pick Marco under *Plan manually*, click **Plan**, then **Approve**. Try **What if?** and **Risk scan** in the board header, and the **Reliability lab** to crash it on purpose.
 
 **Live (real Google + Slack, free tiers):**
 
@@ -88,6 +88,6 @@ Open http://localhost:8000, pick Marco under *Plan manually*, click **Plan**, th
 ## More
 
 - [System and reliability brief](docs/BRIEF.md) · [Brand](docs/BRAND.md)
-- [The 40 ideas we ranked before choosing this one](ideas/40-hackathon-ideas.md)
+- [The 40 ideas we ranked before choosing this one](ideas/40-hackathon-ideas.md) · [Sponsor and judge research](reference/README.md)
 - Stack: Python 3.12, FastAPI, OR-Tools, SQLite, Google APIs, Slack SDK, OpenAI / Anthropic SDKs; vanilla JS pixel dashboard
 - Limits: one technician per message; drive times from a zone table, not a routing API; the demo company is synthetic and customer emails go to aliases of the demo inbox
