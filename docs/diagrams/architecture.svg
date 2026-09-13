@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1195" width="1500" height="1195" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
 <title id="t">Second Shift: system architecture</title>
 <desc id="d">Slack, Google Sheets, Google Calendar and Gmail connect through one adapter layer to the Second Shift engine: LLM reader, deterministic guardrails, state reader, CP-SAT solver, independent rule checker, dispatcher approval, fingerprint re-check, ledger and executor, read-back verifier, and a what-if simulator. In-memory fake apps replace the real apps in evals.</desc>
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker></defs>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker></defs>
 <rect x="0" y="0" width="1500" height="1195" fill="#ffffff"/>
 <text x="40.0" y="58.0" font-size="30" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="40.0" dy="0.0">Second Shift: system architecture</tspan></text>
 <text x="40.0" y="88.0" font-size="17" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="40.0" dy="0.0">The LLM only reads messages. Code plans, checks, writes, and verifies, and nothing is written until a dispatcher approves.</tspan></text>
@@ -10,24 +10,24 @@
 <text x="40.0" y="1105.0" font-size="18" font-weight="600" fill="#495057" text-anchor="start"><tspan x="40.0" dy="0.0">Second Shift engine (Python, second_shift/)</tspan></text>
 <rect x="40" y="300" width="1420" height="50" rx="10" fill="#fff3bf" stroke="#f08c00" stroke-width="2"/>
 <text x="750.0" y="331.0" font-size="16" font-weight="600" fill="#1e1e1e" text-anchor="middle"><tspan x="750.0" dy="0.0">Adapters: one interface for all four apps. Live Google + Slack APIs in the real run, in-memory fakes in evals.</tspan></text>
-<rect x="40" y="110" width="260" height="140" rx="12" fill="#f1f3f5" stroke="#868e96" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="40" y="110" width="260" height="130" rx="12" fill="#f1f3f5" stroke="#868e96" stroke-width="2" stroke-dasharray="8 6"/>
 <text x="54.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="54.0" dy="0.0">In-memory fake apps</tspan></text>
 <text x="54.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="54.0" dy="0.0">stand-ins for all 4 apps</tspan><tspan x="54.0" dy="20.0">used by evals and tests;</tspan><tspan x="54.0" dy="20.0">inject 429s, 5xx errors,</tspan><tspan x="54.0" dy="20.0">crashes, hand edits</tspan></text>
-<rect x="330" y="110" width="260" height="140" rx="12" fill="#f3d9fa" stroke="#9c36b5" stroke-width="2"/>
+<rect x="330" y="110" width="260" height="130" rx="12" fill="#f3d9fa" stroke="#9c36b5" stroke-width="2"/>
 <text x="344.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="344.0" dy="0.0">Slack #dispatch</tspan></text>
 <text x="344.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="344.0" dy="0.0">call-outs, what-ifs in;</tspan><tspan x="344.0" dy="20.0">routes, summaries,</tspan><tspan x="344.0" dy="20.0">questions, replies out</tspan></text>
-<rect x="620" y="110" width="260" height="140" rx="12" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<rect x="620" y="110" width="260" height="130" rx="12" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
 <text x="634.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="634.0" dy="0.0">Google Sheets</tspan></text>
-<text x="634.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="634.0" dy="0.0">Jobs, Skills, Windows,</tspan><tspan x="634.0" dy="20.0">Drive times tabs;</tspan><tspan x="634.0" dy="20.0">job rows updated</tspan></text>
-<rect x="910" y="110" width="260" height="140" rx="12" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text x="634.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="634.0" dy="0.0">Tabs: Technicians,</tspan><tspan x="634.0" dy="20.0">Jobs, Travel;</tspan><tspan x="634.0" dy="20.0">job rows updated</tspan></text>
+<rect x="910" y="110" width="260" height="130" rx="12" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
 <text x="924.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="924.0" dy="0.0">Google Calendar ×6</tspan></text>
 <text x="924.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="924.0" dy="0.0">one calendar per tech:</tspan><tspan x="924.0" dy="20.0">bookings of record +</tspan><tspan x="924.0" dy="20.0">personal busy time</tspan></text>
-<rect x="1200" y="110" width="260" height="140" rx="12" fill="#ffe3e3" stroke="#e03131" stroke-width="2"/>
+<rect x="1200" y="110" width="260" height="130" rx="12" fill="#ffe3e3" stroke="#e03131" stroke-width="2"/>
 <text x="1214.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="1214.0" dy="0.0">Gmail</tspan></text>
 <text x="1214.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="1214.0" dy="0.0">customer emails from</tspan><tspan x="1214.0" dy="20.0">fixed templates; refuses</tspan><tspan x="1214.0" dy="20.0">non-demo recipients</tspan></text>
 <rect x="40" y="450" width="290" height="140" rx="12" fill="#fff0f6" stroke="#c2255c" stroke-width="2"/>
 <text x="54.0" y="481.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="54.0" dy="0.0">LLM reader</tspan></text>
-<text x="54.0" y="507.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="54.0" dy="0.0">fills a strict schema:</tspan><tspan x="54.0" dy="20.0">who is out, when, and</tspan><tspan x="54.0" dy="20.0">is it hypothetical?</tspan><tspan x="54.0" dy="20.0">OpenAI · Claude · Groq</tspan></text>
+<text x="54.0" y="507.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="54.0" dy="0.0">fills a strict schema: who</tspan><tspan x="54.0" dy="20.0">is out, when, hypothetical?</tspan><tspan x="54.0" dy="20.0">provider: OpenAI (default),</tspan><tspan x="54.0" dy="20.0">Claude or Groq</tspan></text>
 <rect x="40" y="670" width="290" height="140" rx="12" fill="#e6fcf5" stroke="#0c8599" stroke-width="2"/>
 <text x="54.0" y="701.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="54.0" dy="0.0">Deterministic guardrails</tspan></text>
 <text x="54.0" y="727.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="54.0" dy="0.0">the named tech must be</tspan><tspan x="54.0" dy="20.0">in the message; crew or</tspan><tspan x="54.0" dy="20.0">dispatch only; sane hours;</tspan><tspan x="54.0" dy="20.0">unsure = ask, never guess</tspan></text>
@@ -70,11 +70,11 @@
 <path d="M 1315 354 L 1315 444" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
 <path d="M 1315 596 L 1315 884" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
 <path d="M 185 1036 L 185 1070 L 1126 1070 L 1126 1036" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
-<path d="M 170 256 L 170 294" fill="none" stroke="#495057" stroke-width="2" stroke-dasharray="7 5" marker-start="url(#ah)" marker-end="url(#ah)"/>
-<path d="M 460 256 L 460 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
-<path d="M 750 256 L 750 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
-<path d="M 1040 256 L 1040 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
-<path d="M 1330 256 L 1330 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 170 246 L 170 294" fill="none" stroke="#495057" stroke-width="2" stroke-dasharray="7 5" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 460 246 L 460 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 750 246 L 750 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 1040 246 L 1040 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 1330 246 L 1330 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
 <rect x="150.1" y="386.6" width="69.8" height="24.8" rx="4" fill="#ffffff"/>
 <text x="185.0" y="403.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="185.0" dy="0.0">message</tspan></text>
 <rect x="80.0" y="617.6" width="210.0" height="24.8" rx="4" fill="#ffffff"/>
@@ -107,14 +107,14 @@
 <text x="655.5" y="1074.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="655.5" dy="0.0">simulated plan + impact scan (/api/whatif)</tspan></text>
 <rect x="40" y="1150" width="22" height="22" rx="5" fill="#fff0f6" stroke="#c2255c" stroke-width="2"/>
 <text x="70.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="70.0" dy="0.0">LLM: reads messages only</tspan></text>
-<rect x="320.0" y="1150" width="22" height="22" rx="5" fill="#e6fcf5" stroke="#0c8599" stroke-width="2"/>
-<text x="350.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="350.0" dy="0.0">deterministic plan + checks</tspan></text>
-<rect x="627.0" y="1150" width="22" height="22" rx="5" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
-<text x="657.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="657.0" dy="0.0">writes + verification</tspan></text>
-<rect x="880.0" y="1150" width="22" height="22" rx="5" fill="#edf2ff" stroke="#3b5bdb" stroke-width="2"/>
-<text x="910.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="910.0" dy="0.0">dispatcher</tspan></text>
-<rect x="1034.0" y="1150" width="22" height="22" rx="5" fill="#f3f0ff" stroke="#6741d9" stroke-width="2" stroke-dasharray="4 3"/>
-<text x="1064.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="1064.0" dy="0.0">simulation, writes nothing</tspan></text>
-<rect x="1332.0" y="1150" width="22" height="22" rx="5" fill="#f1f3f5" stroke="#868e96" stroke-width="2" stroke-dasharray="4 3"/>
-<text x="1362.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="1362.0" dy="0.0">eval stand-ins</tspan></text>
+<rect x="297.20000000000005" y="1150" width="22" height="22" rx="5" fill="#e6fcf5" stroke="#0c8599" stroke-width="2"/>
+<text x="327.2" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="327.2" dy="0.0">deterministic code</tspan></text>
+<rect x="507.6" y="1150" width="22" height="22" rx="5" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="537.6" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="537.6" dy="0.0">writes + verification</tspan></text>
+<rect x="741.4000000000001" y="1150" width="22" height="22" rx="5" fill="#edf2ff" stroke="#3b5bdb" stroke-width="2"/>
+<text x="771.4" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="771.4" dy="0.0">dispatcher</tspan></text>
+<rect x="889.4000000000001" y="1150" width="22" height="22" rx="5" fill="#f3f0ff" stroke="#6741d9" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="919.4" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="919.4" dy="0.0">simulation, no writes</tspan></text>
+<rect x="1123.2" y="1150" width="22" height="22" rx="5" fill="#f1f3f5" stroke="#868e96" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1153.2" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="1153.2" dy="0.0">eval stand-ins</tspan></text>
 </svg>

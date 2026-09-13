@@ -11,8 +11,8 @@
   const W = 180, H = 124; // logical pixels, drawn at 2x
   const ZONES = { North: [90, 24], West: [30, 64], Central: [90, 64], East: [150, 64], South: [90, 104] };
   const C = {
-    night: '#0c0f1d', panel: '#141934', line: '#2e3768', line2: '#3d4784', text: '#eeebdc', muted: '#8d93b8',
-    dim: '#5d6390', brand: '#d4ff3f', reassigned: '#5b8cff', retimed: '#ffb238', resched: '#ff5a64',
+    night: '#141413', panel: '#1c1b19', line: '#3a3631', line2: '#4d4740', text: '#f0eee6', muted: '#a29d91',
+    dim: '#6f6a60', brand: '#d97757', reassigned: '#6a9bcc', retimed: '#e3b341', resched: '#f0506e',
   };
   let travel = null;
   let open = false;
@@ -144,7 +144,7 @@
     }
     ctx.clearRect(0, 0, cv.width, cv.height);
     // dot field
-    for (let y = 2; y < H; y += 6) for (let x = 2; x < W; x += 6) px(x, y, '#1a2046');
+    for (let y = 2; y < H; y += 6) for (let x = 2; x < W; x += 6) px(x, y, '#211f1c');
     // roads (only between neighbours; 40-min pairs are the long way round)
     const names = Object.keys(ZONES);
     names.forEach((a, ai) => names.slice(ai + 1).forEach((b) => {
@@ -160,7 +160,7 @@
       for (let yy = -7; yy <= 7; yy++) for (let xx = -15; xx <= 15; xx++) {
         const edge = Math.abs(yy) === 7 || Math.abs(xx) === 15;
         if (edge) { if (!((Math.abs(yy) === 7) && (Math.abs(xx) === 15))) px(x + xx, y + yy, C.line2); }
-        else if ((xx + yy) % 2 === 0) px(x + xx, y + yy, '#1b2143');
+        else if ((xx + yy) % 2 === 0) px(x + xx, y + yy, '#24221f');
       }
     });
     // routes: everyone dim, the focused tech bright

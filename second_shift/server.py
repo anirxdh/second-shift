@@ -257,6 +257,10 @@ def reset() -> dict:
                              cwd=ROOT, timeout=300)
         if out.returncode != 0:
             raise HTTPException(500, out.stderr[-2000:])
+        # A reset starts a clean day: archive the ledger so earlier call-outs no longer apply.
+        ledger_file = ROOT / "runs" / "ledger-live.sqlite"
+        if ledger_file.exists():
+            ledger_file.rename(ledger_file.with_name(f"ledger-live-{int(time.time())}.sqlite"))
         build()
         return {"ok": True, "log": out.stdout[-2000:]}
     build()

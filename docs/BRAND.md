@@ -1,5 +1,7 @@
 # Second Shift: brand sheet
 
+> Palette v2 (2026-09-13): warm terminal. Near-black ground, ivory text, a coral accent in the spirit of Claude's warmth; semantic colors unchanged in meaning.
+
 **Idea.** A night-shift dispatch console. Think of the arcade cabinet in the back of a 24-hour depot: dark room, one lit screen, a crew board that glows when the plan changes. Crafted and calm, never cartoonish. Every pixel choice has to help the dispatcher read the board faster.
 
 ## Wordmark
@@ -9,26 +11,26 @@
 ## Color tokens
 
 ```css
---ss-night:    #0c0f1d;  /* page background */
---ss-panel:    #141934;  /* columns, cards */
---ss-panel-2:  #1b2143;  /* raised: headers, inputs */
---ss-panel-3:  #232a52;  /* hover / selected */
---ss-line:     #2e3768;  /* 2px pixel borders */
---ss-grid:     rgba(130, 150, 255, 0.07); /* board grid + dot field */
---ss-text:     #eeebdc;  /* phosphor white */
---ss-muted:    #8d93b8;  /* secondary text */
---ss-dim:      #5d6390;  /* disabled, ticks */
---ss-shadow:   #05060d;  /* hard drop shadows */
---ss-brand:    #d4ff3f;  /* lime: brand, focus, primary action, clock */
+--ss-night:    #141413;  /* page background */
+--ss-panel:    #1c1b19;  /* columns, cards */
+--ss-panel-2:  #24221f;  /* raised: headers, inputs */
+--ss-panel-3:  #2d2a26;  /* hover / selected */
+--ss-line:     #3a3631;  /* 2px pixel borders */
+--ss-grid:     rgba(240, 238, 230, 0.07); /* board grid + dot field */
+--ss-text:     #f0eee6;  /* phosphor white */
+--ss-muted:    #a29d91;  /* secondary text */
+--ss-dim:      #6f6a60;  /* disabled, ticks */
+--ss-shadow:   #050505;  /* hard drop shadows */
+--ss-brand:    #d97757;  /* lime: brand, focus, primary action, clock */
 
 /* semantic: fixed meaning everywhere (board, legend, pills, trace, mail) */
---ss-reassigned: #5b8cff;  /* job moved to another tech */
---ss-retimed:    #ffb238;  /* moved inside the promised window */
---ss-resched:    #ff5a64;  /* needs reschedule / error */
---ss-verified:   #3ff0a6;  /* written and read back */
---ss-out:        #6a6f93;  /* technician out (hatched) */
---ss-busy:       #a58bff;  /* calendar busy (dithered) */
---ss-window:     #f4e7a1;  /* promised arrival band */
+--ss-reassigned: #6a9bcc;  /* job moved to another tech */
+--ss-retimed:    #e3b341;  /* moved inside the promised window */
+--ss-resched:    #f0506e;  /* needs reschedule / error */
+--ss-verified:   #7ec77b;  /* written and read back */
+--ss-out:        #6f6a60;  /* technician out (hatched) */
+--ss-busy:       #b392f0;  /* calendar busy (dithered) */
+--ss-window:     #f2dfb0;  /* promised arrival band */
 ```
 
 Rules: lime is the only brand color and is never used for a status. Mint means verified and nothing else. Semantic colors always appear with a second cue (hatch, dither, badge text, icon) so the board still reads for color-blind viewers.

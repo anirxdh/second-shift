@@ -135,7 +135,7 @@
 <text x="60" y="1206" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">Approve on a done plan returns it unchanged. Approve on a stale or rejected plan writes nothing.</text>
 <text x="60" y="1230" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">What-if ("what if Wei doesn't show up?") runs the full plan and checks and replies with the impact. GET /api/whatif/scan does it for every tech.</text>
 <text x="40" y="1294" font-size="23" font-weight="bold" fill="#212529" text-anchor="start" dominant-baseline="hanging">3.  Risk, what stops it, and the test that proves it</text>
-<text x="40" y="1326" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">Test names are functions in evals/scenarios.py (26/26 pass, evals/REPORT.md) unless marked otherwise.</text>
+<text x="40" y="1326" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">Test names are functions in evals/scenarios.py (30/30 pass, evals/REPORT.md) unless marked otherwise.</text>
 <text x="40" y="2040" font-size="14" font-weight="normal" fill="#868e96" text-anchor="start" dominant-baseline="hanging">Source: second_shift/ledger.py, second_shift/engine.py (approve, _run, _perform, verify), second_shift/adapters/gmail.py, evals/scenarios.py.</text>
 <rect x="40" y="1350" width="1280" height="40" fill="#e9ecef" stroke="#adb5bd" stroke-width="1.2"/>
 <rect x="40" y="1390" width="1280" height="62" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2"/>

@@ -142,7 +142,7 @@
     cv.style.height = '100vh';
     document.body.appendChild(cv);
     const ctx = cv.getContext('2d');
-    const colors = ['#d4ff3f', '#3ff0a6', '#5b8cff', '#ffb238', '#eeebdc', '#3ff0a6'];
+    const colors = ['#d97757', '#7ec77b', '#6a9bcc', '#e3b341', '#f0eee6', '#7ec77b'];
     const ox = (rect.left + rect.width * 0.22) / 2;
     const oy = (rect.top + rect.height * 0.3) / 2;
     const parts = [];
