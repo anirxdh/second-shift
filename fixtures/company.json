@@ -1,0 +1,43 @@
+{
+  "name": "Bayside Home Services",
+  "timezone": "America/Los_Angeles",
+  "zones": ["North", "Central", "South", "East", "West"],
+  "travel": {
+    "North":   {"North": 10, "Central": 20, "South": 40, "East": 25, "West": 25},
+    "Central": {"North": 20, "Central": 10, "South": 20, "East": 20, "West": 20},
+    "South":   {"North": 40, "Central": 20, "South": 10, "East": 25, "West": 25},
+    "East":    {"North": 25, "Central": 20, "South": 25, "East": 10, "West": 40},
+    "West":    {"North": 25, "Central": 20, "South": 25, "East": 40, "West": 10}
+  },
+  "technicians": [
+    {"id": "T1", "name": "Marco Diaz",  "skills": ["hvac", "gas"],              "equipment": ["gauges"],       "shift_start": 480, "shift_end": 1020, "home_zone": "North"},
+    {"id": "T2", "name": "Priya Shah",  "skills": ["hvac", "electrical"],       "equipment": ["gauges"],       "shift_start": 480, "shift_end": 1020, "home_zone": "Central"},
+    {"id": "T3", "name": "Sam Okafor",  "skills": ["plumbing", "gas"],          "equipment": ["drain_camera"], "shift_start": 450, "shift_end": 990,  "home_zone": "South"},
+    {"id": "T4", "name": "Ana Lopez",   "skills": ["plumbing"],                 "equipment": ["drain_camera"], "shift_start": 540, "shift_end": 1080, "home_zone": "Central"},
+    {"id": "T5", "name": "Jordan Lee",  "skills": ["electrical"],               "equipment": ["lift"],         "shift_start": 480, "shift_end": 1020, "home_zone": "East"},
+    {"id": "T6", "name": "Wei Chen",    "skills": ["hvac", "gas", "plumbing"],  "equipment": ["gauges"],       "shift_start": 540, "shift_end": 1080, "home_zone": "West"}
+  ],
+  "jobs": [
+    {"id": "J101", "customer": "Rosa Hernandez",    "alias": "hernandez", "address": "412 Alder St",       "zone": "North",   "service": "AC not cooling (94F today, elderly resident)", "required_skills": ["hvac"],             "duration": 90,  "window_start": 480, "window_end": 600, "start": 495, "tech_id": "T1", "priority": 1},
+    {"id": "J102", "customer": "Brightside Dental", "alias": "brightside", "address": "88 Harbor Blvd",    "zone": "North",   "service": "Gas furnace safety inspection (contract)",     "required_skills": ["hvac", "gas"],      "duration": 120, "window_start": 660, "window_end": 660, "start": 660, "tech_id": "T1", "priority": 1, "protected": true},
+    {"id": "J103", "customer": "Linh Nguyen",       "alias": "nguyen",    "address": "19 Crest Ct",        "zone": "North",   "service": "Smart thermostat replacement",                "required_skills": ["hvac"],             "duration": 60,  "window_start": 840, "window_end": 960, "start": 840, "tech_id": "T1", "priority": 3},
+    {"id": "J104", "customer": "Diego Castillo",    "alias": "castillo",  "address": "7 Ridge Way",        "zone": "North",   "service": "Gas fireplace won't light",                   "required_skills": ["hvac", "gas"],      "duration": 90,  "window_start": 900, "window_end": 930, "start": 910, "tech_id": "T1", "priority": 3},
+
+    {"id": "J201", "customer": "Anil Patel",        "alias": "patel",     "address": "230 Market St",      "zone": "Central", "service": "Heat pump not heating",                       "required_skills": ["hvac"],             "duration": 90,  "window_start": 480, "window_end": 600, "start": 500, "tech_id": "T2", "priority": 2},
+    {"id": "J202", "customer": "Greenleaf Cafe",    "alias": "greenleaf", "address": "5 Plaza Sq",         "zone": "Central", "service": "Walk-in cooler running warm",                 "required_skills": ["hvac"],             "duration": 120, "window_start": 630, "window_end": 750, "start": 660, "tech_id": "T2", "priority": 1},
+    {"id": "J203", "customer": "Carmen Morales",    "alias": "morales",   "address": "61 Birch Ln",        "zone": "East",    "service": "Breaker keeps tripping",                      "required_skills": ["electrical"],       "duration": 60,  "window_start": 840, "window_end": 960, "start": 840, "tech_id": "T2", "priority": 2},
+
+    {"id": "J301", "customer": "Grace Kim",         "alias": "kim",       "address": "900 Bay Rd",         "zone": "South",   "service": "Water heater leaking",                        "required_skills": ["plumbing", "gas"], "duration": 120, "window_start": 450, "window_end": 570, "start": 465, "tech_id": "T3", "priority": 1},
+    {"id": "J302", "customer": "Marco Rossi",       "alias": "rossi",     "address": "14 Pier Ave",        "zone": "South",   "service": "Gas smell near meter",                        "required_skills": ["gas"],             "duration": 60,  "window_start": 630, "window_end": 750, "start": 630, "tech_id": "T3", "priority": 1},
+    {"id": "J303", "customer": "Tom Anderson",      "alias": "anderson",  "address": "3 Dune St",          "zone": "South",   "service": "Main sewer line backing up",                  "required_skills": ["plumbing"],        "required_equipment": ["drain_camera"], "duration": 90, "window_start": 810, "window_end": 930, "start": 810, "tech_id": "T3", "priority": 2},
+
+    {"id": "J401", "customer": "Keisha Brooks",     "alias": "brooks",    "address": "77 Center St",       "zone": "Central", "service": "Kitchen sink clogged",                        "required_skills": ["plumbing"],        "duration": 60,  "window_start": 540, "window_end": 660, "start": 560, "tech_id": "T4", "priority": 3},
+    {"id": "J402", "customer": "Hans Fischer",      "alias": "fischer",   "address": "250 Sunset Dr",      "zone": "West",    "service": "Toilet keeps running",                        "required_skills": ["plumbing"],        "duration": 45,  "window_start": 780, "window_end": 900, "start": 780, "tech_id": "T4", "priority": 3},
+
+    {"id": "J501", "customer": "Summit Gym",        "alias": "summit",    "address": "1200 Eastgate Blvd", "zone": "East",    "service": "EV charger install (contract)",               "required_skills": ["electrical"],      "required_equipment": ["lift"], "duration": 180, "window_start": 540, "window_end": 540, "start": 540, "tech_id": "T5", "priority": 1, "protected": true},
+    {"id": "J502", "customer": "Owen Walsh",        "alias": "walsh",     "address": "45 Orchard Rd",      "zone": "East",    "service": "Outlet sparking",                             "required_skills": ["electrical"],      "duration": 60,  "window_start": 840, "window_end": 960, "start": 840, "tech_id": "T5", "priority": 1},
+
+    {"id": "J601", "customer": "Chidi Okoro",       "alias": "okoro",     "address": "18 Cypress Ave",     "zone": "West",    "service": "Garbage disposal jammed",                     "required_skills": ["plumbing"],        "duration": 60,  "window_start": 600, "window_end": 720, "start": 630, "tech_id": "T6", "priority": 2},
+    {"id": "J602", "customer": "Elena Duarte",      "alias": "duarte",    "address": "302 Vista Pl",       "zone": "West",    "service": "Furnace pilot light out",                     "required_skills": ["hvac", "gas"],      "duration": 90,  "window_start": 840, "window_end": 960, "start": 840, "tech_id": "T6", "priority": 2}
+  ]
+}

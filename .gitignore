@@ -1,0 +1,21 @@
+.env
+.env.*
+!.env.example
+secrets/
+.arga-session.json
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+runs/
+*.sqlite
+.DS_Store
+# Third-party docs scraped for offline reference; not ours to redistribute.
+reference/
+# Local-only planning and tooling, not part of the project
+ideas/
+CODEX_REFERENCE_TASK.md
+.claude/
+web/samples/
+evals/recorded_parses.json
