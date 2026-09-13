@@ -4,7 +4,7 @@
 
 When a field technician calls out sick, Second Shift re-plans the whole crew's day across **Slack, Google Sheets, Google Calendar, and Gmail**, then proves the new day is right.
 
-**▶ Demo video (1:45):** [watch on YouTube](https://youtu.be/ZyVJ2nfkAkc) · [download (subtitled)](https://github.com/anirxdh/second-shift/raw/main/video/release/second-shift-demo-v2.mp4) · [no-subtitles version](https://github.com/anirxdh/second-shift/raw/main/video/release/second-shift-demo-v2-nosubs.mp4) · [captions .srt](video/release/second-shift-demo-v2.srt)
+**▶ Demo video (1:43):** [watch on YouTube](https://youtu.be/ZyVJ2nfkAkc) · [download (subtitled)](https://github.com/anirxdh/second-shift/raw/main/video/release/SecondShift-final.mp4) · [no-subtitles version](https://github.com/anirxdh/second-shift/raw/main/video/release/SecondShift-final-nosubs.mp4) · [captions .srt](video/release/SecondShift-final.srt)
 
 Built for the Multi-App AI Agent Hackathon, September 13, 2026.
 

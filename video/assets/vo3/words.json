@@ -2,978 +2,978 @@
   "S1": [
     {
       "word": "It's",
-      "start": 0.046,
-      "end": 0.197
+      "start": 0.035,
+      "end": 0.244
     },
     {
       "word": "six",
-      "start": 0.221,
-      "end": 0.372
+      "start": 0.313,
+      "end": 0.592
     },
     {
       "word": "forty-five",
-      "start": 0.43,
-      "end": 0.882
+      "start": 0.708,
+      "end": 1.614
     },
     {
       "word": "in",
-      "start": 0.917,
-      "end": 0.964
+      "start": 1.672,
+      "end": 1.741
     },
     {
       "word": "the",
-      "start": 0.987,
-      "end": 1.057
+      "start": 1.8,
+      "end": 1.869
     },
     {
       "word": "morning.",
-      "start": 1.08,
-      "end": 1.486
+      "start": 1.985,
+      "end": 2.81
     },
     {
       "word": "Marco",
-      "start": 1.707,
-      "end": 1.985
+      "start": 3.138,
+      "end": 3.707
     },
     {
       "word": "just",
-      "start": 2.043,
-      "end": 2.171
+      "start": 3.823,
+      "end": 4.044
     },
     {
       "word": "called",
-      "start": 2.194,
-      "end": 2.415
+      "start": 4.125,
+      "end": 4.497
     },
     {
       "word": "in",
-      "start": 2.45,
-      "end": 2.519
+      "start": 4.555,
+      "end": 4.648
     },
     {
       "word": "sick.",
-      "start": 2.577,
-      "end": 2.984
+      "start": 4.764,
+      "end": 5.367
     },
     {
       "word": "Four",
-      "start": 3.332,
-      "end": 3.529
+      "start": 5.747,
+      "end": 6.06
     },
     {
       "word": "customers",
-      "start": 3.587,
-      "end": 3.994
+      "start": 6.153,
+      "end": 6.769
     },
     {
       "word": "are",
-      "start": 4.029,
-      "end": 4.122
+      "start": 6.827,
+      "end": 6.943
     },
     {
       "word": "waiting",
-      "start": 4.145,
-      "end": 4.377
+      "start": 6.989,
+      "end": 7.326
     },
     {
       "word": "for",
-      "start": 4.412,
-      "end": 4.505
+      "start": 7.396,
+      "end": 7.581
     },
     {
       "word": "him",
-      "start": 4.551,
-      "end": 4.644
+      "start": 7.651,
+      "end": 7.779
     },
     {
       "word": "today.",
-      "start": 4.69,
-      "end": 5.108
+      "start": 7.837,
+      "end": 8.673
     },
     {
       "word": "Who",
-      "start": 5.399,
-      "end": 5.561
+      "start": 8.879,
+      "end": 9.146
     },
     {
       "word": "covers",
-      "start": 5.619,
-      "end": 5.875
+      "start": 9.321,
+      "end": 9.808
     },
     {
       "word": "his",
-      "start": 5.909,
-      "end": 6.002
+      "start": 9.878,
+      "end": 10.029
     },
     {
       "word": "jobs?",
-      "start": 6.049,
-      "end": 6.594
+      "start": 10.18,
+      "end": 11.074
     },
     {
       "word": "Figuring",
-      "start": 6.885,
-      "end": 7.221
+      "start": 11.417,
+      "end": 11.928
     },
     {
       "word": "that",
-      "start": 7.268,
-      "end": 7.396
+      "start": 12.009,
+      "end": 12.218
     },
     {
       "word": "out",
-      "start": 7.442,
-      "end": 7.558
+      "start": 12.276,
+      "end": 12.439
     },
     {
       "word": "by",
-      "start": 7.605,
-      "end": 7.697
+      "start": 12.509,
+      "end": 12.694
     },
     {
       "word": "hand",
-      "start": 7.755,
-      "end": 7.918
+      "start": 12.787,
+      "end": 13.136
     },
     {
       "word": "takes",
-      "start": 7.964,
-      "end": 8.162
+      "start": 13.205,
+      "end": 13.507
     },
     {
       "word": "an",
-      "start": 8.185,
-      "end": 8.243
+      "start": 13.554,
+      "end": 13.646
     },
     {
       "word": "hour.",
-      "start": 8.278,
-      "end": 8.684
+      "start": 13.763,
+      "end": 14.517
     },
     {
       "word": "Second",
-      "start": 9.091,
-      "end": 9.358
+      "start": 14.881,
+      "end": 15.299
     },
     {
       "word": "Shift",
-      "start": 9.404,
-      "end": 9.636
+      "start": 15.369,
+      "end": 15.74
     },
     {
       "word": "does",
-      "start": 9.659,
-      "end": 9.81
+      "start": 15.984,
+      "end": 16.216
     },
     {
       "word": "it",
-      "start": 9.845,
-      "end": 9.903
+      "start": 16.274,
+      "end": 16.344
     },
     {
       "word": "in",
-      "start": 9.938,
-      "end": 9.996
+      "start": 16.39,
+      "end": 16.471
     },
     {
       "word": "seconds.",
-      "start": 10.043,
-      "end": 10.658
+      "start": 16.564,
+      "end": 17.301
     }
   ],
   "S2": [
     {
       "word": "Someone",
-      "start": 0.058,
-      "end": 0.325
+      "start": 0.035,
+      "end": 0.743
     },
     {
       "word": "posts",
-      "start": 0.36,
-      "end": 0.592
+      "start": 0.917,
+      "end": 1.428
     },
     {
       "word": "in",
-      "start": 0.615,
-      "end": 0.673
+      "start": 1.486,
+      "end": 1.579
     },
     {
       "word": "Slack:",
-      "start": 0.731,
-      "end": 1.068
+      "start": 1.672,
+      "end": 2.461
     },
     {
       "word": "Marco",
-      "start": 1.173,
-      "end": 1.463
+      "start": 2.825,
+      "end": 3.335
     },
     {
       "word": "is",
-      "start": 1.509,
-      "end": 1.591
+      "start": 3.428,
+      "end": 3.544
     },
     {
       "word": "out.",
-      "start": 1.637,
-      "end": 1.881
+      "start": 3.614,
+      "end": 4.125
     },
     {
       "word": "Second",
-      "start": 2.287,
-      "end": 2.566
+      "start": 4.553,
+      "end": 4.982
     },
     {
       "word": "Shift",
-      "start": 2.601,
-      "end": 2.821
+      "start": 5.052,
+      "end": 5.354
     },
     {
       "word": "reads",
-      "start": 2.879,
-      "end": 3.1
+      "start": 5.423,
+      "end": 5.714
     },
     {
       "word": "it,",
-      "start": 3.158,
-      "end": 3.32
+      "start": 5.772,
+      "end": 6.062
     },
     {
       "word": "then",
-      "start": 3.425,
-      "end": 3.576
+      "start": 6.368,
+      "end": 6.565
     },
     {
       "word": "looks",
-      "start": 3.622,
-      "end": 3.808
+      "start": 6.658,
+      "end": 6.937
     },
     {
       "word": "at",
-      "start": 3.843,
-      "end": 3.901
+      "start": 6.995,
+      "end": 7.099
     },
     {
       "word": "every",
-      "start": 3.959,
-      "end": 4.156
+      "start": 7.157,
+      "end": 7.448
     },
     {
       "word": "job",
-      "start": 4.214,
-      "end": 4.458
+      "start": 7.564,
+      "end": 7.993
     },
     {
       "word": "and",
-      "start": 4.493,
-      "end": 4.563
+      "start": 8.11,
+      "end": 8.237
     },
     {
       "word": "every",
-      "start": 4.621,
-      "end": 4.83
+      "start": 8.411,
+      "end": 8.829
     },
     {
       "word": "calendar.",
-      "start": 4.888,
-      "end": 5.399
+      "start": 8.911,
+      "end": 9.606
     }
   ],
   "S3": [
     {
       "word": "It",
-      "start": 0.046,
-      "end": 0.139
+      "start": 0.035,
+      "end": 0.174
     },
     {
       "word": "builds",
-      "start": 0.174,
-      "end": 0.406
+      "start": 0.255,
+      "end": 0.615
     },
     {
       "word": "a",
-      "start": 0.441,
-      "end": 0.464
+      "start": 0.673,
+      "end": 0.708
     },
     {
       "word": "new",
-      "start": 0.511,
-      "end": 0.627
+      "start": 0.824,
+      "end": 1.022
     },
     {
       "word": "plan.",
-      "start": 0.673,
-      "end": 1.08
+      "start": 1.115,
+      "end": 1.985
     },
     {
       "word": "Watch",
-      "start": 1.242,
-      "end": 1.474
+      "start": 2.243,
+      "end": 2.603
     },
     {
       "word": "the",
-      "start": 1.533,
-      "end": 1.602
+      "start": 2.673,
+      "end": 2.766
     },
     {
       "word": "trucks",
-      "start": 1.637,
-      "end": 1.904
+      "start": 2.836,
+      "end": 3.23
     },
     {
       "word": "move.",
-      "start": 1.962,
-      "end": 2.345
+      "start": 3.346,
+      "end": 4.164
     },
     {
       "word": "Wei",
-      "start": 2.694,
-      "end": 2.833
+      "start": 4.433,
+      "end": 4.758
     },
     {
       "word": "can",
-      "start": 2.879,
-      "end": 2.984
+      "start": 4.851,
+      "end": 5.083
     },
     {
       "word": "do",
-      "start": 3.042,
-      "end": 3.135
+      "start": 5.187,
+      "end": 5.454
     },
     {
       "word": "Marco's",
-      "start": 3.193,
-      "end": 3.529
+      "start": 5.605,
+      "end": 6.209
     },
     {
       "word": "big",
-      "start": 3.564,
-      "end": 3.704
+      "start": 6.325,
+      "end": 6.569
     },
     {
       "word": "gas",
-      "start": 3.75,
-      "end": 3.947
+      "start": 6.65,
+      "end": 7.01
     },
     {
       "word": "job,",
-      "start": 4.005,
-      "end": 4.261
+      "start": 7.091,
+      "end": 7.707
     },
     {
       "word": "but",
-      "start": 4.284,
-      "end": 4.4
+      "start": 7.967,
+      "end": 8.165
     },
     {
       "word": "he's",
-      "start": 4.435,
-      "end": 4.586
+      "start": 8.234,
+      "end": 8.455
     },
     {
       "word": "busy.",
-      "start": 4.632,
-      "end": 5.097
+      "start": 8.629,
+      "end": 9.403
     },
     {
       "word": "So",
-      "start": 5.445,
-      "end": 5.561
+      "start": 9.669,
+      "end": 9.901
     },
     {
       "word": "Ana",
-      "start": 5.631,
-      "end": 5.817
+      "start": 10.028,
+      "end": 10.435
     },
     {
       "word": "takes",
-      "start": 5.863,
-      "end": 6.06
+      "start": 10.504,
+      "end": 10.841
     },
     {
       "word": "Wei's",
-      "start": 6.107,
-      "end": 6.316
+      "start": 10.957,
+      "end": 11.294
     },
     {
       "word": "small",
-      "start": 6.339,
-      "end": 6.571
+      "start": 11.34,
+      "end": 11.758
     },
     {
       "word": "job,",
-      "start": 6.629,
-      "end": 6.989
+      "start": 11.851,
+      "end": 12.478
     },
     {
       "word": "and",
-      "start": 7.07,
-      "end": 7.21
+      "start": 12.723,
+      "end": 12.932
     },
     {
       "word": "Wei",
-      "start": 7.268,
-      "end": 7.407
+      "start": 13.048,
+      "end": 13.315
     },
     {
       "word": "takes",
-      "start": 7.454,
-      "end": 7.651
+      "start": 13.396,
+      "end": 13.675
     },
     {
       "word": "Marco's.",
-      "start": 7.697,
-      "end": 8.255
+      "start": 13.791,
+      "end": 14.708
     },
     {
       "word": "One",
-      "start": 8.603,
-      "end": 8.777
+      "start": 15.061,
+      "end": 15.363
     },
     {
       "word": "job",
-      "start": 8.812,
-      "end": 8.986
+      "start": 15.444,
+      "end": 15.804
     },
     {
       "word": "can't",
-      "start": 9.044,
-      "end": 9.23
+      "start": 16.048,
+      "end": 16.42
     },
     {
       "word": "be",
-      "start": 9.265,
-      "end": 9.346
+      "start": 16.478,
+      "end": 16.594
     },
     {
       "word": "saved",
-      "start": 9.392,
-      "end": 9.636
+      "start": 16.71,
+      "end": 17.174
     },
     {
       "word": "today,",
-      "start": 9.659,
-      "end": 10.043
+      "start": 17.209,
+      "end": 18.0
     },
     {
       "word": "so",
-      "start": 10.147,
-      "end": 10.252
+      "start": 18.267,
+      "end": 18.453
     },
     {
       "word": "that",
-      "start": 10.298,
-      "end": 10.414
+      "start": 18.523,
+      "end": 18.685
     },
     {
       "word": "customer",
-      "start": 10.472,
-      "end": 10.82
+      "start": 18.755,
+      "end": 19.301
     },
     {
       "word": "is",
-      "start": 10.855,
-      "end": 10.925
+      "start": 19.37,
+      "end": 19.475
     },
     {
       "word": "asked",
-      "start": 10.971,
-      "end": 11.157
+      "start": 19.544,
+      "end": 19.835
     },
     {
       "word": "to",
-      "start": 11.18,
-      "end": 11.227
+      "start": 19.869,
+      "end": 19.939
     },
     {
       "word": "pick",
-      "start": 11.273,
-      "end": 11.413
+      "start": 20.055,
+      "end": 20.311
     },
     {
       "word": "a",
-      "start": 11.459,
-      "end": 11.482
+      "start": 20.369,
+      "end": 20.392
     },
     {
       "word": "new",
-      "start": 11.529,
-      "end": 11.645
+      "start": 20.508,
+      "end": 20.705
     },
     {
       "word": "time.",
-      "start": 11.691,
-      "end": 12.063
+      "start": 20.787,
+      "end": 21.361
     }
   ],
   "S4": [
     {
       "word": "Nothing",
       "start": 0.035,
-      "end": 0.302
+      "end": 0.476
     },
     {
       "word": "changes",
-      "start": 0.348,
-      "end": 0.755
+      "start": 0.569,
+      "end": 1.184
     },
     {
       "word": "until",
-      "start": 0.813,
-      "end": 1.057
+      "start": 1.358,
+      "end": 1.73
     },
     {
       "word": "a",
-      "start": 1.091,
-      "end": 1.115
+      "start": 1.788,
+      "end": 1.823
     },
     {
       "word": "person",
-      "start": 1.161,
-      "end": 1.44
+      "start": 1.904,
+      "end": 2.357
     },
     {
       "word": "says",
-      "start": 1.498,
-      "end": 1.707
+      "start": 2.45,
+      "end": 2.728
     },
     {
       "word": "yes.",
-      "start": 1.765,
-      "end": 2.218
+      "start": 2.844,
+      "end": 3.518
     },
     {
       "word": "One",
-      "start": 2.566,
-      "end": 2.74
+      "start": 3.928,
+      "end": 4.206
     },
     {
       "word": "click,",
-      "start": 2.775,
-      "end": 3.146
+      "start": 4.276,
+      "end": 4.845
     },
     {
       "word": "and",
-      "start": 3.216,
-      "end": 3.355
+      "start": 5.161,
+      "end": 5.324
     },
     {
       "word": "it",
-      "start": 3.413,
-      "end": 3.471
+      "start": 5.393,
+      "end": 5.475
     },
     {
       "word": "updates",
-      "start": 3.529,
-      "end": 3.878
+      "start": 5.567,
+      "end": 6.136
     },
     {
       "word": "the",
-      "start": 3.924,
-      "end": 3.994
+      "start": 6.194,
+      "end": 6.276
     },
     {
       "word": "calendars",
-      "start": 4.029,
-      "end": 4.493
+      "start": 6.345,
+      "end": 6.961
     },
     {
       "word": "and",
-      "start": 4.551,
-      "end": 4.656
+      "start": 7.019,
+      "end": 7.123
     },
     {
       "word": "the",
-      "start": 4.702,
-      "end": 4.772
+      "start": 7.181,
+      "end": 7.251
     },
     {
       "word": "job",
-      "start": 4.807,
-      "end": 4.992
+      "start": 7.332,
+      "end": 7.622
     },
     {
       "word": "sheet,",
-      "start": 5.039,
-      "end": 5.352
+      "start": 7.692,
+      "end": 8.168
     },
     {
       "word": "messages",
-      "start": 5.457,
-      "end": 5.863
+      "start": 8.551,
+      "end": 9.085
     },
     {
       "word": "the",
-      "start": 5.921,
-      "end": 5.991
+      "start": 9.155,
+      "end": 9.248
     },
     {
       "word": "team",
-      "start": 6.026,
-      "end": 6.235
+      "start": 9.317,
+      "end": 9.712
     },
     {
       "word": "in",
-      "start": 6.281,
-      "end": 6.327
+      "start": 9.793,
+      "end": 9.875
     },
     {
       "word": "Slack,",
-      "start": 6.385,
-      "end": 6.769
+      "start": 9.968,
+      "end": 10.641
     },
     {
       "word": "and",
-      "start": 6.838,
-      "end": 6.978
+      "start": 10.966,
+      "end": 11.175
     },
     {
       "word": "emails",
-      "start": 7.036,
-      "end": 7.349
+      "start": 11.326,
+      "end": 11.918
     },
     {
       "word": "the",
-      "start": 7.396,
-      "end": 7.465
+      "start": 11.988,
+      "end": 12.057
     },
     {
       "word": "customers.",
-      "start": 7.5,
-      "end": 8.127
+      "start": 12.127,
+      "end": 12.91
     }
   ],
   "S5": [
     {
       "word": "Then",
-      "start": 0.058,
-      "end": 0.197
+      "start": 0.046,
+      "end": 0.255
     },
     {
       "word": "it",
-      "start": 0.244,
-      "end": 0.302
+      "start": 0.325,
+      "end": 0.418
     },
     {
       "word": "double-checks",
-      "start": 0.337,
-      "end": 0.813
+      "start": 0.534,
+      "end": 1.347
     },
     {
       "word": "every",
-      "start": 0.859,
-      "end": 1.045
+      "start": 1.521,
+      "end": 1.95
     },
     {
       "word": "change.",
-      "start": 1.091,
-      "end": 1.579
+      "start": 2.032,
+      "end": 2.902
     },
     {
       "word": "Thirty-six",
-      "start": 1.834,
-      "end": 2.334
+      "start": 3.175,
+      "end": 4.22
     },
     {
       "word": "out",
-      "start": 2.38,
-      "end": 2.473
+      "start": 4.429,
+      "end": 4.708
     },
     {
       "word": "of",
-      "start": 2.508,
-      "end": 2.554
+      "start": 4.754,
+      "end": 4.835
     },
     {
       "word": "thirty-six.",
-      "start": 2.601,
-      "end": 3.332
+      "start": 4.952,
+      "end": 6.24
     },
     {
       "word": "If",
-      "start": 3.68,
-      "end": 3.796
+      "start": 6.555,
+      "end": 6.741
     },
     {
       "word": "it",
-      "start": 3.843,
-      "end": 3.889
+      "start": 6.81,
+      "end": 6.915
     },
     {
       "word": "crashes",
-      "start": 3.924,
-      "end": 4.261
+      "start": 6.984,
+      "end": 7.577
     },
     {
       "word": "halfway,",
-      "start": 4.319,
-      "end": 4.795
+      "start": 7.693,
+      "end": 8.784
     },
     {
       "word": "it",
-      "start": 4.876,
-      "end": 4.981
+      "start": 9.014,
+      "end": 9.188
     },
     {
       "word": "finishes",
-      "start": 5.016,
-      "end": 5.352
+      "start": 9.304,
+      "end": 9.966
     },
     {
       "word": "without",
-      "start": 5.387,
-      "end": 5.642
+      "start": 10.082,
+      "end": 10.512
     },
     {
       "word": "sending",
-      "start": 5.689,
-      "end": 5.956
+      "start": 10.605,
+      "end": 11.069
     },
     {
       "word": "anything",
-      "start": 6.002,
-      "end": 6.293
+      "start": 11.278,
+      "end": 11.94
     },
     {
       "word": "twice.",
-      "start": 6.339,
-      "end": 6.861
+      "start": 12.021,
+      "end": 12.904
     },
     {
       "word": "And",
-      "start": 7.21,
-      "end": 7.338
+      "start": 13.178,
+      "end": 13.364
     },
     {
       "word": "you",
-      "start": 7.396,
-      "end": 7.465
+      "start": 13.445,
+      "end": 13.55
     },
     {
       "word": "can",
-      "start": 7.512,
-      "end": 7.616
+      "start": 13.631,
+      "end": 13.805
     },
     {
       "word": "ask:",
-      "start": 7.674,
-      "end": 7.964
+      "start": 13.921,
+      "end": 14.676
     },
     {
       "word": "what",
-      "start": 8.022,
-      "end": 8.185
+      "start": 14.907,
+      "end": 15.162
     },
     {
       "word": "if",
-      "start": 8.208,
-      "end": 8.266
+      "start": 15.22,
+      "end": 15.348
     },
     {
       "word": "Wei",
-      "start": 8.324,
-      "end": 8.44
+      "start": 15.464,
+      "end": 15.766
     },
     {
       "word": "doesn't",
-      "start": 8.487,
-      "end": 8.719
+      "start": 15.859,
+      "end": 16.242
     },
     {
       "word": "show",
-      "start": 8.754,
-      "end": 8.905
+      "start": 16.3,
+      "end": 16.567
     },
     {
       "word": "up?",
-      "start": 8.963,
-      "end": 9.23
+      "start": 16.66,
+      "end": 17.078
     },
     {
       "word": "It",
-      "start": 9.578,
-      "end": 9.694
+      "start": 17.37,
+      "end": 17.556
     },
     {
       "word": "shows",
-      "start": 9.741,
-      "end": 9.973
+      "start": 17.626,
+      "end": 18.032
     },
     {
       "word": "you,",
-      "start": 10.031,
-      "end": 10.159
+      "start": 18.102,
+      "end": 18.578
     },
     {
       "word": "before",
-      "start": 10.182,
-      "end": 10.437
+      "start": 18.826,
+      "end": 19.441
     },
     {
       "word": "it",
-      "start": 10.472,
-      "end": 10.53
+      "start": 19.499,
+      "end": 19.604
     },
     {
       "word": "happens.",
-      "start": 10.565,
-      "end": 11.146
+      "start": 19.685,
+      "end": 20.548
     }
   ],
   "S6": [
     {
       "word": "Sick",
       "start": 0.035,
-      "end": 0.221
+      "end": 0.337
     },
     {
       "word": "days,",
-      "start": 0.279,
-      "end": 0.592
+      "start": 0.406,
+      "end": 1.08
     },
     {
       "word": "flat",
-      "start": 0.65,
-      "end": 0.894
+      "start": 1.254,
+      "end": 1.579
     },
     {
       "word": "tires,",
-      "start": 0.94,
-      "end": 1.393
+      "start": 1.637,
+      "end": 2.485
     },
     {
       "word": "no-shows.",
-      "start": 1.498,
-      "end": 2.183
+      "start": 2.81,
+      "end": 4.029
     },
     {
       "word": "They'll",
-      "start": 2.473,
-      "end": 2.705
+      "start": 4.296,
+      "end": 4.703
     },
     {
       "word": "keep",
-      "start": 2.74,
-      "end": 2.879
+      "start": 4.796,
+      "end": 5.086
     },
     {
       "word": "happening.",
-      "start": 2.926,
-      "end": 3.437
+      "start": 5.202,
+      "end": 6.142
     },
     {
       "word": "Now",
-      "start": 3.785,
-      "end": 3.924
+      "start": 6.497,
+      "end": 6.915
     },
     {
       "word": "they",
-      "start": 3.971,
-      "end": 4.075
+      "start": 7.031,
+      "end": 7.228
     },
     {
       "word": "take",
-      "start": 4.133,
-      "end": 4.296
+      "start": 7.31,
+      "end": 7.612
     },
     {
       "word": "seconds",
-      "start": 4.331,
-      "end": 4.656
+      "start": 7.728,
+      "end": 8.355
     },
     {
       "word": "to",
-      "start": 4.702,
-      "end": 4.772
+      "start": 8.424,
+      "end": 8.529
     },
     {
       "word": "fix,",
-      "start": 4.83,
-      "end": 5.306
+      "start": 8.703,
+      "end": 9.516
     },
     {
       "word": "not",
-      "start": 5.445,
-      "end": 5.619
+      "start": 9.879,
+      "end": 10.158
     },
     {
       "word": "an",
-      "start": 5.654,
-      "end": 5.712
+      "start": 10.216,
+      "end": 10.321
     },
     {
       "word": "hour.",
-      "start": 5.747,
-      "end": 6.118
+      "start": 10.495,
+      "end": 11.319
     },
     {
       "word": "We",
-      "start": 6.374,
-      "end": 6.478
+      "start": 11.59,
+      "end": 11.764
     },
     {
       "word": "can't",
-      "start": 6.525,
-      "end": 6.722
+      "start": 11.857,
+      "end": 12.182
     },
     {
       "word": "predict",
-      "start": 6.769,
-      "end": 7.036
+      "start": 12.252,
+      "end": 12.797
     },
     {
       "word": "the",
-      "start": 7.07,
-      "end": 7.14
+      "start": 12.855,
+      "end": 12.948
     },
     {
       "word": "day.",
-      "start": 7.187,
-      "end": 7.5
+      "start": 13.064,
+      "end": 13.881
     },
     {
       "word": "But",
-      "start": 7.605,
-      "end": 7.744
+      "start": 14.068,
+      "end": 14.277
     },
     {
       "word": "we",
-      "start": 7.767,
-      "end": 7.837
+      "start": 14.347,
+      "end": 14.463
     },
     {
       "word": "can",
-      "start": 7.883,
-      "end": 7.999
+      "start": 14.614,
+      "end": 14.997
     },
     {
       "word": "be",
-      "start": 8.046,
-      "end": 8.115
+      "start": 15.078,
+      "end": 15.206
     },
     {
       "word": "ready",
-      "start": 8.162,
-      "end": 8.336
+      "start": 15.322,
+      "end": 15.636
     },
     {
       "word": "for",
-      "start": 8.394,
-      "end": 8.522
+      "start": 15.717,
+      "end": 15.926
     },
     {
       "word": "it.",
-      "start": 8.58,
-      "end": 8.812
+      "start": 16.007,
+      "end": 16.344
     },
     {
       "word": "Second",
-      "start": 9.169,
-      "end": 9.459
+      "start": 16.798,
+      "end": 17.227
     },
     {
       "word": "Shift.",
-      "start": 9.506,
-      "end": 9.936
+      "start": 17.297,
+      "end": 17.81
     }
   ]
 }

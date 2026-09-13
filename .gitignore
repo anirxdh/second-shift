@@ -43,3 +43,5 @@ video/*.log
 video/*.mp4
 video/release/*-v1*
 video/assets/apps/
+video/release/sync-src*
+video/release/second-shift-demo-v2*
