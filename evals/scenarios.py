@@ -399,6 +399,61 @@ def message_handled_once():
     return ok, f
 
 
+# ---------------------------------------------------------------- what-if
+
+@scenario("What-if", "A what-if runs the full plan and checks but can never write, even if someone clicks Approve")
+def whatif_never_writes():
+    engine, ports, _ = fresh()
+    before = writes(ports)
+    view = engine.propose([Absence(tech_id="T6", start=0, end=1440)], simulate=True)
+    after = engine.approve(view["id"])
+    f: list[str] = []
+    ok = check(view["status"] == "simulated" and not view["violations"], f"status {view['status']}, rule check clean", f)
+    ok &= check(after["status"] == "simulated", "approve on a what-if is refused", f)
+    ok &= check(writes(ports) == before, "zero writes to Calendar, Slack, Gmail", f)
+    return ok, f
+
+
+@scenario("What-if", "'What if Wei doesn't show up?' in Slack gets a simulated answer, and nothing changes")
+def whatif_from_slack():
+    text = "What if Wei doesn't show up today?"
+    _, ports, out, before = _msg("U_DISPATCH", text, {"is_callout": True, "tech_id": "T6", "whole_day": True,
+                                                      "confidence": "high", "is_hypothetical": True,
+                                                      "summary": "Hypothetical: Wei out all day."})
+    reply = ports.chat.bot_posts()[-1][0].text if ports.chat.bot_posts() else ""
+    f: list[str] = []
+    ok = check(out["outcome"] == "simulated", f"outcome {out['outcome']}", f)
+    ok &= check(reply.startswith("What-if:") and "Nothing has changed" in reply, f"reply: {reply[:90]}...", f)
+    ok &= check(not ports.mail.sent and ports.calendar.version == before["calendar_version"], "no emails, calendar untouched", f)
+    return ok, f
+
+
+@scenario("What-if", "'Make it real' turns a what-if into a normal plan that executes and verifies")
+def whatif_adopt_then_execute():
+    engine, ports, _ = fresh()
+    sim = engine.propose(MARCO_OUT, simulate=True)
+    real = engine.adopt(sim["id"])
+    done = engine.approve(real["id"])
+    f: list[str] = []
+    ok = check(real["status"] == "proposed" and real["id"] != sim["id"], "adopted as a fresh proposal", f)
+    ok &= check(done["status"] == "done" and all(c["ok"] for c in done["verification"]), "executed and verified", f)
+    return ok, f
+
+
+@scenario("What-if", "The preparedness scan simulates every call-out and finds the single points of failure")
+def preparedness_scan():
+    engine, ports, _ = fresh()
+    before = writes(ports)
+    rows = engine.preparedness_scan()
+    by = {r["tech_id"]: r for r in rows}
+    f: list[str] = []
+    ok = check(len(rows) == 6 and all(r["valid"] for r in rows), "6 technicians simulated, every plan legal", f)
+    ok &= check(by["T1"]["reschedule"] == 1 and by["T1"]["covered"] == 3, "Marco out: 3 covered, 1 reschedule (matches the demo)", f)
+    ok &= check(rows[0]["reschedule"] >= rows[-1]["reschedule"], f"ranked riskiest first: {rows[0]['name']}", f)
+    ok &= check(writes(ports) == before and not engine.ledger.list_plans(), "no writes, no plans stored", f)
+    return ok, f
+
+
 # ---------------------------------------------------------------- helpers
 
 def greedy_cover(company: Company, absences: list[Absence]) -> int:

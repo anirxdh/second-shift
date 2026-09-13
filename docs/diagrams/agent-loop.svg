@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 1790" width="1160" height="1790" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Agent loop: from call-out to verified day</title>
+<desc id="d">Second Shift agent loop: 1 Slack call-out, 2 LLM reads who and when, 3 guardrails, 4 read Sheets and Calendar and fingerprint, 5 CP-SAT re-plan, 6 independent rule check, 7 dispatcher approves, 8 re-read and compare fingerprint, 9 ledger writes in order, 10 read back and rule check.</desc>
+<rect x="0" y="0" width="1160" height="1790" fill="#ffffff"/>
+<text x="40.0" y="66.0" font-size="30" font-weight="700" fill="#1e1e1e" text-anchor="start">Agent loop: from call-out to verified day</text>
+<text x="40.0" y="100.0" font-size="17" fill="#343a40" text-anchor="start">Second Shift. Follow the numbers. Box color shows who does the work.</text>
+<rect x="40.0" y="124.0" width="32.0" height="22.0" rx="5" fill="#e5dbff"/>
+<path d="M44.9,124.1 Q56.4,124.0 67.8,123.9 Q72.0,124.0 72.2,128.4 Q73.2,135.3 72.3,141.6 Q72.0,146.0 66.6,145.2 Q56.3,144.6 45.4,145.1 Q40.0,146.0 40.9,141.3 Q39.8,134.5 39.3,128.0 Q40.0,124.0 44.1,123.4" fill="none" stroke="#7048e8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M44.5,123.1 Q55.7,124.4 66.9,123.9 Q72.0,124.0 72.0,129.3 Q72.7,134.9 72.3,140.9 Q72.0,146.0 68.0,147.0 Q56.2,146.9 45.4,145.6 Q40.0,146.0 39.6,140.1 Q39.9,135.4 39.8,129.7 Q40.0,124.0 45.9,124.7" fill="none" stroke="#7048e8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="82.0" y="141.0" font-size="15.5" fill="#1e1e1e" text-anchor="start">Model (LLM)</text>
+<rect x="218.8" y="124.0" width="32.0" height="22.0" rx="5" fill="#d0ebff"/>
+<path d="M222.8,123.4 Q234.7,124.9 246.6,123.9 Q250.8,124.0 250.6,128.1 Q252.3,134.7 251.4,140.5 Q250.8,146.0 245.5,146.9 Q234.4,147.0 223.0,145.5 Q218.8,146.0 217.9,141.6 Q217.7,134.9 218.9,128.9 Q218.8,124.0 224.3,123.3" fill="none" stroke="#1c7ed6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M224.1,123.2 Q234.9,122.7 245.6,123.4 Q250.8,124.0 251.7,129.6 Q251.3,134.7 251.6,140.4 Q250.8,146.0 246.5,146.3 Q235.3,145.9 224.8,145.4 Q218.8,146.0 219.3,140.7 Q218.4,134.6 217.9,128.2 Q218.8,124.0 223.3,124.2" fill="none" stroke="#1c7ed6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="260.8" y="141.0" font-size="15.5" fill="#1e1e1e" text-anchor="start">Code (deterministic)</text>
+<rect x="458.7" y="124.0" width="32.0" height="22.0" rx="5" fill="#fff3bf"/>
+<path d="M463.4,123.9 Q475.0,124.1 486.6,124.0 Q490.7,124.0 491.4,128.4 Q491.4,135.2 491.5,141.6 Q490.7,146.0 485.0,146.5 Q474.4,145.9 463.0,146.9 Q458.7,146.0 458.9,140.8 Q457.1,135.5 457.7,129.9 Q458.7,124.0 464.1,123.5" fill="none" stroke="#f08c00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M464.3,124.2 Q474.8,124.3 485.2,123.4 Q490.7,124.0 489.8,128.5 Q491.6,135.1 491.4,141.2 Q490.7,146.0 486.5,145.4 Q474.5,146.6 463.2,145.9 Q458.7,146.0 458.0,140.7 Q459.4,134.8 457.9,128.7 Q458.7,124.0 464.6,124.3" fill="none" stroke="#f08c00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="500.7" y="141.0" font-size="15.5" fill="#1e1e1e" text-anchor="start">Person</text>
+<rect x="592.7" y="124.0" width="32.0" height="22.0" rx="5" fill="#ffe3e3"/>
+<path d="M598.1,124.2 Q608.4,122.4 619.0,123.1 Q624.7,124.0 625.5,129.4 Q624.7,135.1 623.7,141.3 Q624.7,146.0 620.1,145.6 Q608.3,145.9 596.8,146.1 Q592.7,146.0 593.5,141.5 Q592.8,135.4 593.3,129.8 Q592.7,124.0 598.1,124.8" fill="none" stroke="#e03131" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<path d="M598.4,123.8 Q609.3,124.5 620.3,124.7 Q624.7,124.0 624.9,128.8 Q624.5,134.6 624.9,140.2 Q624.7,146.0 620.7,146.8 Q608.6,146.3 597.5,146.5 Q592.7,146.0 592.6,141.7 Q592.8,134.6 593.2,128.1 Q592.7,124.0 597.6,123.5" fill="none" stroke="#e03131" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<text x="634.7" y="141.0" font-size="15.5" fill="#1e1e1e" text-anchor="start">Stop: no changes made</text>
+<rect x="862.1" y="124.0" width="32.0" height="22.0" rx="5" fill="#d3f9d8"/>
+<path d="M867.5,124.0 Q878.5,123.8 889.4,124.8 Q894.1,124.0 893.2,128.6 Q893.0,134.6 893.6,140.3 Q894.1,146.0 889.5,145.9 Q878.0,147.3 866.8,146.3 Q862.1,146.0 862.0,141.6 Q863.2,134.9 862.9,128.8 Q862.1,124.0 866.8,123.3" fill="none" stroke="#2f9e44" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M867.1,124.7 Q878.5,125.7 889.8,124.4 Q894.1,124.0 893.7,128.3 Q894.1,134.7 893.7,140.4 Q894.1,146.0 889.4,146.0 Q878.5,146.4 867.8,147.0 Q862.1,146.0 861.3,140.1 Q862.2,135.2 861.2,129.4 Q862.1,124.0 866.8,124.6" fill="none" stroke="#2f9e44" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="904.1" y="141.0" font-size="15.5" fill="#1e1e1e" text-anchor="start">Verified result</text>
+<rect x="96.0" y="196.0" width="540.0" height="86.0" rx="10" fill="#fff3bf"/>
+<path d="M105.0,195.3 Q365.5,196.0 625.9,195.0 Q636.0,196.0 635.5,205.3 Q635.3,239.0 636.3,271.9 Q636.0,282.0 626.3,282.6 Q366.2,282.2 106.4,281.4 Q96.0,282.0 95.4,271.0 Q95.6,238.7 96.4,205.4 Q96.0,196.0 105.7,196.4" fill="none" stroke="#f08c00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106.0,196.2 Q366.3,196.8 626.5,195.8 Q636.0,196.0 636.8,205.2 Q636.8,238.6 636.4,271.3 Q636.0,282.0 626.3,282.8 Q366.1,281.5 106.1,282.8 Q96.0,282.0 96.9,271.9 Q96.7,239.2 95.4,206.4 Q96.0,196.0 106.3,196.4" fill="none" stroke="#f08c00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="223.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">Call-out in Slack</text>
+<text x="366.0" y="245.0" font-size="14.5" fill="#343a40" text-anchor="middle">A tech posts in #dispatch: "out sick today".</text>
+<text x="366.0" y="265.0" font-size="14.5" fill="#343a40" text-anchor="middle">Or dispatch asks: "what if Wei doesn't show up?"</text>
+<rect x="96.0" y="342.0" width="540.0" height="86.0" rx="10" fill="#e5dbff"/>
+<path d="M105.4,342.8 Q366.2,343.0 627.0,343.0 Q636.0,342.0 636.6,351.6 Q637.9,384.9 636.7,417.7 Q636.0,428.0 625.9,428.1 Q366.0,427.0 106.0,427.1 Q96.0,428.0 95.1,418.6 Q94.6,385.3 95.7,352.6 Q96.0,342.0 105.3,342.0" fill="none" stroke="#7048e8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106.4,342.7 Q366.4,342.8 626.4,342.9 Q636.0,342.0 636.9,351.2 Q635.2,384.8 636.1,417.6 Q636.0,428.0 626.3,428.0 Q366.1,428.5 106.1,427.6 Q96.0,428.0 96.7,418.8 Q96.1,385.5 96.7,352.9 Q96.0,342.0 106.1,341.4" fill="none" stroke="#7048e8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="369.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">LLM reads who and when</text>
+<text x="366.0" y="391.0" font-size="14.5" fill="#343a40" text-anchor="middle">Strict schema: which tech, which hours, how sure,</text>
+<text x="366.0" y="411.0" font-size="14.5" fill="#343a40" text-anchor="middle">and whether it is real or a what-if.</text>
+<rect x="96.0" y="488.0" width="540.0" height="86.0" rx="10" fill="#d0ebff"/>
+<path d="M106.1,488.0 Q366.1,488.8 626.2,487.1 Q636.0,488.0 636.0,497.8 Q635.9,531.0 636.1,564.0 Q636.0,574.0 625.1,574.1 Q366.5,574.9 106.9,574.8 Q96.0,574.0 95.9,563.3 Q96.2,531.4 96.6,498.8 Q96.0,488.0 105.6,487.4" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106.2,488.9 Q365.7,487.5 625.3,488.6 Q636.0,488.0 635.4,497.5 Q635.7,530.9 635.6,563.7 Q636.0,574.0 625.2,574.5 Q366.0,574.2 106.0,573.5 Q96.0,574.0 96.1,563.9 Q94.9,531.0 95.8,498.1 Q96.0,488.0 105.4,488.3" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="515.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">Guardrails</text>
+<text x="366.0" y="537.0" font-size="14.5" fill="#343a40" text-anchor="middle">Checks the model's answer. Never guesses who is out.</text>
+<text x="366.0" y="557.0" font-size="14.5" fill="#343a40" text-anchor="middle">Outcomes: ignore | ask | plan | simulate what-if</text>
+<rect x="96.0" y="634.0" width="540.0" height="86.0" rx="10" fill="#d0ebff"/>
+<path d="M106.3,634.1 Q366.5,635.1 626.7,634.2 Q636.0,634.0 635.5,644.5 Q637.2,676.8 636.8,709.6 Q636.0,720.0 626.8,719.4 Q366.4,720.8 106.8,719.3 Q96.0,720.0 96.5,709.5 Q96.7,676.9 96.7,643.8 Q96.0,634.0 105.3,633.8" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106.4,633.0 Q365.9,634.8 625.4,634.4 Q636.0,634.0 636.9,643.2 Q635.8,677.0 636.5,710.0 Q636.0,720.0 625.4,719.1 Q365.5,719.6 105.1,720.1 Q96.0,720.0 96.1,709.3 Q96.7,677.3 95.4,644.7 Q96.0,634.0 106.9,633.2" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="661.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">Read Sheets + Calendar, fingerprint</text>
+<text x="366.0" y="683.0" font-size="14.5" fill="#343a40" text-anchor="middle">Jobs, skills, windows, drive times. One calendar per</text>
+<text x="366.0" y="703.0" font-size="14.5" fill="#343a40" text-anchor="middle">tech is the schedule of record, plus busy blocks.</text>
+<rect x="96.0" y="780.0" width="540.0" height="86.0" rx="10" fill="#d0ebff"/>
+<path d="M105.1,780.9 Q365.5,780.3 625.9,780.5 Q636.0,780.0 635.9,790.0 Q635.5,822.5 636.2,855.0 Q636.0,866.0 626.7,865.4 Q366.2,866.7 106.5,865.8 Q96.0,866.0 95.3,856.0 Q96.4,823.3 96.8,790.6 Q96.0,780.0 106.7,780.3" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M105.8,780.2 Q365.9,781.4 626.0,781.0 Q636.0,780.0 635.5,790.8 Q636.8,823.3 636.6,856.6 Q636.0,866.0 626.8,866.8 Q366.3,866.7 106.5,866.5 Q96.0,866.0 96.4,855.1 Q95.4,822.5 95.9,789.0 Q96.0,780.0 106.3,780.2" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="807.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">Re-plan with OR-Tools CP-SAT</text>
+<text x="366.0" y="829.0" font-size="14.5" fill="#343a40" text-anchor="middle">Skills, equipment, arrival windows, shifts, drive time.</text>
+<text x="366.0" y="849.0" font-size="14.5" fill="#343a40" text-anchor="middle">Urgent first. Bump only for more urgent. Fewest changes.</text>
+<rect x="96.0" y="926.0" width="540.0" height="86.0" rx="10" fill="#d0ebff"/>
+<path d="M105.5,926.9 Q365.9,926.7 626.3,925.7 Q636.0,926.0 636.1,936.1 Q635.9,969.2 637.0,1002.3 Q636.0,1012.0 626.5,1013.0 Q366.1,1012.4 106.2,1012.5 Q96.0,1012.0 95.8,1001.1 Q94.9,968.6 95.8,935.2 Q96.0,926.0 106.8,926.1" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106.0,926.9 Q366.1,927.3 626.1,927.0 Q636.0,926.0 636.6,935.2 Q635.2,968.6 636.5,1001.1 Q636.0,1012.0 625.3,1011.9 Q366.0,1012.9 106.0,1012.2 Q96.0,1012.0 96.9,1001.8 Q95.6,968.9 96.2,935.7 Q96.0,926.0 106.3,926.1" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="953.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">Independent rule check</text>
+<text x="366.0" y="975.0" font-size="14.5" fill="#343a40" text-anchor="middle">A separate checker re-verifies every rule</text>
+<text x="366.0" y="995.0" font-size="14.5" fill="#343a40" text-anchor="middle">on the proposed plan before anyone sees it.</text>
+<rect x="96.0" y="1072.0" width="540.0" height="86.0" rx="10" fill="#fff3bf"/>
+<path d="M105.6,1072.4 Q365.6,1071.1 625.6,1071.0 Q636.0,1072.0 635.1,1081.3 Q635.5,1115.4 635.8,1148.8 Q636.0,1158.0 625.1,1159.0 Q365.6,1159.0 105.1,1158.8 Q96.0,1158.0 96.0,1148.9 Q96.3,1115.4 96.0,1082.9 Q96.0,1072.0 105.9,1073.0" fill="none" stroke="#f08c00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106.6,1072.2 Q365.9,1072.1 625.2,1072.2 Q636.0,1072.0 635.4,1081.1 Q635.2,1114.9 635.2,1147.9 Q636.0,1158.0 625.9,1157.5 Q365.9,1158.3 105.8,1158.6 Q96.0,1158.0 97.0,1148.9 Q97.0,1114.6 95.5,1081.2 Q96.0,1072.0 106.6,1072.2" fill="none" stroke="#f08c00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="1099.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">Dispatcher approves</text>
+<text x="366.0" y="1121.0" font-size="14.5" fill="#343a40" text-anchor="middle">Reviews the plan in the web dashboard.</text>
+<text x="366.0" y="1141.0" font-size="14.5" fill="#343a40" text-anchor="middle">Nothing changes before this click.</text>
+<rect x="96.0" y="1218.0" width="540.0" height="86.0" rx="10" fill="#d0ebff"/>
+<path d="M105.7,1217.5 Q366.0,1218.1 626.4,1218.1 Q636.0,1218.0 636.3,1228.5 Q634.4,1261.5 635.5,1295.0 Q636.0,1304.0 626.8,1303.1 Q365.8,1303.2 105.5,1303.9 Q96.0,1304.0 95.2,1294.1 Q95.3,1261.2 95.2,1228.4 Q96.0,1218.0 106.3,1217.7" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106.0,1217.4 Q365.8,1218.8 625.7,1218.5 Q636.0,1218.0 635.1,1227.2 Q637.2,1261.3 636.2,1294.5 Q636.0,1304.0 625.8,1303.5 Q365.9,1303.2 105.7,1304.3 Q96.0,1304.0 95.7,1294.1 Q96.3,1260.9 96.8,1227.9 Q96.0,1218.0 105.2,1218.8" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="1245.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">Re-read + compare fingerprint</text>
+<text x="366.0" y="1267.0" font-size="14.5" fill="#343a40" text-anchor="middle">Same Sheets and Calendar as when the plan was made?</text>
+<text x="366.0" y="1287.0" font-size="14.5" fill="#343a40" text-anchor="middle">Match: go on and write. Changed: stop.</text>
+<rect x="96.0" y="1624.0" width="540.0" height="86.0" rx="10" fill="#d0ebff"/>
+<path d="M105.2,1623.2 Q365.6,1624.0 626.1,1624.0 Q636.0,1624.0 635.6,1634.6 Q636.4,1667.2 635.4,1700.3 Q636.0,1710.0 625.6,1710.4 Q365.8,1710.2 105.6,1709.3 Q96.0,1710.0 96.5,1699.7 Q96.9,1667.1 96.4,1634.1 Q96.0,1624.0 106.9,1624.8" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M105.9,1624.6 Q365.7,1623.9 625.6,1623.6 Q636.0,1624.0 636.9,1634.8 Q636.0,1666.9 635.7,1699.7 Q636.0,1710.0 625.8,1709.8 Q366.1,1709.9 106.1,1710.6 Q96.0,1710.0 96.7,1700.1 Q95.4,1667.4 96.5,1634.8 Q96.0,1624.0 105.0,1624.0" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.0" y="1651.0" font-size="17" font-weight="700" fill="#1e1e1e" text-anchor="middle">Read back + rule check</text>
+<text x="366.0" y="1673.0" font-size="14.5" fill="#343a40" text-anchor="middle">Re-read Calendar, Sheets, Slack and Gmail.</text>
+<text x="366.0" y="1693.0" font-size="14.5" fill="#343a40" text-anchor="middle">Run the rule checker on the real calendars.</text>
+<rect x="96.0" y="1364.0" width="1024.0" height="200.0" rx="10" fill="#d0ebff"/>
+<path d="M106.1,1364.1 Q608.5,1365.0 1110.9,1364.3 Q1120.0,1364.0 1119.1,1374.1 Q1119.3,1463.6 1119.2,1553.2 Q1120.0,1564.0 1110.8,1563.2 Q607.6,1564.0 105.3,1564.5 Q96.0,1564.0 95.5,1553.4 Q96.0,1464.3 96.0,1374.5 Q96.0,1364.0 105.7,1364.9" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106.3,1364.0 Q608.2,1364.8 1110.1,1364.4 Q1120.0,1364.0 1120.8,1373.8 Q1119.7,1464.4 1120.3,1554.7 Q1120.0,1564.0 1110.7,1564.8 Q608.1,1563.9 106.3,1564.0 Q96.0,1564.0 96.6,1553.8 Q96.8,1464.2 95.3,1374.5 Q96.0,1364.0 105.8,1363.3" fill="none" stroke="#1c7ed6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="608.0" y="1396.0" font-size="18" font-weight="700" fill="#1e1e1e" text-anchor="middle">Write through the ledger, in this order</text>
+<rect x="123.0" y="1418.0" width="140.0" height="52.0" rx="8" fill="#ffffff"/>
+<path d="M130.4,1417.8 Q192.5,1417.2 254.6,1418.9 Q263.0,1418.0 262.6,1425.2 Q264.6,1443.7 263.6,1461.4 Q263.0,1470.0 254.9,1470.2 Q192.5,1470.8 130.1,1469.2 Q123.0,1470.0 122.4,1461.5 Q122.5,1443.7 123.2,1425.4 Q123.0,1418.0 130.6,1417.3" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M131.5,1417.6 Q193.3,1418.1 255.1,1418.6 Q263.0,1418.0 262.5,1426.8 Q262.1,1444.0 262.7,1462.1 Q263.0,1470.0 255.0,1469.4 Q193.5,1470.2 131.9,1470.6 Q123.0,1470.0 123.1,1462.0 Q122.6,1444.1 124.0,1426.3 Q123.0,1418.0 130.0,1417.9" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="193.0" y="1440.0" font-size="15" font-weight="700" fill="#1e1e1e" text-anchor="middle">Calendar</text>
+<text x="193.0" y="1459.0" font-size="14" fill="#343a40" text-anchor="middle">create new</text>
+<rect x="289.0" y="1418.0" width="140.0" height="52.0" rx="8" fill="#ffffff"/>
+<path d="M296.7,1418.6 Q359.1,1417.5 421.4,1418.2 Q429.0,1418.0 428.3,1425.6 Q428.8,1444.0 429.7,1462.0 Q429.0,1470.0 422.0,1469.5 Q358.7,1471.6 296.3,1470.5 Q289.0,1470.0 289.6,1462.7 Q289.5,1443.7 288.2,1425.5 Q289.0,1418.0 296.2,1418.0" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M296.9,1418.9 Q359.1,1418.3 421.2,1418.7 Q429.0,1418.0 429.6,1425.8 Q429.8,1444.4 428.2,1462.7 Q429.0,1470.0 421.1,1470.1 Q359.3,1470.0 297.7,1469.6 Q289.0,1470.0 288.2,1461.6 Q289.7,1443.9 289.4,1425.7 Q289.0,1418.0 296.2,1417.8" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="359.0" y="1440.0" font-size="15" font-weight="700" fill="#1e1e1e" text-anchor="middle">Calendar</text>
+<text x="359.0" y="1459.0" font-size="14" fill="#343a40" text-anchor="middle">delete old</text>
+<rect x="455.0" y="1418.0" width="140.0" height="52.0" rx="8" fill="#ffffff"/>
+<path d="M462.9,1418.9 Q525.3,1417.4 587.7,1418.3 Q595.0,1418.0 594.8,1426.4 Q596.1,1443.9 595.1,1461.9 Q595.0,1470.0 588.0,1470.6 Q525.1,1469.8 463.2,1469.6 Q455.0,1470.0 455.1,1461.6 Q454.1,1444.2 454.8,1426.3 Q455.0,1418.0 462.4,1418.5" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M462.7,1418.9 Q524.9,1418.2 587.1,1418.4 Q595.0,1418.0 595.7,1425.2 Q593.7,1444.2 594.2,1462.4 Q595.0,1470.0 586.4,1469.8 Q525.1,1470.6 463.2,1469.2 Q455.0,1470.0 454.3,1461.2 Q454.3,1444.4 454.1,1426.8 Q455.0,1418.0 463.0,1418.3" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="525.0" y="1440.0" font-size="15" font-weight="700" fill="#1e1e1e" text-anchor="middle">Sheets</text>
+<text x="525.0" y="1459.0" font-size="14" fill="#343a40" text-anchor="middle">update rows</text>
+<rect x="621.0" y="1418.0" width="140.0" height="52.0" rx="8" fill="#ffffff"/>
+<path d="M629.5,1418.6 Q691.2,1417.9 752.8,1417.7 Q761.0,1418.0 760.0,1425.8 Q761.3,1444.3 762.0,1462.6 Q761.0,1470.0 753.2,1469.0 Q690.8,1471.0 628.7,1470.3 Q621.0,1470.0 620.8,1462.0 Q620.7,1444.1 621.7,1426.2 Q621.0,1418.0 629.5,1418.8" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M629.1,1417.7 Q691.1,1418.0 753.0,1417.3 Q761.0,1418.0 762.0,1426.0 Q760.4,1443.7 761.7,1461.4 Q761.0,1470.0 753.3,1469.4 Q690.7,1469.1 628.5,1470.2 Q621.0,1470.0 620.7,1462.9 Q622.1,1443.6 620.9,1425.2 Q621.0,1418.0 628.3,1418.8" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="691.0" y="1440.0" font-size="15" font-weight="700" fill="#1e1e1e" text-anchor="middle">Slack</text>
+<text x="691.0" y="1459.0" font-size="14" fill="#343a40" text-anchor="middle">crew messages</text>
+<rect x="787.0" y="1418.0" width="140.0" height="52.0" rx="8" fill="#ffffff"/>
+<path d="M795.1,1418.1 Q857.1,1418.9 919.1,1417.5 Q927.0,1418.0 928.0,1426.6 Q927.3,1444.3 926.2,1462.6 Q927.0,1470.0 919.8,1469.5 Q857.3,1469.6 795.7,1469.4 Q787.0,1470.0 786.2,1461.1 Q787.6,1444.5 788.0,1426.9 Q787.0,1418.0 794.6,1418.3" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M795.5,1417.8 Q857.3,1416.9 919.2,1418.6 Q927.0,1418.0 926.4,1425.9 Q927.4,1444.1 926.8,1462.1 Q927.0,1470.0 919.0,1469.5 Q856.8,1471.4 794.7,1470.3 Q787.0,1470.0 787.3,1461.3 Q787.3,1444.0 787.2,1425.9 Q787.0,1418.0 795.2,1418.4" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="857.0" y="1440.0" font-size="15" font-weight="700" fill="#1e1e1e" text-anchor="middle">Gmail</text>
+<text x="857.0" y="1459.0" font-size="14" fill="#343a40" text-anchor="middle">customers</text>
+<rect x="953.0" y="1418.0" width="140.0" height="52.0" rx="8" fill="#ffffff"/>
+<path d="M961.5,1418.5 Q1023.2,1419.6 1085.0,1419.0 Q1093.0,1418.0 1093.7,1425.8 Q1092.9,1444.4 1093.1,1462.8 Q1093.0,1470.0 1085.1,1469.9 Q1022.8,1469.4 960.6,1469.1 Q953.0,1470.0 953.8,1462.5 Q953.6,1443.8 953.5,1425.6 Q953.0,1418.0 960.1,1417.2" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M960.9,1418.0 Q1022.8,1418.1 1084.8,1417.1 Q1093.0,1418.0 1093.1,1425.5 Q1093.8,1443.7 1092.8,1461.5 Q1093.0,1470.0 1085.8,1470.9 Q1023.4,1469.3 961.7,1469.8 Q953.0,1470.0 952.4,1462.5 Q954.2,1443.6 953.8,1425.2 Q953.0,1418.0 960.2,1418.1" fill="none" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1023.0" y="1440.0" font-size="15" font-weight="700" fill="#1e1e1e" text-anchor="middle">Slack</text>
+<text x="1023.0" y="1459.0" font-size="14" fill="#343a40" text-anchor="middle">summary</text>
+<path d="M265.4,1443.7 Q276.0,1445.3 286.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M265.8,1443.5 Q276.0,1443.4 286.0,1444.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M274.3,1438.3 L286.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M274.3,1449.7 L286.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M432.4,1443.9 Q442.0,1445.1 452.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M432.1,1443.5 Q442.0,1443.6 452.0,1444.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M440.3,1438.3 L452.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M440.3,1449.7 L452.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M598.5,1443.8 Q608.0,1442.7 618.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M598.5,1444.6 Q608.0,1444.0 618.0,1444.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M606.3,1438.3 L618.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M606.3,1449.7 L618.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M763.6,1443.8 Q774.0,1443.9 784.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M764.5,1443.6 Q774.0,1445.2 784.0,1444.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M772.3,1438.3 L784.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M772.3,1449.7 L784.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M929.8,1444.0 Q940.0,1444.9 950.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M930.5,1444.6 Q940.0,1443.1 950.0,1444.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M938.3,1438.3 L950.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M938.3,1449.7 L950.0,1444.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<text x="120.0" y="1504.0" font-size="14.5" fill="#343a40" text-anchor="start">Every write is logged: pending, then done or failed. Calendar event ids are fixed per plan.</text>
+<text x="120.0" y="1525.0" font-size="14.5" fill="#343a40" text-anchor="start">Slack and Gmail sends are keyed and looked up before any retry. Retries back off.</text>
+<text x="120.0" y="1546.0" font-size="14.5" fill="#343a40" text-anchor="start">After a crash it resumes where it stopped. A second approve changes nothing.</text>
+<rect x="780.0" y="488.0" width="340.0" height="86.0" rx="10" fill="#ffe3e3"/>
+<path d="M789.4,488.3 Q949.4,487.3 1109.4,488.8 Q1120.0,488.0 1119.2,498.5 Q1119.7,531.4 1120.8,564.7 Q1120.0,574.0 1109.3,574.4 Q949.9,574.7 789.9,573.2 Q780.0,574.0 779.6,564.4 Q779.8,530.7 779.4,497.5 Q780.0,488.0 790.6,487.7" fill="none" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<path d="M790.3,488.8 Q950.2,487.6 1110.2,487.5 Q1120.0,488.0 1120.9,498.3 Q1118.7,530.6 1120.3,563.2 Q1120.0,574.0 1109.9,574.1 Q949.5,574.7 789.1,574.2 Q780.0,574.0 779.5,564.6 Q778.7,531.3 779.6,498.5 Q780.0,488.0 789.6,488.1" fill="none" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<text x="950.0" y="515.0" font-size="16.5" font-weight="700" fill="#1e1e1e" text-anchor="middle">Ignore or ask</text>
+<text x="950.0" y="537.0" font-size="14" fill="#343a40" text-anchor="middle">Not a call-out: ignore it.</text>
+<text x="950.0" y="557.0" font-size="14" fill="#343a40" text-anchor="middle">Unsure who or when: ask in Slack.</text>
+<path d="M642.5,531.6 Q708.0,530.1 774.0,531.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<path d="M642.0,531.3 Q708.0,529.7 774.0,531.0" fill="none" stroke="#e03131" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<path d="M762.3,525.3 L774.0,531.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<path d="M762.3,536.7 L774.0,531.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="663.6" y="520.0" width="88.7" height="20" fill="#ffffff"/>
+<text x="708.0" y="536.0" font-size="14" fill="#e03131" text-anchor="middle">ignore / ask</text>
+<rect x="780.0" y="926.0" width="340.0" height="86.0" rx="10" fill="#ffe3e3"/>
+<path d="M789.8,926.9 Q949.9,926.3 1110.0,925.4 Q1120.0,926.0 1120.3,935.7 Q1120.4,969.0 1120.6,1002.0 Q1120.0,1012.0 1110.7,1012.4 Q950.5,1011.0 790.9,1011.3 Q780.0,1012.0 779.3,1002.2 Q780.4,969.3 779.9,936.5 Q780.0,926.0 790.6,925.5" fill="none" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<path d="M790.0,925.4 Q950.1,924.5 1110.2,926.0 Q1120.0,926.0 1120.2,936.4 Q1121.4,968.7 1120.7,1001.4 Q1120.0,1012.0 1109.0,1012.0 Q949.9,1010.9 789.9,1011.5 Q780.0,1012.0 779.1,1002.8 Q779.4,969.3 780.1,936.6 Q780.0,926.0 789.3,925.6" fill="none" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<text x="950.0" y="953.0" font-size="16.5" font-weight="700" fill="#1e1e1e" text-anchor="middle">Plan rejected</text>
+<text x="950.0" y="975.0" font-size="14" fill="#343a40" text-anchor="middle">A rule broke, or no valid plan.</text>
+<text x="950.0" y="995.0" font-size="14" fill="#343a40" text-anchor="middle">Nothing to approve. No changes.</text>
+<path d="M641.8,969.1 Q708.0,967.7 774.0,969.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<path d="M641.7,969.1 Q708.0,969.1 774.0,969.0" fill="none" stroke="#e03131" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<path d="M762.3,963.3 L774.0,969.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<path d="M762.3,974.7 L774.0,969.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="664.9" y="958.0" width="86.2" height="20" fill="#ffffff"/>
+<text x="708.0" y="974.0" font-size="14" fill="#e03131" text-anchor="middle">rule broken</text>
+<rect x="780.0" y="1072.0" width="340.0" height="86.0" rx="10" fill="#ffe3e3"/>
+<path d="M789.2,1072.6 Q949.3,1071.2 1109.3,1071.5 Q1120.0,1072.0 1120.4,1082.7 Q1120.2,1114.9 1119.1,1147.8 Q1120.0,1158.0 1109.4,1158.9 Q950.0,1156.5 790.0,1158.5 Q780.0,1158.0 779.3,1147.9 Q780.8,1114.7 779.1,1081.5 Q780.0,1072.0 789.3,1071.8" fill="none" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<path d="M789.6,1071.8 Q949.4,1072.7 1109.2,1071.1 Q1120.0,1072.0 1120.5,1082.5 Q1120.2,1115.1 1119.5,1148.1 Q1120.0,1158.0 1109.9,1158.9 Q949.8,1158.1 789.7,1159.0 Q780.0,1158.0 779.1,1147.8 Q780.2,1114.8 779.1,1081.7 Q780.0,1072.0 790.7,1072.2" fill="none" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<text x="950.0" y="1099.0" font-size="16.5" font-weight="700" fill="#1e1e1e" text-anchor="middle">What-if stops here</text>
+<text x="950.0" y="1121.0" font-size="14" fill="#343a40" text-anchor="middle">Nothing written. Slack gets the impact.</text>
+<text x="950.0" y="1141.0" font-size="14" fill="#343a40" text-anchor="middle">Dashboard shows it with "Make it real".</text>
+<path d="M642.0,1114.9 Q708.0,1116.1 774.0,1115.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<path d="M641.9,1115.3 Q708.0,1116.0 774.0,1115.0" fill="none" stroke="#e03131" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<path d="M762.3,1109.3 L774.0,1115.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<path d="M762.3,1120.7 L774.0,1115.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="680.1" y="1104.0" width="55.7" height="20" fill="#ffffff"/>
+<text x="708.0" y="1120.0" font-size="14" fill="#e03131" text-anchor="middle">what-if</text>
+<rect x="780.0" y="1218.0" width="340.0" height="86.0" rx="10" fill="#ffe3e3"/>
+<path d="M789.4,1217.7 Q949.4,1217.0 1109.4,1218.1 Q1120.0,1218.0 1119.4,1227.4 Q1118.5,1260.9 1119.6,1293.9 Q1120.0,1304.0 1110.4,1304.7 Q949.9,1302.8 789.8,1303.1 Q780.0,1304.0 779.7,1293.5 Q778.9,1260.8 779.4,1227.5 Q780.0,1218.0 790.8,1218.4" fill="none" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<path d="M789.5,1217.7 Q949.4,1217.9 1109.3,1218.9 Q1120.0,1218.0 1120.5,1228.4 Q1120.2,1260.8 1119.0,1293.6 Q1120.0,1304.0 1109.2,1304.8 Q950.3,1305.0 790.5,1304.0 Q780.0,1304.0 779.8,1293.5 Q778.0,1261.1 779.3,1228.2 Q780.0,1218.0 789.6,1217.8" fill="none" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<text x="950.0" y="1245.0" font-size="16.5" font-weight="700" fill="#1e1e1e" text-anchor="middle">Data changed: stop</text>
+<text x="950.0" y="1267.0" font-size="14" fill="#343a40" text-anchor="middle">Nothing written. Plan again</text>
+<text x="950.0" y="1287.0" font-size="14" fill="#343a40" text-anchor="middle">on the fresh data.</text>
+<path d="M641.6,1261.2 Q708.0,1261.1 774.0,1261.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<path d="M642.3,1261.2 Q708.0,1260.3 774.0,1261.0" fill="none" stroke="#e03131" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<path d="M762.3,1255.3 L774.0,1261.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<path d="M762.3,1266.7 L774.0,1261.0" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+<rect x="673.5" y="1250.0" width="68.9" height="20" fill="#ffffff"/>
+<text x="708.0" y="1266.0" font-size="14" fill="#e03131" text-anchor="middle">changed</text>
+<rect x="780.0" y="1624.0" width="340.0" height="86.0" rx="10" fill="#d3f9d8"/>
+<path d="M789.3,1623.4 Q949.4,1623.7 1109.6,1624.4 Q1120.0,1624.0 1119.8,1634.7 Q1120.3,1666.8 1119.6,1699.7 Q1120.0,1710.0 1109.1,1709.0 Q950.1,1709.2 790.1,1710.6 Q780.0,1710.0 779.6,1700.3 Q780.6,1667.2 779.4,1634.4 Q780.0,1624.0 790.9,1624.7" fill="none" stroke="#2f9e44" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M789.5,1624.3 Q949.3,1623.8 1109.2,1623.9 Q1120.0,1624.0 1119.1,1633.8 Q1120.7,1666.8 1120.0,1699.6 Q1120.0,1710.0 1109.8,1710.0 Q950.2,1710.5 790.3,1709.5 Q780.0,1710.0 779.7,1699.8 Q779.9,1667.2 780.2,1634.4 Q780.0,1624.0 790.4,1623.0" fill="none" stroke="#2f9e44" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="950.0" y="1651.0" font-size="16.5" font-weight="700" fill="#1e1e1e" text-anchor="middle">Verified day</text>
+<text x="950.0" y="1673.0" font-size="14" fill="#343a40" text-anchor="middle">N/N read-back checks pass.</text>
+<text x="950.0" y="1693.0" font-size="14" fill="#343a40" text-anchor="middle">Demo-day eval: 36/36.</text>
+<path d="M641.8,1666.5 Q708.0,1666.7 774.0,1667.0" fill="none" stroke="#2f9e44" stroke-width="2" stroke-linecap="round"/>
+<path d="M641.5,1667.0 Q708.0,1666.7 774.0,1667.0" fill="none" stroke="#2f9e44" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M762.3,1661.3 L774.0,1667.0" fill="none" stroke="#2f9e44" stroke-width="2" stroke-linecap="round"/>
+<path d="M762.3,1672.7 L774.0,1667.0" fill="none" stroke="#2f9e44" stroke-width="2" stroke-linecap="round"/>
+<path d="M366.0,287.8 Q365.8,312.0 366.0,336.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.4,287.8 Q366.7,312.0 366.0,336.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,324.3 L366.0,336.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,324.3 L366.0,336.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M366.1,433.7 Q364.9,458.0 366.0,482.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.6,434.0 Q365.5,458.0 366.0,482.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,470.3 L366.0,482.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,470.3 L366.0,482.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M366.5,579.8 Q365.7,604.0 366.0,628.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M366.5,580.3 Q365.8,604.0 366.0,628.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,616.3 L366.0,628.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,616.3 L366.0,628.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<rect x="313.4" y="593.0" width="105.2" height="20" fill="#ffffff"/>
+<text x="366.0" y="609.0" font-size="14" fill="#343a40" text-anchor="middle">plan or what-if</text>
+<path d="M366.1,725.9 Q365.6,750.0 366.0,774.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.7,726.4 Q366.2,750.0 366.0,774.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,762.3 L366.0,774.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,762.3 L366.0,774.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.9,872.5 Q364.9,896.0 366.0,920.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.6,872.0 Q367.3,896.0 366.0,920.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,908.3 L366.0,920.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,908.3 L366.0,920.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.8,1018.6 Q366.5,1042.0 366.0,1066.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.6,1017.7 Q367.0,1042.0 366.0,1066.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,1054.3 L366.0,1066.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,1054.3 L366.0,1066.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.7,1163.4 Q365.5,1188.0 366.0,1212.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.9,1163.7 Q365.9,1188.0 366.0,1212.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,1200.3 L366.0,1212.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,1200.3 L366.0,1212.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M366.2,1310.1 Q366.0,1334.0 366.0,1358.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M366.1,1310.4 Q365.7,1334.0 366.0,1358.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,1346.3 L366.0,1358.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,1346.3 L366.0,1358.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.8,1569.8 Q364.7,1594.0 366.0,1618.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M365.8,1570.3 Q364.9,1594.0 366.0,1618.0" fill="none" stroke="#495057" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M371.7,1606.3 L366.0,1618.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<path d="M360.3,1606.3 L366.0,1618.0" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round"/>
+<circle cx="58" cy="239.0" r="18" fill="#1e1e1e"/>
+<circle cx="58.3" cy="239.3" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="245.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<circle cx="58" cy="385.0" r="18" fill="#1e1e1e"/>
+<circle cx="58.7" cy="385.5" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="391.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<circle cx="58" cy="531.0" r="18" fill="#1e1e1e"/>
+<circle cx="57.5" cy="531.2" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="537.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<circle cx="58" cy="677.0" r="18" fill="#1e1e1e"/>
+<circle cx="58.0" cy="677.1" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="683.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<circle cx="58" cy="823.0" r="18" fill="#1e1e1e"/>
+<circle cx="57.8" cy="822.7" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="829.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<circle cx="58" cy="969.0" r="18" fill="#1e1e1e"/>
+<circle cx="58.4" cy="969.1" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="975.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<circle cx="58" cy="1115.0" r="18" fill="#1e1e1e"/>
+<circle cx="57.6" cy="1114.6" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="1121.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+<circle cx="58" cy="1261.0" r="18" fill="#1e1e1e"/>
+<circle cx="57.7" cy="1260.5" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="1267.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+<circle cx="58" cy="1407.0" r="18" fill="#1e1e1e"/>
+<circle cx="58.0" cy="1406.4" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="1413.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">9</text>
+<circle cx="58" cy="1667.0" r="18" fill="#1e1e1e"/>
+<circle cx="57.3" cy="1666.3" r="18.5" fill="none" stroke="#1e1e1e" stroke-width="1.4"/>
+<text x="58" y="1673.0" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">10</text>
+<text x="40.0" y="1756.0" font-size="15" fill="#343a40" text-anchor="start">The model is called once, at step 2. Every later step is plain code or a person.</text>
+<text font-style="italic" x="784.0" y="234.5" font-size="14" fill="#495057" text-anchor="start">App: Slack, channel #dispatch.</text>
+<text font-style="italic" x="784.0" y="253.5" font-size="14" fill="#495057" text-anchor="start">Each message is handled once.</text>
+<text font-style="italic" x="784.0" y="371.0" font-size="14" fill="#495057" text-anchor="start">OpenAI gpt-4.1-mini by default.</text>
+<text font-style="italic" x="784.0" y="390.0" font-size="14" fill="#495057" text-anchor="start">Claude or Groq via LLM_PROVIDER.</text>
+<text font-style="italic" x="784.0" y="409.0" font-size="14" fill="#495057" text-anchor="start">Message eval: 15/15 (14/15 before one fix).</text>
+<text font-style="italic" x="784.0" y="672.5" font-size="14" fill="#495057" text-anchor="start">Apps: Google Sheets + Google Calendar.</text>
+<text font-style="italic" x="784.0" y="691.5" font-size="14" fill="#495057" text-anchor="start">If they disagree, Calendar wins.</text>
+<text font-style="italic" x="784.0" y="818.5" font-size="14" fill="#495057" text-anchor="start">Demo day: 3 of Marco's 4 jobs covered</text>
+<text font-style="italic" x="784.0" y="837.5" font-size="14" fill="#495057" text-anchor="start">by a chain move. Greedy baseline: 1 of 4.</text>
+</svg>

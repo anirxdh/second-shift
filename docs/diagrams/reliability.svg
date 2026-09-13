@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 2070" width="1360" height="2070" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Second Shift reliability design</title>
+<defs>
+<marker id="ah-1971c2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker>
+<marker id="ah-2f9e44" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker>
+<marker id="ah-343a40" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#343a40"/></marker>
+<marker id="ah-495057" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker>
+<marker id="ah-6741d9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6741d9"/></marker>
+<marker id="ah-c92a2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c92a2a"/></marker>
+<marker id="ah-e67700" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e67700"/></marker>
+</defs>
+<rect x="0" y="0" width="1360" height="2070" fill="#ffffff"/>
+<line x1="40" y1="720" x2="1320" y2="720" stroke="#dee2e6" stroke-width="1.5"/>
+<line x1="40" y1="1262" x2="1320" y2="1262" stroke="#dee2e6" stroke-width="1.5"/>
+<rect x="60" y="380" width="180" height="66" rx="12" fill="#e9ecef" stroke="#495057" stroke-width="2"/>
+<text x="150.0" y="405" font-size="19" font-weight="bold" fill="#495057" text-anchor="middle" dominant-baseline="central">planned</text>
+<text x="150.0" y="428" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">(no row yet)</text>
+<rect x="370" y="380" width="190" height="66" rx="12" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text x="465.0" y="405" font-size="19" font-weight="bold" fill="#1971c2" text-anchor="middle" dominant-baseline="central">pending</text>
+<text x="465.0" y="428" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">write in flight</text>
+<rect x="1060" y="380" width="250" height="66" rx="12" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text x="1185.0" y="405" font-size="19" font-weight="bold" fill="#2f9e44" text-anchor="middle" dominant-baseline="central">done</text>
+<text x="1185.0" y="428" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">result saved</text>
+<rect x="370" y="560" width="190" height="66" rx="12" fill="#fff3bf" stroke="#e67700" stroke-width="2"/>
+<text x="465.0" y="585" font-size="19" font-weight="bold" fill="#e67700" text-anchor="middle" dominant-baseline="central">retrying</text>
+<text x="465.0" y="608" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">wait 0.5s, 1s, 2s</text>
+<rect x="1060" y="560" width="250" height="66" rx="12" fill="#ffe3e3" stroke="#c92a2a" stroke-width="2"/>
+<text x="1185.0" y="585" font-size="19" font-weight="bold" fill="#c92a2a" text-anchor="middle" dominant-baseline="central">failed</text>
+<text x="1185.0" y="608" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">run stops, plan = failed</text>
+<rect x="610" y="205" width="400" height="116" rx="12" fill="#f1f8ff" stroke="#1971c2" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="810.0" y="230.6" font-size="16" font-weight="bold" fill="#1c3d5a" text-anchor="middle" dominant-baseline="central">Resume after a crash (approve again)</text>
+<text x="810.0" y="252.2" font-size="16" font-weight="normal" fill="#1c3d5a" text-anchor="middle" dominant-baseline="central">Calendar: same event id per plan,</text>
+<text x="810.0" y="273.8" font-size="16" font-weight="normal" fill="#1c3d5a" text-anchor="middle" dominant-baseline="central">so Google returns the existing event</text>
+<text x="810.0" y="295.4" font-size="16" font-weight="normal" fill="#1c3d5a" text-anchor="middle" dominant-baseline="central">Slack, Gmail: find_by_key before posting</text>
+<rect x="60" y="970" width="220" height="66" rx="12" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+<text x="170.0" y="995" font-size="19" font-weight="bold" fill="#343a40" text-anchor="middle" dominant-baseline="central">solver + rule check</text>
+<text x="170.0" y="1018" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">(new call-out)</text>
+<rect x="60" y="1100" width="220" height="66" rx="12" fill="#ffffff" stroke="#343a40" stroke-width="2"/>
+<text x="170.0" y="1125" font-size="19" font-weight="bold" fill="#343a40" text-anchor="middle" dominant-baseline="central">what-if message</text>
+<text x="170.0" y="1148" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">or POST /api/whatif</text>
+<rect x="410" y="840" width="200" height="66" rx="12" fill="#ffe3e3" stroke="#c92a2a" stroke-width="2"/>
+<text x="510.0" y="865" font-size="19" font-weight="bold" fill="#c92a2a" text-anchor="middle" dominant-baseline="central">rejected</text>
+<text x="510.0" y="888" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">rule check failed</text>
+<rect x="410" y="970" width="200" height="66" rx="12" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text x="510.0" y="995" font-size="19" font-weight="bold" fill="#1971c2" text-anchor="middle" dominant-baseline="central">proposed</text>
+<text x="510.0" y="1018" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">waits for approval</text>
+<rect x="410" y="1100" width="200" height="66" rx="12" fill="#e5dbff" stroke="#6741d9" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="510.0" y="1125" font-size="19" font-weight="bold" fill="#6741d9" text-anchor="middle" dominant-baseline="central">simulated</text>
+<text x="510.0" y="1148" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">nothing written</text>
+<rect x="760" y="840" width="210" height="66" rx="12" fill="#f1f8ff" stroke="#1971c2" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="865.0" y="862.2" font-size="16" font-weight="bold" fill="#1c3d5a" text-anchor="middle" dominant-baseline="central">crash while executing?</text>
+<text x="865.0" y="883.8" font-size="16" font-weight="normal" fill="#1c3d5a" text-anchor="middle" dominant-baseline="central">approve again: resume</text>
+<rect x="760" y="970" width="210" height="66" rx="12" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text x="865.0" y="995" font-size="19" font-weight="bold" fill="#1971c2" text-anchor="middle" dominant-baseline="central">executing</text>
+<text x="865.0" y="1018" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">writes via ledger</text>
+<rect x="760" y="1100" width="210" height="66" rx="12" fill="#e9ecef" stroke="#495057" stroke-width="2"/>
+<text x="865.0" y="1125" font-size="19" font-weight="bold" fill="#495057" text-anchor="middle" dominant-baseline="central">stale</text>
+<text x="865.0" y="1148" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">nothing written</text>
+<rect x="1080" y="840" width="230" height="66" rx="12" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text x="1195.0" y="865" font-size="19" font-weight="bold" fill="#2f9e44" text-anchor="middle" dominant-baseline="central">done</text>
+<text x="1195.0" y="888" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">every check passed</text>
+<rect x="1080" y="970" width="230" height="66" rx="12" fill="#fff3bf" stroke="#e67700" stroke-width="2"/>
+<text x="1195.0" y="995" font-size="19" font-weight="bold" fill="#e67700" text-anchor="middle" dominant-baseline="central">done_with_issues</text>
+<text x="1195.0" y="1018" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">read-back found a gap</text>
+<rect x="1080" y="1100" width="230" height="66" rx="12" fill="#ffe3e3" stroke="#c92a2a" stroke-width="2"/>
+<text x="1195.0" y="1125" font-size="19" font-weight="bold" fill="#c92a2a" text-anchor="middle" dominant-baseline="central">failed</text>
+<text x="1195.0" y="1148" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">a write failed</text>
+<line x1="246.0" y1="413.0" x2="364.0" y2="413.0" stroke="#343a40" stroke-width="2" marker-end="url(#ah-343a40)"/>
+<line x1="566.0" y1="413.0" x2="1054.0" y2="413.0" stroke="#2f9e44" stroke-width="2" marker-end="url(#ah-2f9e44)"/>
+<line x1="420.0" y1="452.0" x2="420.0" y2="554.0" stroke="#e67700" stroke-width="2" marker-end="url(#ah-e67700)"/>
+<line x1="510.0" y1="554.0" x2="510.0" y2="452.0" stroke="#e67700" stroke-width="2" marker-end="url(#ah-e67700)"/>
+<line x1="566.0" y1="593.0" x2="1054.0" y2="593.0" stroke="#c92a2a" stroke-width="2" marker-end="url(#ah-c92a2a)"/>
+<line x1="565.8" y1="436.6" x2="1054.2" y2="573.4" stroke="#c92a2a" stroke-width="2" marker-end="url(#ah-c92a2a)"/>
+<line x1="470.3" y1="377.1" x2="604.7" y2="302.9" stroke="#1971c2" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#ah-1971c2)"/>
+<line x1="1015.2" y1="303.1" x2="1139.8" y2="376.9" stroke="#1971c2" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#ah-1971c2)"/>
+<line x1="286.0" y1="1003.0" x2="404.0" y2="1003.0" stroke="#343a40" stroke-width="2" marker-end="url(#ah-343a40)"/>
+<line x1="284.9" y1="977.6" x2="405.1" y2="894.4" stroke="#c92a2a" stroke-width="2" marker-end="url(#ah-c92a2a)"/>
+<line x1="286.0" y1="1133.0" x2="404.0" y2="1133.0" stroke="#6741d9" stroke-width="2" marker-end="url(#ah-6741d9)"/>
+<line x1="510.0" y1="1094.0" x2="510.0" y2="1042.0" stroke="#6741d9" stroke-width="2" marker-end="url(#ah-6741d9)"/>
+<line x1="616.0" y1="1003.0" x2="754.0" y2="1003.0" stroke="#343a40" stroke-width="2" marker-end="url(#ah-343a40)"/>
+<line x1="615.1" y1="1028.1" x2="754.9" y2="1111.9" stroke="#495057" stroke-width="2" marker-end="url(#ah-495057)"/>
+<line x1="974.6" y1="977.2" x2="1075.4" y2="894.8" stroke="#2f9e44" stroke-width="2" marker-end="url(#ah-2f9e44)"/>
+<line x1="976.0" y1="1003.0" x2="1074.0" y2="1003.0" stroke="#e67700" stroke-width="2" marker-end="url(#ah-e67700)"/>
+<line x1="974.6" y1="1028.8" x2="1075.4" y2="1111.2" stroke="#c92a2a" stroke-width="2" marker-end="url(#ah-c92a2a)"/>
+<line x1="865.0" y1="912.0" x2="865.0" y2="964.0" stroke="#1971c2" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#ah-1971c2)"/>
+<rect x="268.8" y="400.6" width="72.4" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="305.0" y="413.0" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">approved</text>
+<rect x="746.5" y="400.6" width="127.0" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="810.0" y="413.0" font-size="15" fill="#2f9e44" text-anchor="middle" dominant-baseline="central">write succeeded</text>
+<rect x="379.9" y="490.6" width="80.2" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="420.0" y="503.0" font-size="15" fill="#e67700" text-anchor="middle" dominant-baseline="central">429 / 5xx</text>
+<rect x="485.5" y="490.6" width="49.0" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="510.0" y="503.0" font-size="15" fill="#e67700" text-anchor="middle" dominant-baseline="central">retry</text>
+<rect x="723.1" y="580.6" width="173.8" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="810.0" y="593.0" font-size="15" fill="#c92a2a" text-anchor="middle" dominant-baseline="central">3rd attempt fails too</text>
+<rect x="746.5" y="492.6" width="127.0" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="810.0" y="505.0" font-size="15" fill="#c92a2a" text-anchor="middle" dominant-baseline="central">permanent error</text>
+<rect x="489.6" y="318.2" width="95.8" height="43.5" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="537.5" y="330.6" font-size="15" fill="#1971c2" text-anchor="middle" dominant-baseline="central">crash after</text>
+<text x="537.5" y="349.4" font-size="15" fill="#1971c2" text-anchor="middle" dominant-baseline="central">the write</text>
+<rect x="1017.9" y="318.2" width="119.2" height="43.5" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="1077.5" y="330.6" font-size="15" fill="#1971c2" text-anchor="middle" dominant-baseline="central">already there:</text>
+<text x="1077.5" y="349.4" font-size="15" fill="#1971c2" text-anchor="middle" dominant-baseline="central">mark done</text>
+<rect x="320.5" y="990.6" width="49.0" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="345.0" y="1003.0" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">legal</text>
+<rect x="301.0" y="923.6" width="88.0" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="345.0" y="936.0" font-size="15" fill="#c92a2a" text-anchor="middle" dominant-baseline="central">violations</text>
+<rect x="316.6" y="1111.2" width="56.8" height="43.5" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="345.0" y="1123.6" font-size="15" fill="#6741d9" text-anchor="middle" dominant-baseline="central">plan +</text>
+<text x="345.0" y="1142.4" font-size="15" fill="#6741d9" text-anchor="middle" dominant-baseline="central">checks</text>
+<rect x="458.2" y="1055.6" width="103.6" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="510.0" y="1068.0" font-size="15" fill="#6741d9" text-anchor="middle" dominant-baseline="central">Make it real</text>
+<rect x="644.9" y="981.2" width="80.2" height="43.5" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="685.0" y="993.6" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">approve,</text>
+<text x="685.0" y="1012.4" font-size="15" fill="#343a40" text-anchor="middle" dominant-baseline="central">same data</text>
+<rect x="629.3" y="1048.2" width="111.4" height="43.5" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="685.0" y="1060.6" font-size="15" fill="#495057" text-anchor="middle" dominant-baseline="central">data changed</text>
+<text x="685.0" y="1079.4" font-size="15" fill="#495057" text-anchor="middle" dominant-baseline="central">(fingerprint)</text>
+<rect x="988.8" y="923.6" width="72.4" height="24.8" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="1025.0" y="936.0" font-size="15" fill="#2f9e44" text-anchor="middle" dominant-baseline="central">all pass</text>
+<rect x="992.7" y="981.2" width="64.6" height="43.5" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="1025.0" y="993.6" font-size="15" fill="#e67700" text-anchor="middle" dominant-baseline="central">a check</text>
+<text x="1025.0" y="1012.4" font-size="15" fill="#e67700" text-anchor="middle" dominant-baseline="central">fails</text>
+<rect x="996.6" y="1048.2" width="56.8" height="43.5" rx="4" fill="#ffffff" fill-opacity="0.95"/>
+<text x="1025.0" y="1060.6" font-size="15" fill="#c92a2a" text-anchor="middle" dominant-baseline="central">write</text>
+<text x="1025.0" y="1079.4" font-size="15" fill="#c92a2a" text-anchor="middle" dominant-baseline="central">failed</text>
+<text x="40" y="34" font-size="34" font-weight="bold" fill="#212529" text-anchor="start" dominant-baseline="hanging">Second Shift: reliability design</text>
+<text x="40" y="84" font-size="17" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">Every write is recorded before and after it happens, retried safely, and read back. Every risk below has a mechanism and a test.</text>
+<text x="40" y="136" font-size="23" font-weight="bold" fill="#212529" text-anchor="start" dominant-baseline="hanging">1.  Each external write is a row in the SQLite ledger</text>
+<text x="40" y="168" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">One stable key per write. Status: planned (no row yet), pending, retrying, done, failed.</text>
+<text x="60" y="668" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">A failed write stops the run. Later writes are not attempted, and the plan shows failed, never done.</text>
+<text x="60" y="692" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">Crash-resume never duplicates: the provider is asked first, so each job is booked once and each email or post is sent once.</text>
+<text x="40" y="756" font-size="23" font-weight="bold" fill="#212529" text-anchor="start" dominant-baseline="hanging">2.  Each plan has one status, stored with the plan</text>
+<text x="40" y="788" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">Only a rule-checked plan that is still fresh when the dispatcher approves can write. A simulation never writes.</text>
+<text x="60" y="1206" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">Approve on a done plan returns it unchanged. Approve on a stale or rejected plan writes nothing.</text>
+<text x="60" y="1230" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">What-if ("what if Wei doesn't show up?") runs the full plan and checks and replies with the impact. GET /api/whatif/scan does it for every tech.</text>
+<text x="40" y="1294" font-size="23" font-weight="bold" fill="#212529" text-anchor="start" dominant-baseline="hanging">3.  Risk, what stops it, and the test that proves it</text>
+<text x="40" y="1326" font-size="16" font-weight="normal" fill="#495057" text-anchor="start" dominant-baseline="hanging">Test names are functions in evals/scenarios.py (26/26 pass, evals/REPORT.md) unless marked otherwise.</text>
+<text x="40" y="2040" font-size="14" font-weight="normal" fill="#868e96" text-anchor="start" dominant-baseline="hanging">Source: second_shift/ledger.py, second_shift/engine.py (approve, _run, _perform, verify), second_shift/adapters/gmail.py, evals/scenarios.py.</text>
+<rect x="40" y="1350" width="1280" height="40" fill="#e9ecef" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1390" width="1280" height="62" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1452" width="1280" height="62" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1514" width="1280" height="62" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1576" width="1280" height="62" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1638" width="1280" height="62" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1700" width="1280" height="62" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1762" width="1280" height="62" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1824" width="1280" height="62" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1886" width="1280" height="62" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1948" width="1280" height="62" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="300" y1="1350" x2="300" y2="2010" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="920" y1="1350" x2="920" y2="2010" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="40" y="1350" width="1280" height="660" fill="none" stroke="#495057" stroke-width="2" rx="4"/>
+<text x="54" y="1362" font-size="17" font-weight="bold" fill="#212529" dominant-baseline="hanging">Risk</text>
+<text x="314" y="1362" font-size="17" font-weight="bold" fill="#212529" dominant-baseline="hanging">What stops it</text>
+<text x="934" y="1362" font-size="17" font-weight="bold" fill="#212529" dominant-baseline="hanging">Proven by</text>
+<text x="54" y="1401" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Prompt injection</text>
+<text x="314" y="1401" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">The model only fills a strict schema. It has no tools.</text>
+<text x="314" y="1422" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">Only crew and dispatch can trigger a re-plan.</text>
+<text x="934" y="1401" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">prompt_injection</text>
+<text x="934" y="1422" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">stranger_blocked</text>
+<text x="54" y="1463" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Model misreads the message</text>
+<text x="314" y="1463" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">The tech the model picks must be the sender or be named in</text>
+<text x="314" y="1484" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">the message. Vague or low confidence: ask, never guess.</text>
+<text x="934" y="1463" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">model_mistake_caught</text>
+<text x="934" y="1484" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">vague_asks, llm_eval.py (15/15)</text>
+<text x="54" y="1525" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Illegal schedule</text>
+<text x="314" y="1525" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">CP-SAT enforces the rules, then an independent checker</text>
+<text x="314" y="1546" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">re-verifies. Any violation marks the plan rejected.</text>
+<text x="934" y="1525" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">full_day_callout, two_out</text>
+<text x="934" y="1546" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">calendar_busy_block</text>
+<text x="54" y="1587" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Stale calendar</text>
+<text x="314" y="1587" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">Sheets and Calendar are re-read at approval and the fingerprint</text>
+<text x="314" y="1608" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">compared. If it changed: stale, nothing written.</text>
+<text x="934" y="1587" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">stale_plan_blocked</text>
+<text x="54" y="1649" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Rate limits, 5xx errors</text>
+<text x="314" y="1649" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">Retry with backoff (0.5s, 1s, 2s), at most 3 attempts.</text>
+<text x="314" y="1670" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">Writes are keyed, so a retry never duplicates.</text>
+<text x="934" y="1649" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">slack_rate_limit</text>
+<text x="934" y="1670" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">calendar_transient</text>
+<text x="54" y="1711" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Crash mid-run</text>
+<text x="314" y="1711" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">The ledger row stays pending. Resume asks the provider first:</text>
+<text x="314" y="1732" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">same Calendar event id, Slack and Gmail find_by_key.</text>
+<text x="934" y="1711" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">crash_after_calendar_write</text>
+<text x="934" y="1732" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">crash_after_email, crash_after_slack</text>
+<text x="54" y="1773" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Double approve</text>
+<text x="314" y="1773" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">A done plan is returned as is. Each Slack message is</text>
+<text x="314" y="1794" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">handled once, even after a poller restart.</text>
+<text x="934" y="1773" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">double_approve</text>
+<text x="934" y="1794" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">message_handled_once</text>
+<text x="54" y="1835" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">False success</text>
+<text x="314" y="1835" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">A permanent error stops the run and the plan shows failed.</text>
+<text x="314" y="1856" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">Read-back checks every write on the real calendars.</text>
+<text x="934" y="1835" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">permanent_error_is_honest</text>
+<text x="934" y="1856" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">verification_catches_tampering</text>
+<text x="54" y="1897" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Sheet and Calendar disagree</text>
+<text x="314" y="1897" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">Calendar is the schedule of record.</text>
+<text x="314" y="1918" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">The conflict is reported, not hidden.</text>
+<text x="934" y="1897" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">sheet_calendar_conflict</text>
+<text x="54" y="1959" font-size="16" font-weight="bold" fill="#212529" dominant-baseline="hanging">Emailing real people</text>
+<text x="314" y="1959" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">Customer emails are templates filled from plan data.</text>
+<text x="314" y="1980" font-size="16" font-weight="normal" fill="#212529" dominant-baseline="hanging">Gmail refuses anything but the demo inbox and its +aliases.</text>
+<text x="934" y="1959" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">unit tests, tests/test_live_adapters.py:</text>
+<text x="934" y="1980" font-size="15" font-weight="normal" fill="#1864ab" dominant-baseline="hanging" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">test_gmail_guard_*, test_gmail_send_*</text>
+</svg>

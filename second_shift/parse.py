@@ -26,6 +26,8 @@ Rules:
 - is_callout is true only if the message says a technician can't work some or all of today (sick, car trouble,
   family emergency, running late, leaving early). Chit-chat, questions, and job updates are not call-outs.
   A possible or uncertain absence ("might be out", "not sure yet") is a call-out that needs clarification.
+- A hypothetical question ("what if Wei doesn't show up?", "what happens if Sam is out?") is a call-out with
+  is_hypothetical true (the team wants a simulation, not a change). Otherwise is_hypothetical is false.
 - tech_id must be the id of a technician in the roster. If the sender is a technician speaking about
   themselves ("I", "me"), use the sender's id. If the message names someone, use that person.
   If you cannot tell exactly who is out, set tech_id to null and needs_clarification to true. Never guess.
@@ -84,10 +86,11 @@ CALLOUT_SCHEMA = {
         "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
         "needs_clarification": {"type": "boolean"},
         "clarifying_question": {"type": ["string", "null"]},
+        "is_hypothetical": {"type": "boolean"},
         "summary": {"type": "string"},
     },
     "required": ["is_callout", "tech_id", "whole_day", "unavailable_from", "unavailable_until", "confidence",
-                 "needs_clarification", "clarifying_question", "summary"],
+                 "needs_clarification", "clarifying_question", "is_hypothetical", "summary"],
     "additionalProperties": False,
 }
 

@@ -78,6 +78,11 @@
         </select>
         <button type="submit" class="btn-small" id="manual-btn">Plan</button>
       </form>
+      <dialog id="scan-dialog" class="scan-dialog">
+        <div class="scan-head"><b>Risk scan</b><span>What if each technician called out today? Every row is a full re-plan, checked, nothing written.</span></div>
+        <div id="scan-body">Scanning…</div>
+        <form method="dialog"><button class="btn-small" type="submit">Close</button></form>
+      </dialog>
     </section>
 
     <!-- 02 · the board -->
@@ -87,6 +92,8 @@
         <h2>Crew board</h2>
         <span class="head-sub" id="board-sub"></span>
         <span class="head-spacer"></span>
+        <button type="button" class="btn-small ghost head-btn" id="whatif-btn" title="Simulate the call-out picked in 'Plan manually'. Nothing is written.">What if?</button>
+        <button type="button" class="btn-small ghost head-btn" id="scan-btn" title="Simulate every technician calling out and find single points of failure">Risk scan</button>
         <div class="seg" id="view-toggle" role="group" aria-label="Board view" title="Press B to flip">
           <button type="button" data-view="before">Before</button>
           <button type="button" data-view="after" class="on">After</button>

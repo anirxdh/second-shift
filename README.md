@@ -12,10 +12,11 @@ Built for the Multi-App AI Agent Hackathon (September 13, 2026).
 | What the model does | Reads one Slack message into a strict schema. Nothing else. |
 | What code does | Guardrails, planning (OR-Tools CP-SAT), rule checking, writes, read-back |
 | What a person does | Approves the plan |
-| Reliability scenarios | **26/26 pass** ([evals/REPORT.md](evals/REPORT.md)) |
+| Reliability scenarios | **30/30 pass** ([evals/REPORT.md](evals/REPORT.md)) |
 | Message understanding | **15/15** with OpenAI `gpt-4.1-mini` plus guardrails ([evals/LLM_REPORT.md](evals/LLM_REPORT.md)) |
 | Demo day | 3 of 4 affected jobs covered (careful greedy dispatcher: 1 of 4), **36/36** read-back checks |
-| Tests | 100 (26 scenarios + 74 adapter unit tests) |
+| Readiness | What-if simulation in Slack and a crew-wide scan for single points of failure |
+| Tests | 104 (30 scenarios + 74 adapter unit tests) |
 
 More detail: [docs/BRIEF.md](docs/BRIEF.md) (system and reliability brief), [SETUP.md](SETUP.md) (accounts), [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md) (2-minute demo).
 
@@ -36,7 +37,7 @@ Nobody can stop people from getting sick. What a company can control is how read
 ## 2. What it does
 
 1. **Hears the call-out** in Slack `#dispatch`: "Marco just called, he's out sick all day."
-2. **Reads the message** with an LLM into a fixed schema: is it a call-out, who, whole day or which hours, and how confident. OpenAI `gpt-4.1-mini` by default; Claude or Groq by setting `LLM_PROVIDER`.
+2. **Reads the message** with an LLM into a fixed schema: is it a call-out (or a what-if question), who, whole day or which hours, and how confident. OpenAI `gpt-4.1-mini` by default; Claude or Groq by setting `LLM_PROVIDER`.
 3. **Guards the reading** with plain code. If anything is unclear, it asks a question in Slack instead of guessing.
 4. **Reads the day** from Google Sheets and Google Calendar, reconciles the two (Calendar wins), and fingerprints that state.
 5. **Re-plans** the whole crew with a constraint solver (OR-Tools CP-SAT).
@@ -102,17 +103,33 @@ The 36 read-back checks are: 16 Calendar checks (one per job), 1 full rule check
 
 A call-out is the worst time to learn that only one person can do a job. So Second Shift can run the same plan before anyone is actually out.
 
-**In Slack**, a dispatcher can ask: "what if Wei doesn't show up?" The model marks the message as hypothetical. The engine then runs the full plan and every check as a simulation and replies in Slack with the impact. Nothing is written to Calendar, Sheets, or Gmail. The dashboard shows the result as a simulation, with a **Make it real** action.
+**In Slack**, a dispatcher can ask: "what if Wei doesn't show up?" The model marks the message as hypothetical (`is_hypothetical` in the schema). The same guardrails run. The engine then runs the full plan and every check as a simulation and replies in Slack with the impact, for example:
+
+> What-if: if Wei Chen is out, the plan covers 1 of 2 of their jobs; Elena Duarte would need rescheduling; 2 customers would be emailed. Nothing has changed. Dispatch can make it real in the app.
+
+Nothing is written to Calendar, Sheets, or Gmail. The dashboard shows the result as a simulation (its **What if?** button and **Risk scan** do the same without Slack). A simulated plan can never be approved. Its **Make it real** action re-plans from fresh Sheets and Calendar data and creates a normal proposal, which then goes through the usual approval, stale check, and read-back.
 
 **Interfaces**
 
 | Interface | What it does |
 |---|---|
-| `POST /api/whatif` with `{tech_id, start, end}` | Returns a simulated plan (status `"simulated"`). Same solver, same checker, no writes. |
-| `GET /api/whatif/scan` | Returns the impact for each technician being out: jobs affected, jobs covered, jobs needing reschedule, and customers to notify. This shows single points of failure. |
-| `uv run python -m evals.preparedness` | The same scan from the command line |
+| `POST /api/whatif` with `{tech_id, start, end}` (minutes since midnight) | Returns a simulated plan (status `"simulated"`). Same solver, same checker, no writes. |
+| `GET /api/whatif/scan` | Simulates each technician being out all day and returns the impact for each: jobs affected, jobs covered, jobs needing reschedule (with the reason), and customers to notify. The most fragile people come first. This shows single points of failure. |
+| `POST /api/plans/{id}/adopt` | The **Make it real** action: turns a what-if into a real proposal awaiting approval |
+| `uv run python -m evals.preparedness` | The same scan from the command line. Writes [evals/PREPAREDNESS.md](evals/PREPAREDNESS.md). Add `--live` to scan your real Sheets and Calendar (read-only). |
 
-On the demo company, running the solver for each technician being out all day points at three people. Marco or Wei out leaves a gas job with no legal slot, because they are the only two HVAC + gas technicians. Jordan out leaves the Summit Gym EV-charger contract uncovered, because he is the only one with the lift it needs. Priya, Sam, or Ana out can be fully covered. That is a hiring and training list, found before the bad morning.
+The scan on the demo day, before anyone calls out:
+
+| Technician out all day | Jobs affected | Covered | Need reschedule | Customers to notify |
+|---|---:|---:|---:|---:|
+| Marco Diaz | 4 | 3 | 1 (Diego Castillo) | 5 |
+| Jordan Lee | 2 | 1 | 1 (Summit Gym) | 2 |
+| Wei Chen | 2 | 1 | 1 (Elena Duarte) | 2 |
+| Priya Shah | 3 | 3 | 0 | 4 |
+| Sam Okafor | 3 | 3 | 0 | 4 |
+| Ana Lopez | 2 | 2 | 0 | 2 |
+
+So the scan points at three people. Marco or Wei out leaves a gas job with no legal slot, because they are the only two HVAC + gas technicians. Jordan out leaves the Summit Gym EV-charger contract uncovered, because he is the only one with the lift it needs. Priya, Sam, or Ana out can be fully covered. That is a hiring and training list, found before the bad morning.
 
 ---
 
@@ -142,7 +159,7 @@ Slack message -> parse (LLM) -> guard (code) -> read Sheets + Calendar -> solve 
 
 | Decision | Made by | Why |
 |---|---|---|
-| Is this message a call-out? Who, and which hours? | The LLM, with strict structured output | Language is messy: "car broke down, in by noon" |
+| Is this message a call-out or a what-if? Who, and which hours? | The LLM, with strict structured output | Language is messy: "car broke down, in by noon" |
 | Is that reading trustworthy? | Code ([engine.py](second_shift/engine.py) `guard()`) | The model can be wrong. Code refuses to guess and asks instead. |
 | Who does which job, and when | CP-SAT solver ([solver.py](second_shift/solver.py)) | Skills, windows, shifts, and drive times are hard rules, not suggestions |
 | Is the plan legal? | Independent checker ([validate.py](second_shift/validate.py)) | A solver bug can't hide itself |
@@ -157,6 +174,7 @@ Slack message -> parse (LLM) -> guard (code) -> read Sheets + Calendar -> solve 
 - The technician id is not on the roster: ask who.
 - The named technician must literally appear in the message (full or first name), unless the sender is talking about themselves. This catches the model naming the wrong person.
 - Times must parse and the end must be after the start.
+- A what-if passes the same checks, then becomes a simulation that can never be approved.
 
 The model only ever fills a schema. It has no tools and no path to any write. The prompt tells it the message is data, not instructions.
 
@@ -179,7 +197,7 @@ The model only ever fills a schema. It has no tools and no path to any write. Th
 
 - Only technicians with the required **skills and equipment** are eligible. Anyone out for the full day is removed.
 - Each job starts inside its **promised arrival window**.
-- **Protected** jobs (contracts) keep their exact time. Jobs that started before the call-out keep their time and tech.
+- **Protected** jobs (contracts) keep their exact time. Jobs already under way when the call-out arrives keep their time and technician.
 - **Shift hours**, including the drive from the technician's home zone to the first job.
 - **Absences**: call-outs and personal Calendar busy blocks. A job must end before or start after each one.
 - **No overlap** on a technician, with **drive time** between consecutive jobs from the `Travel` matrix.
@@ -202,7 +220,7 @@ The solver runs single-threaded with a fixed seed and a 10-second limit, so the 
 
 ### The ledger and idempotency
 
-[second_shift/ledger.py](second_shift/ledger.py) is a SQLite file with four tables: `plans`, `actions`, `trace`, and `seen_messages`. Every external write has a stable key and a status (`pending`, then `done` or `failed`). A transient error (rate limit, 5xx, network) is retried up to 3 times with backoff (0.5 s, 1 s, 2 s). A permanent error stops the run, pins the failing write, and never reports success. If the process dies, approving again resumes: writes already `done` are skipped, and each remaining write is checked with the app before it is retried.
+[second_shift/ledger.py](second_shift/ledger.py) is a SQLite file with four tables: `plans`, `actions`, `trace`, and `seen_messages`. Every external write has a stable key and a status (`pending`, then `done` or `failed`). A transient error (rate limit, 5xx, network) gets up to 3 attempts, with exponential backoff between them (0.5 s, then 1 s). A permanent error stops the run, pins the failing write, and never reports success. If the process dies, approving again resumes: writes already `done` are skipped, and every remaining write is safe to repeat, as the table shows.
 
 Writes run in a fixed order: new Calendar bookings first, then removal of the old ones (so a job is never missing from every calendar mid-run), then sheet rows, then Slack, then customer emails, then the dispatch summary.
 
@@ -248,7 +266,7 @@ The Gmail adapter ([second_shift/adapters/gmail.py](second_shift/adapters/gmail.
 
 <sub>Editable source: [docs/diagrams/reliability.excalidraw](docs/diagrams/reliability.excalidraw)</sub>
 
-### Reliability scenarios: 26/26 pass
+### Reliability scenarios: 30/30 pass
 
 Every scenario runs the real engine, solver, checker, ledger, and sheet-parsing code against fresh in-memory Sheets, Calendar, Slack, and Gmail that can inject faults. Full evidence per scenario is in [evals/REPORT.md](evals/REPORT.md).
 
@@ -257,6 +275,7 @@ Every scenario runs the real engine, solver, checker, ledger, and sheet-parsing 
 | Planning | 7 | Full-day, partial-day, running-late, and two-out call-outs give legal plans; chain moves beat a greedy dispatcher; personal Calendar events are respected; same input, same plan |
 | Execution | 13 | Happy path verifies 36/36; double-approve writes nothing new; a stale plan writes nothing; Slack rate limits and Calendar 5xx errors are retried; a crash after a Calendar write, an email, or a Slack post resumes with no duplicates; a permanent error is reported honestly; read-back catches tampering; Sheet vs Calendar conflicts are reported and Calendar wins; a second call-out keeps the first in effect |
 | Guardrails | 6 | A clear call-out becomes a plan awaiting approval; vague messages get a question; the model naming the wrong person is caught; strangers can't trigger plans; prompt injection has no path to any action; each Slack message is handled once |
+| What-if | 4 | A what-if runs the full plan and checks but can never write, even if someone clicks Approve; "What if Wei doesn't show up?" in Slack gets a simulated answer and nothing changes; **Make it real** gives a normal plan that executes and verifies; the scan finds the single points of failure |
 
 ### Message understanding: 15/15
 
@@ -282,13 +301,13 @@ CP-SAT runs with one worker and seed 0. The `deterministic` scenario solves the 
 
 | Number | Command | Where it shows |
 |---|---|---|
-| 26/26 scenarios | `uv run python -m evals.run` | Writes [evals/REPORT.md](evals/REPORT.md) |
-| 100 tests (26 scenarios + 74 adapter unit tests) | `uv run pytest -q` | Terminal |
+| 30/30 scenarios | `uv run python -m evals.run` | Writes [evals/REPORT.md](evals/REPORT.md) |
+| 104 tests (30 scenarios + 74 adapter unit tests) | `uv run pytest -q` | Terminal |
 | 15/15 message eval | `uv run python -m evals.llm_eval` (needs an LLM key) | Writes [evals/LLM_REPORT.md](evals/LLM_REPORT.md) |
 | 3 of 4 vs greedy 1 of 4 | `uv run python -m evals.run` (`beats_greedy_baseline`) | [evals/REPORT.md](evals/REPORT.md) |
 | 36/36 read-back checks | `uv run python -m evals.run` (`happy_path_execution`), or approve Marco's plan in the dashboard | Report, or the dashboard checklist |
 | Same plan 5/5 runs | `uv run python -m evals.run` (`deterministic`) | [evals/REPORT.md](evals/REPORT.md) |
-| Per-technician impact | `uv run python -m evals.preparedness` | Terminal |
+| Per-technician impact (scan table in section 4) | `uv run python -m evals.preparedness` | Writes [evals/PREPAREDNESS.md](evals/PREPAREDNESS.md) |
 
 ---
 
@@ -297,9 +316,9 @@ CP-SAT runs with one worker and seed 0. The `deterministic` scenario solves the 
 | Criterion | Where to look |
 |---|---|
 | **Technical execution (30%)** | Four real app integrations with their own error mapping ([adapters/](second_shift/adapters/)). A real optimization model, not prompt-based planning: CP-SAT with skills, equipment, windows, shifts, drive times, absences, and chain moves. A full loop from Slack message to verified writes. |
-| **Reliability and evaluation (25%)** | 26 fault-injection scenarios, 74 adapter unit tests, a labeled message eval, a greedy baseline, and a determinism check. Idempotent writes per app, crash-resume, a stale-plan guard, and read-back verification of every write. The first eval run failed one case; we fixed the rule and reported both numbers. |
+| **Reliability and evaluation (25%)** | 30 scenarios (including fault injection and what-if), 74 adapter unit tests, a labeled message eval, a greedy baseline, and a determinism check. Idempotent writes per app, crash-resume, a stale-plan guard, and read-back verification of every write. The first eval run failed one case; we fixed the rule and reported both numbers. |
 | **Usefulness (20%)** | A real, daily problem for field-service companies, solved in the tools they already use. The dispatcher stays in control and sees every write before it happens. The what-if scan finds single points of failure ahead of time. |
-| **Originality (15%)** | The model reads language; a solver decides; an independent checker verifies; a person approves; the agent proves the result in the real apps. The chain move a human would likely miss. "Ready before the call" simulation. |
+| **Originality (15%)** | A clear split of work: the model reads language, a solver decides, an independent checker verifies, a person approves, and the agent proves the result in the real apps. The solver finds chain moves a rushed human would likely miss. The what-if scan turns the same engine into a readiness check before anyone calls out. |
 | **Demo clarity (10%)** | One story with real numbers: Marco out, 3 of 4 covered, 1 honest reschedule, 36/36 checks. The dashboard shows the before/after board, every planned write, the trace, and the checklist. |
 
 ---
@@ -315,6 +334,8 @@ uv run uvicorn second_shift.server:app --port 8000
 
 Open http://localhost:8000. Under **Plan manually**, pick Marco and "All day", click **Plan**, then **Approve**. The in-memory Sheets, Calendar, Slack, and Gmail run the same engine code as the live run.
 
+To try readiness: pick a technician and click **What if?** (a simulation, nothing written), or click **Risk scan** to see every technician's impact and the single points of failure.
+
 To type messages into the simulated `#dispatch`, copy `.env.example` to `.env` and set `OPENAI_API_KEY`. The dashboard also has a panel to arm faults (rate limit, crash after a write) before approving, so you can watch the ledger retry and resume.
 
 ### Live (real Google + Slack, free tiers)
@@ -325,7 +346,7 @@ To type messages into the simulated `#dispatch`, copy `.env.example` to `.env` a
 4. `SECOND_SHIFT_MODE=live uv run uvicorn second_shift.server:app --port 8000`
 5. In Slack `#dispatch`, post: `Marco just called, he's out sick all day`. The plan appears in the dashboard. Approve it, then watch Calendar, the sheet, Slack, and the Gmail inbox update.
 
-Optional settings in `.env`: `DISPATCHER_SLACK_IDS` (who counts as dispatch), `DEMO_SLACK_USER_MAP` (link technicians to Slack users, e.g. `T1=U0123`), `APP_URL` (adds a review link to Slack replies), `DEMO_NOW` (default `06:45`), `DEMO_DATE`, `DEMO_TIMEZONE`, `POLL_SECONDS` (default 4).
+Optional settings in `.env`: `DISPATCHER_SLACK_IDS` (comma-separated Slack user ids that count as dispatch; if unset, anyone posting who isn't a technician counts as dispatch), `DEMO_SLACK_USER_MAP` (link technicians to Slack users, e.g. `T1=U0123`), `APP_URL` (adds a review link to Slack replies), `DEMO_NOW` (default `06:45`), `DEMO_DATE`, `DEMO_TIMEZONE`, `POLL_SECONDS` (default 4).
 
 ### Choosing the LLM
 
@@ -340,10 +361,10 @@ We use OpenAI for development and testing, and Claude (`claude-opus-5`) for the 
 ### Tests and evals
 
 ```bash
-uv run pytest -q                      # 100 tests: 26 reliability scenarios + 74 adapter unit tests
-uv run python -m evals.run            # the 26 scenarios, writes evals/REPORT.md
+uv run pytest -q                      # 104 tests: 30 reliability scenarios + 74 adapter unit tests
+uv run python -m evals.run            # the 30 scenarios, writes evals/REPORT.md
 uv run python -m evals.llm_eval       # real model calls, writes evals/LLM_REPORT.md
-uv run python -m evals.preparedness   # what-if scan across the crew
+uv run python -m evals.preparedness   # what-if scan across the crew, writes evals/PREPAREDNESS.md
 ```
 
 ### API
@@ -358,6 +379,7 @@ uv run python -m evals.preparedness   # what-if scan across the crew
 | `POST /api/plans/{id}/approve` | Approve, or resume after a crash. Safe to call twice. |
 | `POST /api/plans/{id}/replan` | Fresh plan for the same call-out (after a stale plan) |
 | `POST /api/whatif`, `GET /api/whatif/scan` | What-if simulation and preparedness scan (see section 4) |
+| `POST /api/plans/{id}/adopt` | Make a what-if real: a fresh proposal awaiting approval |
 | `GET /api/runs/{run_id}/trace` | Step-by-step trace for any run |
 | `GET /api/channel`, `GET /api/outbox` | Recent `#dispatch` messages; fake-mode sent emails |
 | `POST /api/reset` | Fresh day (live mode re-runs `seed_live.py`) |
@@ -407,6 +429,7 @@ docs/              brief, demo script, diagrams
 - One technician per message. For "Marco and Wei are both out", the agent asks dispatch to post one message per person.
 - Drive times come from a zone table in the sheet, not a live routing API.
 - One plan day at a time. Jobs are not moved to another day; they are flagged for rescheduling.
+- The preparedness scan simulates one person out for the whole day. It does not yet try pairs or partial days.
 - Slack is polled every few seconds rather than using the Events API.
 - The demo company is synthetic, and customer emails go to plus-aliases of the demo inbox.
 - Gmail search can lag a few seconds after a send. The ledger is the first defense against a duplicate email; the Gmail lookup is the second.

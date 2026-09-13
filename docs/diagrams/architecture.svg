@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1195" width="1500" height="1195" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Second Shift: system architecture</title>
+<desc id="d">Slack, Google Sheets, Google Calendar and Gmail connect through one adapter layer to the Second Shift engine: LLM reader, deterministic guardrails, state reader, CP-SAT solver, independent rule checker, dispatcher approval, fingerprint re-check, ledger and executor, read-back verifier, and a what-if simulator. In-memory fake apps replace the real apps in evals.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker></defs>
+<rect x="0" y="0" width="1500" height="1195" fill="#ffffff"/>
+<text x="40.0" y="58.0" font-size="30" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="40.0" dy="0.0">Second Shift: system architecture</tspan></text>
+<text x="40.0" y="88.0" font-size="17" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="40.0" dy="0.0">The LLM only reads messages. Code plans, checks, writes, and verifies, and nothing is written until a dispatcher approves.</tspan></text>
+<rect x="20" y="366" width="1460" height="764" rx="16" fill="#f8f9fa" stroke="#adb5bd" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="40.0" y="1105.0" font-size="18" font-weight="600" fill="#495057" text-anchor="start"><tspan x="40.0" dy="0.0">Second Shift engine (Python, second_shift/)</tspan></text>
+<rect x="40" y="300" width="1420" height="50" rx="10" fill="#fff3bf" stroke="#f08c00" stroke-width="2"/>
+<text x="750.0" y="331.0" font-size="16" font-weight="600" fill="#1e1e1e" text-anchor="middle"><tspan x="750.0" dy="0.0">Adapters: one interface for all four apps. Live Google + Slack APIs in the real run, in-memory fakes in evals.</tspan></text>
+<rect x="40" y="110" width="260" height="140" rx="12" fill="#f1f3f5" stroke="#868e96" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="54.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="54.0" dy="0.0">In-memory fake apps</tspan></text>
+<text x="54.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="54.0" dy="0.0">stand-ins for all 4 apps</tspan><tspan x="54.0" dy="20.0">used by evals and tests;</tspan><tspan x="54.0" dy="20.0">inject 429s, 5xx errors,</tspan><tspan x="54.0" dy="20.0">crashes, hand edits</tspan></text>
+<rect x="330" y="110" width="260" height="140" rx="12" fill="#f3d9fa" stroke="#9c36b5" stroke-width="2"/>
+<text x="344.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="344.0" dy="0.0">Slack #dispatch</tspan></text>
+<text x="344.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="344.0" dy="0.0">call-outs, what-ifs in;</tspan><tspan x="344.0" dy="20.0">routes, summaries,</tspan><tspan x="344.0" dy="20.0">questions, replies out</tspan></text>
+<rect x="620" y="110" width="260" height="140" rx="12" fill="#d3f9d8" stroke="#2f9e44" stroke-width="2"/>
+<text x="634.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="634.0" dy="0.0">Google Sheets</tspan></text>
+<text x="634.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="634.0" dy="0.0">Jobs, Skills, Windows,</tspan><tspan x="634.0" dy="20.0">Drive times tabs;</tspan><tspan x="634.0" dy="20.0">job rows updated</tspan></text>
+<rect x="910" y="110" width="260" height="140" rx="12" fill="#d0ebff" stroke="#1971c2" stroke-width="2"/>
+<text x="924.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="924.0" dy="0.0">Google Calendar ×6</tspan></text>
+<text x="924.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="924.0" dy="0.0">one calendar per tech:</tspan><tspan x="924.0" dy="20.0">bookings of record +</tspan><tspan x="924.0" dy="20.0">personal busy time</tspan></text>
+<rect x="1200" y="110" width="260" height="140" rx="12" fill="#ffe3e3" stroke="#e03131" stroke-width="2"/>
+<text x="1214.0" y="141.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="1214.0" dy="0.0">Gmail</tspan></text>
+<text x="1214.0" y="167.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="1214.0" dy="0.0">customer emails from</tspan><tspan x="1214.0" dy="20.0">fixed templates; refuses</tspan><tspan x="1214.0" dy="20.0">non-demo recipients</tspan></text>
+<rect x="40" y="450" width="290" height="140" rx="12" fill="#fff0f6" stroke="#c2255c" stroke-width="2"/>
+<text x="54.0" y="481.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="54.0" dy="0.0">LLM reader</tspan></text>
+<text x="54.0" y="507.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="54.0" dy="0.0">fills a strict schema:</tspan><tspan x="54.0" dy="20.0">who is out, when, and</tspan><tspan x="54.0" dy="20.0">is it hypothetical?</tspan><tspan x="54.0" dy="20.0">OpenAI · Claude · Groq</tspan></text>
+<rect x="40" y="670" width="290" height="140" rx="12" fill="#e6fcf5" stroke="#0c8599" stroke-width="2"/>
+<text x="54.0" y="701.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="54.0" dy="0.0">Deterministic guardrails</tspan></text>
+<text x="54.0" y="727.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="54.0" dy="0.0">the named tech must be</tspan><tspan x="54.0" dy="20.0">in the message; crew or</tspan><tspan x="54.0" dy="20.0">dispatch only; sane hours;</tspan><tspan x="54.0" dy="20.0">unsure = ask, never guess</tspan></text>
+<rect x="40" y="890" width="290" height="140" rx="12" fill="#f3f0ff" stroke="#6741d9" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="54.0" y="921.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="54.0" dy="0.0">What-if simulator</tspan></text>
+<text x="54.0" y="947.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="54.0" dy="0.0">full plan + checks as a</tspan><tspan x="54.0" dy="20.0">simulation; writes nothing.</tspan><tspan x="54.0" dy="20.0">scan: impact per tech</tspan><tspan x="54.0" dy="20.0">(single points of failure)</tspan></text>
+<rect x="417" y="450" width="290" height="140" rx="12" fill="#e6fcf5" stroke="#0c8599" stroke-width="2"/>
+<text x="431.0" y="481.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="431.0" dy="0.0">State reader</tspan></text>
+<text x="431.0" y="507.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="431.0" dy="0.0">reads Sheets + 6 calendars,</tspan><tspan x="431.0" dy="20.0">reconciles (Calendar wins),</tspan><tspan x="431.0" dy="20.0">fingerprints the state</tspan></text>
+<rect x="417" y="670" width="290" height="140" rx="12" fill="#e6fcf5" stroke="#0c8599" stroke-width="2"/>
+<text x="431.0" y="701.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="431.0" dy="0.0">CP-SAT solver (OR-Tools)</tspan></text>
+<text x="431.0" y="727.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="431.0" dy="0.0">skills, equipment, windows,</tspan><tspan x="431.0" dy="20.0">shifts, drive time, no</tspan><tspan x="431.0" dy="20.0">overlap; urgent jobs first,</tspan><tspan x="431.0" dy="20.0">fewest moves</tspan></text>
+<rect x="417" y="890" width="290" height="140" rx="12" fill="#e6fcf5" stroke="#0c8599" stroke-width="2"/>
+<text x="431.0" y="921.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="431.0" dy="0.0">Independent rule checker</tspan></text>
+<text x="431.0" y="947.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="431.0" dy="0.0">re-checks every rule on</tspan><tspan x="431.0" dy="20.0">the plan; shares no code</tspan><tspan x="431.0" dy="20.0">with the solver</tspan></text>
+<rect x="793" y="450" width="290" height="140" rx="12" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="807.0" y="481.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="807.0" dy="0.0">Ledger + executor</tspan></text>
+<text x="807.0" y="507.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="807.0" dy="0.0">SQLite: each write pending,</tspan><tspan x="807.0" dy="20.0">then done or failed; stable</tspan><tspan x="807.0" dy="20.0">ids, keyed lookups, retry</tspan><tspan x="807.0" dy="20.0">with backoff, crash-resume</tspan></text>
+<rect x="793" y="670" width="290" height="140" rx="12" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="807.0" y="701.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="807.0" dy="0.0">Fingerprint re-check</tspan></text>
+<text x="807.0" y="727.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="807.0" dy="0.0">re-reads Sheets + Calendar</tspan><tspan x="807.0" dy="20.0">just before writing;</tspan><tspan x="807.0" dy="20.0">changed = stale plan,</tspan><tspan x="807.0" dy="20.0">nothing is written</tspan></text>
+<rect x="1170" y="450" width="290" height="140" rx="12" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="1184.0" y="481.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="1184.0" dy="0.0">Read-back verifier</tspan></text>
+<text x="1184.0" y="507.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="1184.0" dy="0.0">reads every booking, row,</tspan><tspan x="1184.0" dy="20.0">post and email back, then</tspan><tspan x="1184.0" dy="20.0">runs the rule checker on</tspan><tspan x="1184.0" dy="20.0">the real calendars</tspan></text>
+<rect x="793" y="890" width="667" height="140" rx="12" fill="#edf2ff" stroke="#3b5bdb" stroke-width="2"/>
+<text x="807.0" y="921.0" font-size="19" font-weight="700" fill="#1e1e1e" text-anchor="start"><tspan x="807.0" dy="0.0">FastAPI server + dispatcher dashboard</tspan></text>
+<text x="807.0" y="947.8" font-size="16" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="807.0" dy="0.0">The dispatcher sees the plan and every write, then approves.</tspan><tspan x="807.0" dy="20.0">What-if runs show as simulations with a Make it real action.</tspan><tspan x="807.0" dy="20.0">API: /api/plans, /approve, /api/whatif, /api/whatif/scan</tspan></text>
+<path d="M 185 354 L 185 444" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 185 596 L 185 664" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 185 816 L 185 884" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 336 740 L 411 740" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 562 354 L 562 444" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 562 596 L 562 664" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 562 816 L 562 884" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 713 960 L 787 960" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 938 884 L 938 816" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 938 664 L 938 596" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 938 444 L 938 354" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 1089 520 L 1164 520" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 1315 354 L 1315 444" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 1315 596 L 1315 884" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 185 1036 L 185 1070 L 1126 1070 L 1126 1036" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 170 256 L 170 294" fill="none" stroke="#495057" stroke-width="2" stroke-dasharray="7 5" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 460 256 L 460 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 750 256 L 750 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 1040 256 L 1040 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<path d="M 1330 256 L 1330 294" fill="none" stroke="#495057" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<rect x="150.1" y="386.6" width="69.8" height="24.8" rx="4" fill="#ffffff"/>
+<text x="185.0" y="403.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="185.0" dy="0.0">message</tspan></text>
+<rect x="80.0" y="617.6" width="210.0" height="24.8" rx="4" fill="#ffffff"/>
+<text x="185.0" y="634.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="185.0" dy="0.0">who, when, hypothetical?</tspan></text>
+<rect x="129.5" y="837.6" width="111.0" height="24.8" rx="4" fill="#ffffff"/>
+<text x="185.0" y="854.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="185.0" dy="0.0">hypothetical</tspan></text>
+<rect x="338.6" y="727.6" width="69.8" height="24.8" rx="4" fill="#ffffff"/>
+<text x="373.5" y="744.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="373.5" dy="0.0">absence</tspan></text>
+<rect x="415.8" y="377.2" width="292.5" height="43.5" rx="4" fill="#ffffff"/>
+<text x="562.0" y="394.5" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="562.0" dy="0.0">jobs, skills, windows, drive times</tspan><tspan x="562.0" dy="18.8">+ bookings, busy time</tspan></text>
+<rect x="469.4" y="617.6" width="185.2" height="24.8" rx="4" fill="#ffffff"/>
+<text x="562.0" y="634.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="562.0" dy="0.0">the day + fingerprint</tspan></text>
+<rect x="502.4" y="837.6" width="119.3" height="24.8" rx="4" fill="#ffffff"/>
+<text x="562.0" y="854.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="562.0" dy="0.0">proposed plan</tspan></text>
+<rect x="715.1" y="938.2" width="69.8" height="43.5" rx="4" fill="#ffffff"/>
+<text x="750.0" y="955.5" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="750.0" dy="0.0">checked</tspan><tspan x="750.0" dy="18.8">plan</tspan></text>
+<rect x="903.1" y="837.6" width="69.8" height="24.8" rx="4" fill="#ffffff"/>
+<text x="938.0" y="854.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="938.0" dy="0.0">Approve</tspan></text>
+<rect x="853.6" y="617.6" width="168.8" height="24.8" rx="4" fill="#ffffff"/>
+<text x="938.0" y="634.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="938.0" dy="0.0">fingerprint matches</tspan></text>
+<rect x="820.6" y="377.2" width="234.8" height="43.5" rx="4" fill="#ffffff"/>
+<text x="938.0" y="394.5" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="938.0" dy="0.0">writes: bookings, job rows,</tspan><tspan x="938.0" dy="18.8">Slack posts, emails</tspan></text>
+<rect x="1095.8" y="498.2" width="61.5" height="43.5" rx="4" fill="#ffffff"/>
+<text x="1126.5" y="515.5" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="1126.5" dy="0.0">after</tspan><tspan x="1126.5" dy="18.8">writes</tspan></text>
+<rect x="1271.9" y="386.6" width="86.2" height="24.8" rx="4" fill="#ffffff"/>
+<text x="1315.0" y="403.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="1315.0" dy="0.0">read-back</tspan></text>
+<rect x="1230.6" y="727.6" width="168.8" height="24.8" rx="4" fill="#ffffff"/>
+<text x="1315.0" y="744.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="1315.0" dy="0.0">pass/fail checklist</tspan></text>
+<rect x="476.2" y="1057.6" width="358.5" height="24.8" rx="4" fill="#ffffff"/>
+<text x="655.5" y="1074.9" font-size="15" font-weight="400" fill="#343a40" text-anchor="middle"><tspan x="655.5" dy="0.0">simulated plan + impact scan (/api/whatif)</tspan></text>
+<rect x="40" y="1150" width="22" height="22" rx="5" fill="#fff0f6" stroke="#c2255c" stroke-width="2"/>
+<text x="70.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="70.0" dy="0.0">LLM: reads messages only</tspan></text>
+<rect x="320.0" y="1150" width="22" height="22" rx="5" fill="#e6fcf5" stroke="#0c8599" stroke-width="2"/>
+<text x="350.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="350.0" dy="0.0">deterministic plan + checks</tspan></text>
+<rect x="627.0" y="1150" width="22" height="22" rx="5" fill="#fff4e6" stroke="#e8590c" stroke-width="2"/>
+<text x="657.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="657.0" dy="0.0">writes + verification</tspan></text>
+<rect x="880.0" y="1150" width="22" height="22" rx="5" fill="#edf2ff" stroke="#3b5bdb" stroke-width="2"/>
+<text x="910.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="910.0" dy="0.0">dispatcher</tspan></text>
+<rect x="1034.0" y="1150" width="22" height="22" rx="5" fill="#f3f0ff" stroke="#6741d9" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1064.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="1064.0" dy="0.0">simulation, writes nothing</tspan></text>
+<rect x="1332.0" y="1150" width="22" height="22" rx="5" fill="#f1f3f5" stroke="#868e96" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1362.0" y="1166.0" font-size="15" font-weight="400" fill="#343a40" text-anchor="start"><tspan x="1362.0" dy="0.0">eval stand-ins</tspan></text>
+</svg>

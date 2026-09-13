@@ -1060,6 +1060,11 @@ function bannerHtml(p) {
       `${esc(msg || 'It stopped before finishing.')} The ledger records every write. Resume skips the ones that finished and checks the one in doubt before touching it again. <b>${r.done}/${r.total}</b> writes recorded.`,
       '<button class="btn-inline" data-action="approve" type="button">Resume from ledger</button>');
   }
+  if (st === 'simulated') {
+    return banner('blue', ICON.pause, 'What-if simulation. Nothing will be written.',
+      'This is the plan Second Shift would make if this call-out happened: same solver, same rule check. Make it real to turn it into a normal plan built from fresh data.',
+      '<button class="btn-inline lime" data-action="adopt" type="button">Make it real</button>');
+  }
   if (st === 'rejected') {
     const v = (p.violations || []).map((x) => `<li>${esc(x.detail)}</li>`).join('');
     return banner('red', ICON.x, 'The independent rule check rejected this plan. Nothing will be written.', v ? `<ul>${v}</ul>` : `Solver status: ${esc(p.plan.solver_status)}.`);
@@ -1528,6 +1533,10 @@ function renderActionbar() {
       bar.innerHTML = `<button class="approve resume" data-action="approve" type="button">${ICON.resume}Retry from ledger</button>
         <div class="ab-note">Stopped safely after a permanent error. Retrying skips everything already written.</div>`;
       break;
+    case 'simulated':
+      bar.innerHTML = `<button class="approve replan" data-action="adopt" type="button">${ICON.replan}Make it real</button>
+        <div class="ab-note">A what-if can never be written. Make it real re-plans from fresh Sheets + Calendar, then waits for your approval.</div>`;
+      break;
     case 'rejected':
       bar.innerHTML = `<button class="approve" disabled type="button">${ICON.x}Rejected by the rule check</button><div class="ab-note">A plan that breaks a rule can’t be approved.</div>`;
       break;
@@ -1660,6 +1669,59 @@ async function approvePlan() {
     renderPlan();
   }
   Promise.allSettled([refreshState(), refreshChannel(), refreshOutbox()]);
+}
+
+async function whatifPlan() {
+  const techId = $('#manual-tech').value;
+  const [start, end] = $('#manual-span').value.split('-').map(Number);
+  if (!techId) return;
+  const btn = $('#whatif-btn');
+  btn.disabled = true;
+  btn.textContent = 'Simulating…';
+  try {
+    const view = await post('/api/whatif', { tech_id: techId, start, end });
+    S.knownPlans.add(view.id);
+    setPlan(view, { animate: true });
+    const tech = view.company.technicians.find((t) => t.id === techId);
+    toast(`<b>What-if ready.</b> If ${esc(tech ? tech.name : techId)} is out (${esc(fmtRange(start, end).toLowerCase())}). Nothing will be written.`, 'ok');
+  } catch (e) {
+    toast(`<b>Couldn’t simulate.</b> ${esc(e.message)}`, 'error', 7000);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'What if?';
+  }
+}
+
+async function riskScan() {
+  const dlg = $('#scan-dialog');
+  $('#scan-body').innerHTML = 'Scanning every call-out…';
+  if (!dlg.open) dlg.showModal();
+  try {
+    const rows = await api('/api/whatif/scan');
+    const tr = rows.map((r) => `<tr class="${r.reschedule ? 'risk' : ''}"><td>${esc(r.name)}</td><td>${esc(r.skills.join(', '))}</td>
+      <td class="n">${r.jobs}</td><td class="n">${r.covered}</td><td class="n">${r.reschedule}</td><td class="n">${r.customer_notices}</td><td>${r.valid ? 'legal' : 'NO'}</td></tr>`).join('');
+    const why = rows.flatMap((r) => r.reschedule_jobs.map((j) => `<li>If <b>${esc(r.name)}</b> is out: ${esc(j.job_id)} ${esc(j.customer)}. ${esc(j.why)}</li>`)).join('');
+    const spofs = rows.filter((r) => r.reschedule).map((r) => esc(r.name));
+    $('#scan-body').innerHTML = `<p class="scan-verdict">${spofs.length ? `<b>Single points of failure:</b> ${spofs.join(', ')}.` : 'No single point of failure today.'}</p>
+      <table class="scan-table"><thead><tr><th>If out</th><th>Skills</th><th>Jobs</th><th>Covered</th><th>Reschedule</th><th>Emails</th><th>Plan</th></tr></thead><tbody>${tr}</tbody></table>
+      ${why ? `<ul class="scan-why">${why}</ul>` : ''}`;
+  } catch (e) {
+    $('#scan-body').innerHTML = `Scan failed: ${esc(e.message)}`;
+  }
+}
+
+async function adoptPlan() {
+  const p = S.plan;
+  if (!p) return;
+  try {
+    const view = await post(`/api/plans/${encodeURIComponent(p.id)}/adopt`);
+    S.knownPlans.add(view.id);
+    setPlan(view, { animate: true });
+    toast('<b>Made it real.</b> A fresh plan from what Sheets and Calendar say now. Review, then approve.', 'ok');
+    refreshState();
+  } catch (e) {
+    toast(`<b>Couldn’t make it real.</b> ${esc(e.message)}`, 'error', 7000);
+  }
 }
 
 async function replanPlan() {
@@ -1858,6 +1920,7 @@ function onDocClick(e) {
   const act = e.target.closest('[data-action]');
   if (act) {
     if (act.dataset.action === 'approve') approvePlan();
+    else if (act.dataset.action === 'adopt') adoptPlan();
     else if (act.dataset.action === 'replan') replanPlan();
     return;
   }
@@ -1936,6 +1999,8 @@ function wireEvents() {
     }
   });
   $('#manual-form').addEventListener('submit', manualPlan);
+  $('#whatif-btn').addEventListener('click', whatifPlan);
+  $('#scan-btn').addEventListener('click', riskScan);
   $('#view-toggle').addEventListener('click', (e) => {
     const b = e.target.closest('[data-view]');
     if (b) setView(b.dataset.view);

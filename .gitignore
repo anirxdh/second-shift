@@ -14,10 +14,9 @@ runs/
 # Third-party docs scraped for offline reference; not ours to redistribute.
 reference/
 # Local-only planning and tooling, not part of the project
-ideas/
-CODEX_REFERENCE_TASK.md
 .claude/
 web/samples/
 evals/recorded_parses.json
 # Video production workspace (assets, toolkit clone, renders)
-video/
+video/toolkit/
+video/**/node_modules/

@@ -171,6 +171,28 @@ def manual_plan(body: ManualCallout) -> dict:
                                 callout={"text": "(entered by dispatcher)", "sender": "dispatcher"})
 
 
+@app.post("/api/whatif")
+def whatif(body: ManualCallout) -> dict:
+    """Simulate a call-out: full plan + checks, status 'simulated', nothing is ever written."""
+    with S.lock:
+        return S.engine.propose([Absence(tech_id=body.tech_id, start=body.start, end=body.end)], simulate=True,
+                                callout={"text": "(what-if from the dashboard)", "sender": "dispatcher"})
+
+
+@app.get("/api/whatif/scan")
+def whatif_scan() -> list[dict]:
+    """What if each technician called out? Ranks single points of failure. Pure simulation."""
+    with S.lock:
+        return S.engine.preparedness_scan()
+
+
+@app.post("/api/plans/{plan_id}/adopt")
+def adopt(plan_id: str) -> dict:
+    """Make a what-if real: a fresh proposal from current Sheets + Calendar, awaiting approval."""
+    with S.lock:
+        return S.engine.adopt(plan_id)
+
+
 @app.get("/api/plans")
 def plans() -> list[dict]:
     return S.engine.ledger.list_plans()

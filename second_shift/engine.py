@@ -66,6 +66,7 @@ class ParsedCallout(BaseModel):
     confidence: str = "low"  # high | medium | low
     needs_clarification: bool = False
     clarifying_question: str | None = None
+    is_hypothetical: bool = False  # "what if Wei doesn't show up?" -> simulate, never write
     summary: str = ""
 
 
@@ -78,7 +79,7 @@ def guard(
     now: int | None,
 ) -> tuple[str, str | None, Absence | None]:
     """Deterministic checks on the model's reading. Returns (decision, question, absence).
-    decision: 'ignore' | 'clarify' | 'plan'. When in doubt, ask; never guess who is out."""
+    decision: 'ignore' | 'clarify' | 'plan' | 'simulate'. When in doubt, ask; never guess who is out."""
     if not parsed.is_callout:
         return "ignore", None, None
     if sender_tech is None and not is_dispatcher:
@@ -105,7 +106,7 @@ def guard(
         return "clarify", f"For which hours is {tech.name.split()[0]} out?", None
     if end <= start:
         return "clarify", f"For which hours is {tech.name.split()[0]} out?", None
-    return "plan", None, Absence(tech_id=tech.id, start=start, end=end)
+    return ("simulate" if parsed.is_hypothetical else "plan"), None, Absence(tech_id=tech.id, start=start, end=end)
 
 
 class Engine:
@@ -182,7 +183,8 @@ class Engine:
 
     # ---------- plan ----------
     def propose(self, absences: list[Absence], *, run_id: str | None = None, callout: dict | None = None,
-                snap: Snapshot | None = None) -> dict:
+                snap: Snapshot | None = None, simulate: bool = False) -> dict:
+        """simulate=True makes a what-if: the full plan and checks, status 'simulated', never writable."""
         run_id = run_id or f"run-{uuid.uuid4().hex[:8]}"
         snap = snap or self.snapshot(run_id)
         t0 = time.time()
@@ -202,7 +204,9 @@ class Engine:
                           {"violations": [v.detail for v in violations]})
         actions = self.build_actions(snap, plan)
         ok = not violations and plan.solver_status in ("OPTIMAL", "FEASIBLE")
-        self.ledger.save_plan(plan.id, "proposed" if ok else "rejected", {
+        status = ("simulated" if simulate else "proposed") if ok else "rejected"
+        self.ledger.save_plan(plan.id, status, {
+            "simulated": simulate,
             "run_id": run_id,
             "plan_day": plan_day().isoformat(),
             "plan": plan.model_dump(),
@@ -215,6 +219,37 @@ class Engine:
             "verification": None,
         })
         return self.view(plan.id)
+
+    def adopt(self, plan_id: str) -> dict:
+        """Turn a what-if into a real proposal, re-planned from fresh Sheets + Calendar."""
+        status, body = self.ledger.get_plan(plan_id)
+        absences = [Absence.model_validate(a) for a in body["plan"]["absences"] if a.get("reason") == "callout"]
+        callout = dict(body.get("callout") or {}, adopted_from=plan_id)
+        return self.propose(absences, callout=callout)
+
+    def preparedness_scan(self) -> list[dict]:
+        """What if each technician called out today? Pure simulation: no ledger rows, no writes.
+        Reveals single points of failure (techs whose absence leaves jobs uncoverable)."""
+        snap = self.snapshot()
+        earlier = self.active_absences()
+        rows = []
+        for tech in snap.company.technicians:
+            if any(a.tech_id == tech.id for a in earlier):
+                continue
+            plan = solve(snap.company, [Absence(tech_id=tech.id, start=0, end=24 * 60)] + earlier + snap.busy,
+                         now=self.now(), plan_id=f"scan-{tech.id}")
+            o = plan.objective
+            lost = [c for c in plan.changes if c.kind == "unassigned" and c.from_tech == tech.id]
+            rows.append({
+                "tech_id": tech.id, "name": tech.name, "skills": tech.skills,
+                "jobs": o["displaced"], "covered": o["displaced_covered"], "reschedule": len(lost),
+                "reschedule_jobs": [{"job_id": c.job_id, "customer": snap.company.job(c.job_id).customer,
+                                     "why": c.note} for c in lost],
+                "reassigned": o["reassigned"], "customer_notices": o["customer_notices"],
+                "valid": not check_plan(snap.company, plan), "solve_ms": plan.solve_ms,
+            })
+        rows.sort(key=lambda r: (-r["reschedule"], -r["jobs"], r["name"]))
+        return rows
 
     def active_absences(self) -> list[Absence]:
         """Call-out absences from plans carried out on the current plan day."""
@@ -299,8 +334,8 @@ class Engine:
         run_id = body["run_id"]
         if status in ("done", "done_with_issues"):
             return self.view(plan_id)  # a second click changes nothing
-        if status in ("rejected", "stale"):
-            return self.view(plan_id)
+        if status in ("rejected", "stale", "simulated"):
+            return self.view(plan_id)  # what-ifs and invalid plans never write
         plan = Plan.model_validate(body["plan"])
         actions = [Action.model_validate(a) for a in body["actions"]]
         if status == "proposed":
@@ -456,6 +491,18 @@ class Engine:
             return {"outcome": "clarify", "question": question, "run_id": run_id}
         callout = {"text": msg.text, "sender": sender_name, "parsed": parsed.model_dump(),
                    "absence": absence.model_dump()}
+        if decision == "simulate":
+            view = self.propose([absence], run_id=run_id, callout=callout, snap=snap, simulate=True)
+            o, tech = view["plan"]["objective"], company.tech(absence.tech_id)
+            lost = [company.job(j).customer for j in view["plan"]["unassigned"]
+                    if company.job(j).tech_id == tech.id]
+            text = (f"What-if: if {tech.name} is out, the plan covers {o['displaced_covered']} of {o['displaced']} of "
+                    f"their jobs" + (f"; {', '.join(lost)} would need rescheduling" if lost else "") +
+                    f"; {o['customer_notices']} customers would be emailed. Nothing has changed. "
+                    "Dispatch can make it real in the app.")
+            self._reply(run_id, f"whatif:{msg.ts}", text)
+            self.ledger.mark_seen(msg.ts, "simulated")
+            return {"outcome": "simulated", "plan_id": view["id"], "run_id": run_id}
         view = self.propose([absence], run_id=run_id, callout=callout, snap=snap)
         tech = company.tech(absence.tech_id)
         span = "today" if absence.start <= tech.shift_start and absence.end >= tech.shift_end else \
