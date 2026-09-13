@@ -19,3 +19,5 @@ CODEX_REFERENCE_TASK.md
 .claude/
 web/samples/
 evals/recorded_parses.json
+# Video production workspace (assets, toolkit clone, renders)
+video/

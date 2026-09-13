@@ -38,9 +38,9 @@ Rules: lime is the only brand color and is never used for a status. Mint means v
 | Role | Face | Use |
 |---|---|---|
 | Wordmark, labels, tags, buttons | Silkscreen (400/700) | ALL CAPS, 9 to 12px, tracking 0.04 to 0.08em |
-| Headings, big numbers | Pixelify Sans (500 to 700) | 14 to 30px, tabular feel |
+| Headings | Pixelify Sans (500 to 700) | 12 to 20px |
 | Body, data, trace | JetBrains Mono (400 to 700) | 11.5 to 13px, never below 10px |
-| Clock | VT323 | 20px, lime, with a phosphor glow |
+| Clock, big numbers, timestamps | VT323 | 13 to 42px; the clock is lime with a phosphor glow. Pixel faces made 3 and 8 look alike, so numbers are always VT323 |
 
 All fonts are OFL and vendored in `web/fonts/`. No runtime CDN.
 
