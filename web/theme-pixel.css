@@ -906,9 +906,9 @@ body.crt-off::after { display: none; }
 
 
 /* ---- What-if + risk scan ---- */
-.btn-small.ghost { background: transparent; color: var(--ss-lime, #d97757); box-shadow: inset 0 0 0 2px currentColor; }
-.btn-small.ghost:hover:not(:disabled) { background: rgba(217, 119, 87, 0.12); }
-.head-btn { margin-right: 8px; padding: 4px 10px; font-size: 11px; white-space: nowrap; }
+.btn-small.btn-outline { background: transparent; color: var(--ss-lime, #d97757); box-shadow: inset 0 0 0 2px currentColor; }
+.btn-small.btn-outline:hover:not(:disabled) { background: rgba(217, 119, 87, 0.12); }
+.head-btn { position: static; margin-right: 8px; padding: 4px 10px; font-size: 11px; white-space: nowrap; }
 .scan-dialog { background: #1c1b19; color: #f0eee6; border: 0; padding: 18px 20px; width: min(820px, 92vw);
   box-shadow: 0 0 0 2px #d97757, 6px 6px 0 0 #000; font-family: "JetBrains Mono", ui-monospace, monospace; }
 .scan-dialog::backdrop { background: rgba(8, 8, 7, 0.72); }
