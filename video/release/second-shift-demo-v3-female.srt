@@ -1,0 +1,216 @@
+1
+00:00:00,300 --> 00:00:01,160
+It's six forty-five
+
+2
+00:00:01,170 --> 00:00:01,950
+in the morning.
+
+3
+00:00:01,960 --> 00:00:03,570
+Marco just called in sick.
+
+4
+00:00:03,580 --> 00:00:04,650
+Four customers are waiting
+
+5
+00:00:04,660 --> 00:00:05,640
+for him today.
+
+6
+00:00:05,650 --> 00:00:07,120
+Who covers his jobs?
+
+7
+00:00:07,130 --> 00:00:07,850
+Figuring that out
+
+8
+00:00:07,860 --> 00:00:09,330
+by hand takes an hour.
+
+9
+00:00:09,340 --> 00:00:10,180
+Second Shift does it
+
+10
+00:00:10,190 --> 00:00:11,210
+in seconds.
+
+11
+00:00:12,425 --> 00:00:13,525
+Someone posts in Slack:
+
+12
+00:00:13,535 --> 00:00:14,645
+Marco is out.
+
+13
+00:00:14,655 --> 00:00:15,775
+Second Shift reads it,
+
+14
+00:00:15,785 --> 00:00:16,845
+then looks at every job
+
+15
+00:00:16,855 --> 00:00:18,065
+and every calendar.
+
+16
+00:00:18,404 --> 00:00:19,584
+It builds a new plan.
+
+17
+00:00:19,594 --> 00:00:21,034
+Watch the trucks move.
+
+18
+00:00:21,044 --> 00:00:21,904
+Wei can do Marco's
+
+19
+00:00:21,914 --> 00:00:22,624
+big gas job,
+
+20
+00:00:22,634 --> 00:00:23,794
+but he's busy.
+
+21
+00:00:23,804 --> 00:00:24,454
+So Ana takes
+
+22
+00:00:24,464 --> 00:00:25,414
+Wei's small job,
+
+23
+00:00:25,424 --> 00:00:26,944
+and Wei takes Marco's.
+
+24
+00:00:26,954 --> 00:00:27,614
+One job can't
+
+25
+00:00:27,624 --> 00:00:28,494
+be saved today,
+
+26
+00:00:28,504 --> 00:00:29,524
+so that customer is asked
+
+27
+00:00:29,534 --> 00:00:30,714
+to pick a new time.
+
+28
+00:00:31,141 --> 00:00:32,181
+Nothing changes until
+
+29
+00:00:32,191 --> 00:00:33,661
+a person says yes.
+
+30
+00:00:33,671 --> 00:00:34,311
+One click,
+
+31
+00:00:34,321 --> 00:00:35,641
+and it updates the calendars
+
+32
+00:00:35,651 --> 00:00:36,551
+and the job sheet,
+
+33
+00:00:36,561 --> 00:00:37,931
+messages the team in Slack,
+
+34
+00:00:37,941 --> 00:00:39,531
+and emails the customers.
+
+35
+00:00:39,914 --> 00:00:41,674
+Then it double-checks every change.
+
+36
+00:00:41,684 --> 00:00:43,524
+Thirty-six out of thirty-six.
+
+37
+00:00:43,534 --> 00:00:44,724
+If it crashes halfway,
+
+38
+00:00:44,734 --> 00:00:45,234
+it finishes
+
+39
+00:00:45,244 --> 00:00:47,054
+without sending anything twice.
+
+40
+00:00:47,064 --> 00:00:47,864
+And you can ask:
+
+41
+00:00:47,874 --> 00:00:48,334
+what if Wei
+
+42
+00:00:48,344 --> 00:00:49,424
+doesn't show up?
+
+43
+00:00:49,434 --> 00:00:50,024
+It shows you,
+
+44
+00:00:50,034 --> 00:00:51,304
+before it happens.
+
+45
+00:00:51,674 --> 00:00:52,274
+Sick days,
+
+46
+00:00:52,284 --> 00:00:54,094
+flat tires, no-shows.
+
+47
+00:00:54,104 --> 00:00:55,414
+They'll keep happening.
+
+48
+00:00:55,424 --> 00:00:56,324
+Now they take seconds
+
+49
+00:00:56,334 --> 00:00:57,074
+to fix,
+
+50
+00:00:57,084 --> 00:00:57,994
+not an hour.
+
+51
+00:00:58,004 --> 00:00:59,234
+We can't predict the day.
+
+52
+00:00:59,244 --> 00:01:00,014
+But we can be ready
+
+53
+00:01:00,024 --> 00:01:00,794
+for it.
+
+54
+00:01:00,804 --> 00:01:01,874
+Second Shift.
+
