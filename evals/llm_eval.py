@@ -21,7 +21,7 @@ from second_shift.adapters.fakes import build_fake_ports
 from second_shift.engine import Engine, guard
 from second_shift.ledger import Ledger
 from second_shift.models import fmt
-from second_shift.parse import ClaudeParser
+from second_shift.parse import make_parser
 
 HERE = Path(__file__).resolve().parent
 NOW = 405
@@ -71,7 +71,9 @@ def main() -> int:
     ports, _ = build_fake_ports()
     engine = Engine(ports, Ledger(), None, dispatchers={"U_DISPATCH"}, now=lambda: NOW)
     company = engine.snapshot().company
-    parser = ClaudeParser(record_to=HERE / "recorded_parses.json")
+    parser = make_parser(record_to=HERE / "recorded_parses.json")
+    if parser is None:
+        sys.exit("No API key for LLM_PROVIDER")
     rows, passed = [], 0
     for case in CASES:
         sender, text, *_ = case
@@ -86,9 +88,9 @@ def main() -> int:
         rows.append((ok, sender, text, case[2], got, parsed.confidence, question or "", ms))
         print(f"{'PASS' if ok else 'FAIL'}  {text[:60]:60}  -> {got}")
     lines = [
-        "# Message understanding eval (Claude + guardrails)",
+        "# Message understanding eval (LLM + guardrails)",
         "",
-        f"Generated {dt.datetime.now().strftime('%Y-%m-%d %H:%M')} with model `{parser.model}` "
+        f"Generated {dt.datetime.now().strftime('%Y-%m-%d %H:%M')} with `{getattr(parser, 'provider', 'anthropic')}` model `{parser.model}` "
         "by `uv run python -m evals.llm_eval`.",
         "",
         f"**{passed}/{len(CASES)} messages led to the correct decision.**",

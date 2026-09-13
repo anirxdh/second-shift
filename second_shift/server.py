@@ -42,11 +42,9 @@ S = State()
 
 
 def _parser():
-    if os.getenv("ANTHROPIC_API_KEY"):
-        from .parse import ClaudeParser
+    from .parse import make_parser
 
-        return ClaudeParser()
-    return None
+    return make_parser()
 
 
 def build() -> None:
@@ -147,7 +145,7 @@ def post_message(body: MessageIn) -> dict:
     if MODE != "fake":
         raise HTTPException(400, "In live mode, post in Slack #dispatch. The app picks it up automatically.")
     if S.engine.parser is None:
-        raise HTTPException(400, "Set ANTHROPIC_API_KEY in .env so Claude can read messages.")
+        raise HTTPException(400, "No LLM key for LLM_PROVIDER (default openai: set OPENAI_API_KEY in .env).")
     with S.lock:
         msg = S.engine.ports.chat.human_post(body.user, body.text)
         return {**S.engine.handle_message(msg), "ts": msg.ts}

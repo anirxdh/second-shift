@@ -36,7 +36,7 @@ flowchart LR
 
 | Decision | Made by | Why |
 |---|---|---|
-| Is this message a call-out? Who, and which hours? | Claude (structured output, fixed schema) | Language is messy: "car broke down, in by noon" |
+| Is this message a call-out? Who, and which hours? | An LLM with strict structured output: OpenAI by default, Claude or Groq by config | Language is messy: "car broke down, in by noon" |
 | Is that reading trustworthy? | Code: the named tech must exist and literally appear in the message (or be the sender); the sender must be crew or dispatch; the times must be sane | The model can be wrong; the code refuses to guess and asks instead |
 | Who does which job, and when | CP-SAT solver | Skills, equipment, promised windows, shifts, drive times, and no overlaps are hard rules, not suggestions |
 | Is the plan legal? | Independent checker (separate code) | A solver bug can't hide itself |
@@ -64,7 +64,7 @@ Every run leaves a step-by-step trace (read, parse, guard, solve, check, re-chec
 ## Evaluation results
 
 - **Reliability scenarios: 26/26 pass** (`uv run python -m evals.run`, report in `evals/REPORT.md`). They run the same engine, solver, checker, ledger, and sheet-parsing code as the live run, against in-memory stand-ins for the four apps that can inject faults.
-- **Message understanding: _TBD_/15** real-world messages led to the right decision: plan, ask, or ignore (`uv run python -m evals.llm_eval`, report in `evals/LLM_REPORT.md`).
+- **Message understanding: 15/15** real-world messages led to the right decision: plan, ask, or ignore (OpenAI `gpt-4.1-mini` plus the guardrails; `uv run python -m evals.llm_eval`, report in `evals/LLM_REPORT.md`). The first run scored 14/15: "Jordan might be out later, not sure yet" was ignored instead of asked about. We added one rule (an uncertain absence gets a clarifying question) and re-ran. The same eval runs against Claude with `LLM_PROVIDER=anthropic`.
 - **Solver vs a careful greedy dispatcher:** on the demo day, the solver covers **3 of Marco's 4 jobs**; a greedy dispatcher who fills any legal gap inside the promised window without moving other jobs covers **1**. The fourth job truly has no legal slot, so its customer gets a reschedule request.
 - **Live run on real Google Sheets, Calendar, Gmail and Slack:** _TBD_ read-back checks passed, repeated _TBD_ times from a clean reset.
 - **Determinism:** the same inputs give the same plan every time (5/5 runs identical).

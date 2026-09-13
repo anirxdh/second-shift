@@ -8,6 +8,7 @@ dependencies = [
     "google-api-python-client>=2.200.0",
     "google-auth-httplib2>=0.4.2",
     "google-auth-oauthlib>=1.4.1",
+    "openai>=3.13.0",
     "ortools>=9.15.6755",
     "pydantic>=2.13.5",
     "python-dotenv>=1.2.3",
