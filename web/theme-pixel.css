@@ -727,14 +727,14 @@ body.crt-off::after { display: none; }
   font: 700 17px/1 var(--px-font-head);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  box-shadow: 0 -2px 0 0 #9fc21e inset, 0 -4px 0 0 rgba(0, 0, 0, 0.18) inset, 5px 5px 0 0 var(--ss-shadow);
+  box-shadow: 0 -2px 0 0 #a8543a inset, 0 -4px 0 0 rgba(0, 0, 0, 0.18) inset, 5px 5px 0 0 var(--ss-shadow);
   transition: transform 80ms steps(2), box-shadow 80ms steps(2), background 120ms steps(2);
   width: calc(100% - 5px);
 }
 .approve:not(:disabled) { animation: px-ready 2.4s steps(2) infinite; }
-@keyframes px-ready { 50% { background: #e2ff72; } }
-.approve:hover:not(:disabled) { background: #e8ff85; transform: translate(-1px, -1px); box-shadow: 0 -2px 0 0 #9fc21e inset, 6px 6px 0 0 var(--ss-shadow); animation: none; }
-.approve:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: 0 2px 0 0 #9fc21e inset, 2px 2px 0 0 var(--ss-shadow); }
+@keyframes px-ready { 50% { background: #e8927a; } }
+.approve:hover:not(:disabled) { background: #eaa08a; transform: translate(-1px, -1px); box-shadow: 0 -2px 0 0 #a8543a inset, 6px 6px 0 0 var(--ss-shadow); animation: none; }
+.approve:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: 0 2px 0 0 #a8543a inset, 2px 2px 0 0 var(--ss-shadow); }
 .approve kbd { border-radius: 0; background: var(--ss-night); color: var(--ss-brand); font: 400 10px/1 var(--px-font-label); padding: 4px 5px 3px; }
 .approve:disabled { background: var(--ss-panel-3); color: var(--ss-muted); box-shadow: 4px 4px 0 0 var(--ss-shadow); }
 .approve.busy { color: var(--ss-night); animation: none; }
