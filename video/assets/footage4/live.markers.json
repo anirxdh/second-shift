@@ -1,0 +1,170 @@
+{
+  "video": "/Users/anirudh/Desktop/MultiApp-Ai-Agent-hack/video/assets/footage4/live.mp4",
+  "firstFrameEpoch": 1789338584.742467,
+  "videoSize": [
+    1920,
+    1080
+  ],
+  "markers": [
+    {
+      "t": -0.07,
+      "label": "recording start (Before state, page loaded)"
+    },
+    {
+      "t": 1.23,
+      "label": "screenshot live_01_start.png"
+    },
+    {
+      "t": 5.32,
+      "label": "picked Marco Diaz, All day"
+    },
+    {
+      "t": 6.12,
+      "label": "clicked Plan (Marco Diaz, All day)"
+    },
+    {
+      "t": 8.69,
+      "label": "plan ready (board animates, vans drive)"
+    },
+    {
+      "t": 12.22,
+      "label": "screenshot live_02_plan_after.png"
+    },
+    {
+      "t": 15.23,
+      "label": "B -> Before"
+    },
+    {
+      "t": 16.55,
+      "label": "screenshot live_03_before.png"
+    },
+    {
+      "t": 17.68,
+      "label": "B -> After (vans drive again)"
+    },
+    {
+      "t": 20.45,
+      "label": "screenshot live_04_after_again.png"
+    },
+    {
+      "t": 22.97,
+      "label": "M zone map open"
+    },
+    {
+      "t": 26.16,
+      "label": "screenshot live_05_map.png"
+    },
+    {
+      "t": 29.16,
+      "label": "M zone map close"
+    },
+    {
+      "t": 30.95,
+      "label": "scroll plan panel start"
+    },
+    {
+      "t": 36.17,
+      "label": "plan panel scrolled to bottom"
+    },
+    {
+      "t": 37.26,
+      "label": "screenshot live_06_plan_panel_bottom.png"
+    },
+    {
+      "t": 39.61,
+      "label": "plan panel back to top"
+    },
+    {
+      "t": 40.57,
+      "label": "screenshot live_07_approve_ready.png"
+    },
+    {
+      "t": 41.44,
+      "label": "clicked Approve (writes start)"
+    },
+    {
+      "t": 79.5,
+      "label": "writes done: 36/36 burst"
+    },
+    {
+      "t": 81.25,
+      "label": "screenshot live_08_verified_36.png"
+    },
+    {
+      "t": 86.79,
+      "label": "scrolled to verification trace"
+    },
+    {
+      "t": 87.72,
+      "label": "screenshot live_09_trace.png"
+    },
+    {
+      "t": 91.2,
+      "label": "picked Wei Chen"
+    },
+    {
+      "t": 91.96,
+      "label": "clicked What if?"
+    },
+    {
+      "t": 94.18,
+      "label": "what-if ready"
+    },
+    {
+      "t": 96.55,
+      "label": "screenshot live_10_whatif_wei.png"
+    },
+    {
+      "t": 100.32,
+      "label": "clicked Risk scan"
+    },
+    {
+      "t": 102.66,
+      "label": "risk scan results"
+    },
+    {
+      "t": 104.78,
+      "label": "screenshot live_11_risk_scan.png"
+    },
+    {
+      "t": 108.58,
+      "label": "closed risk scan"
+    },
+    {
+      "t": 110.38,
+      "label": "recording stop"
+    }
+  ],
+  "clicks": [
+    {
+      "t": 5.93,
+      "x": 246,
+      "y": 1040,
+      "label": "Plan"
+    },
+    {
+      "t": 41.31,
+      "x": 1698,
+      "y": 995,
+      "label": "Approve"
+    },
+    {
+      "t": 91.82,
+      "x": 1094,
+      "y": 85,
+      "label": "What if?"
+    },
+    {
+      "t": 100.18,
+      "x": 1200,
+      "y": 85,
+      "label": "Risk scan"
+    },
+    {
+      "t": 108.42,
+      "x": 603,
+      "y": 823,
+      "label": "Close risk scan"
+    }
+  ]
+}

@@ -11,8 +11,15 @@ __pycache__/
 runs/
 *.sqlite
 .DS_Store
-# Third-party docs scraped for offline reference; not ours to redistribute.
-reference/
+# Research: publish our summaries, index and manifests; keep verbatim third-party
+# docs, page captures and repo clones local (not ours to redistribute).
+reference/**
+!reference/**/
+!reference/README.md
+!reference/INDEX.md
+!reference/VERIFY.md
+!reference/*-manifest.txt
+!reference/*/SUMMARY.md
 # Local-only planning and tooling, not part of the project
 .claude/
 web/samples/
@@ -20,3 +27,15 @@ evals/recorded_parses.json
 # Video production workspace (assets, toolkit clone, renders)
 video/toolkit/
 video/**/node_modules/
+reference/arga/skills-or-repos/
+reference/lemma/skills-repo/
+# Video: keep scripts, assets and final renders; drop raw capture frames and scratch
+video/record/*
+!video/record/*.js
+video/smoke/
+video/smoke_assets/
+video/work/
+video/qa*/
+video/**/raw/
+video/**/raw_*/
+video/*.log

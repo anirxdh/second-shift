@@ -1,0 +1,1571 @@
+Source: https://docs.argalabs.com/llms.txt https://docs.uselemma.ai/llms.txt
+Fetched: 2026-09-13T06:16:36.235744+00:00
+
+[
+  {
+    "url": "https://docs.argalabs.com/llms.txt",
+    "path": "arga/docs/llms.txt",
+    "description": "Official documentation page index",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 9553,
+    "sha256": "1388244e020bacf1deb7a1da298c2f80ebbf612a4b2960ef5205cc84c22ecd10"
+  },
+  {
+    "url": "https://docs.uselemma.ai/llms.txt",
+    "path": "lemma/docs/llms.txt",
+    "description": "Official documentation page index",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 17689,
+    "sha256": "94f974313655ed1c51d2779c95ce1d23f87f08cda2bcae498018e14e87f0dcbe"
+  },
+  {
+    "url": "https://docs.argalabs.com/features/custom-scenarios.md",
+    "path": "arga/docs/features/custom-scenarios.md",
+    "description": "Scenarios: Reusable starting state for Twin Runs",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 28638,
+    "sha256": "8507f13eb4ed9dc955f7bb7ee6422eb6f8e693b106802be4c72c736a313bf911"
+  },
+  {
+    "url": "https://docs.argalabs.com/concepts/how-it-works.md",
+    "path": "arga/docs/concepts/how-it-works.md",
+    "description": "How Arga works: Combine controlled service state with repeatable browser tests",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2872,
+    "sha256": "2051a4ba619e049046c48578bf279ccae7b98729f87d06d282430e429010e87e"
+  },
+  {
+    "url": "https://docs.argalabs.com/concepts/digital-twins.md",
+    "path": "arga/docs/concepts/digital-twins.md",
+    "description": "Digital twins: Stateful replicas of external services for safe, repeatable testing",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 110985,
+    "sha256": "4eb73766756f0e6cf69312d5e1e40a106ac047ea0bce94ddfa1b5db0c167c0f6"
+  },
+  {
+    "url": "https://docs.argalabs.com/features/local-testing.md",
+    "path": "arga/docs/features/local-testing.md",
+    "description": "Testing integrations locally: Use digital twins as drop-in replacements for third-party APIs during local development",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 10307,
+    "sha256": "aa7cc39825689c3a04e97e6e2a4f6e26299316cb016164bb640f8990a2fe46b2"
+  },
+  {
+    "url": "https://docs.argalabs.com/concepts/twin-reference.md",
+    "path": "arga/docs/concepts/twin-reference.md",
+    "description": "Twin reference: Per-twin support, known limitations, and MCP tools",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 39888,
+    "sha256": "dea34d3085dd02559367ec1ec921b6c6514c96672e0800cbb416deed40464499"
+  },
+  {
+    "url": "https://docs.argalabs.com/features/twins-quickstart.md",
+    "path": "arga/docs/features/twins-quickstart.md",
+    "description": "Twins quickstart: Set up digital twins for your staging environment in minutes",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 37066,
+    "sha256": "40addcc51f87eef10bab9702fc5be3a356768e6dc24419e78c0a03cfee7526d6"
+  },
+  {
+    "url": "https://docs.argalabs.com/quickstart.md",
+    "path": "arga/docs/quickstart.md",
+    "description": "Quickstart: Run a browser test and provision service twins",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3622,
+    "sha256": "a21d4fa6b86433f45cf5470ef9198c03579122a110c04800eb95b1f114f19f66"
+  },
+  {
+    "url": "https://docs.argalabs.com/index.md",
+    "path": "arga/docs/index.md",
+    "description": "Arga: Stateful service twins and repeatable tests for apps and agents",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2938,
+    "sha256": "bf414e7d59e97ff4d7051d97c4fb2afad315f1c066fac19624ff7d3ed806731e"
+  },
+  {
+    "url": "https://docs.argalabs.com/mcp-tools.md",
+    "path": "arga/docs/mcp-tools.md",
+    "description": "MCP: Use Twin Runs and browser tests from a coding agent",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 7332,
+    "sha256": "22db85d84882cbf42f1e6c9316e851e8229a8e2ec0281510328c08424a0fd771"
+  },
+  {
+    "url": "https://docs.argalabs.com/features/pr-validation.md",
+    "path": "arga/docs/features/pr-validation.md",
+    "description": "PR Test Runs: Run saved or generated tests from pull requests and branch pushes",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3574,
+    "sha256": "7f0cafded0be7a8e3096de3d15f6a5b4d249a6afc0597b64cb25d92369af6c57"
+  },
+  {
+    "url": "https://docs.argalabs.com/plans.md",
+    "path": "arga/docs/plans.md",
+    "description": "Plans and limits: Compare Free, Team, and Paid limits",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2358,
+    "sha256": "6f6b5dcd88c7416333b929c29b3f3e87ba89f66e910b7178e00cde4e4b213392"
+  },
+  {
+    "url": "https://docs.argalabs.com/cli-and-mcp.md",
+    "path": "arga/docs/cli-and-mcp.md",
+    "description": "CLI: Manage Twin Runs, Scenarios, Test Runs, Saved Tests, and PR Test Runs",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 8986,
+    "sha256": "e111f62c4feb421e7da20fc789f31bc139fdf17bc1dd65df06940679e16e6e6c"
+  },
+  {
+    "url": "https://docs.argalabs.com/features/validate-modes.md",
+    "path": "arga/docs/features/validate-modes.md",
+    "description": "Test workflows: Choose between Test Runs, Saved Tests, Twin Runs, Scenarios, and PR Test Runs",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3908,
+    "sha256": "e81656bb1b5da75255f7d8330631755ac082da4f4b5aa0dc6b0dfaf313c9738d"
+  },
+  {
+    "url": "https://docs.argalabs.com/web-app.md",
+    "path": "arga/docs/web-app.md",
+    "description": "Web app: Use Twin Runs, Scenarios, Saved Tests, Test Runs, and PR Test Runs",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3429,
+    "sha256": "f0093a7838d002c277548f28443fb8dcc00bbaefa5b09e75740041e952465277"
+  },
+  {
+    "url": "https://docs.argalabs.com/integrations.md",
+    "path": "arga/docs/integrations.md",
+    "description": "Integrations: Create reusable twin scenarios from selected production data",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2580,
+    "sha256": "bd2fad0b9ea5cd608291ccb4ff4c0b638cc6dfb70641ec0086274883b67e4767"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference.md",
+    "path": "arga/docs/api-reference.md",
+    "description": "API reference: Public API endpoints for twins, scenarios, browser tests, and PR Test Runs",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1651,
+    "sha256": "72658e85620269a100872596ea3ec16da06442ec1445cc5235e0507e3bd7806a"
+  },
+  {
+    "url": "https://docs.argalabs.com/troubleshooting.md",
+    "path": "arga/docs/troubleshooting.md",
+    "description": "Troubleshooting: Common issues and how to fix them",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 9324,
+    "sha256": "d5424442378239ca8524d61747420ffecd55bb15925c2fb853a8e3cae306e2ef"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/auth.md",
+    "path": "arga/docs/api-reference/auth.md",
+    "description": "Authentication: Authenticate requests to the Arga API",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3716,
+    "sha256": "82c4e65cb426af705b2b53e6922d7a85453b8c3a41e5bd0993916d136c78de2e"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-list-available-twins.md",
+    "path": "arga/docs/api-reference/get-list-available-twins.md",
+    "description": "GET List available twins: List digital twins that can be provisioned",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1402,
+    "sha256": "8250f4f535798951c6b5f4471d23ab11564a2d50ae7db3df34a772f5197d86e2"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-get-twin-provision-status.md",
+    "path": "arga/docs/api-reference/get-get-twin-provision-status.md",
+    "description": "GET Get twin provision status: Poll a twin provisioning run",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2579,
+    "sha256": "0171b5928f517c035bfb8cdbb6c09ce38f9150686f7edab0cd12cc018f174651"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/post-provision-twins.md",
+    "path": "arga/docs/api-reference/post-provision-twins.md",
+    "description": "POST Provision twins: Spin up ephemeral digital twins",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2862,
+    "sha256": "b6b61fb3877fb63a0ad8e3b0b1d3f453de778bec6d4f8eff7b57a01d183c0906"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/availability-notes.md",
+    "path": "arga/docs/api-reference/availability-notes.md",
+    "description": "Availability notes: Current public API shape and compatibility routes",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2295,
+    "sha256": "34d2a3be4bdb63d1d1e9f18967a7b26b42d44eb353fb5662f1f1c114b1fa620f"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/post-extend-twin-provision-ttl.md",
+    "path": "arga/docs/api-reference/post-extend-twin-provision-ttl.md",
+    "description": "POST Extend twin provision TTL: Extend an active twin session",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1777,
+    "sha256": "ee7ac2050f1868364dcf74ffda1c95fb51270640326998d3c4c5c8e317a7177e"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/post-lock-twin-provision-public-access.md",
+    "path": "arga/docs/api-reference/post-lock-twin-provision-public-access.md",
+    "description": "POST Lock twin provision public access: Disable public access without teardown",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2226,
+    "sha256": "8364dd2cf623abcb26e11651bb40c4b4f1dc4b836d0353ea9cc58aee5ef5a457"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/post-tear-down-twin-provision.md",
+    "path": "arga/docs/api-reference/post-tear-down-twin-provision.md",
+    "description": "POST Tear down twin provision: Destroy a twin session immediately",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1263,
+    "sha256": "4bf7601aa128528248fec8311fbd094c2bc94df8f6f31c0dd5b214e4651c34ef"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/post-create-a-scenario.md",
+    "path": "arga/docs/api-reference/post-create-a-scenario.md",
+    "description": "POST Create a scenario: Create reusable twin seed data",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2715,
+    "sha256": "9c59527709b6527c0761f4bddb0036d478950c55d12fc9efce4771802de17684"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-list-preset-scenarios.md",
+    "path": "arga/docs/api-reference/get-list-preset-scenarios.md",
+    "description": "GET List preset scenarios: List built-in seed scenarios",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 647,
+    "sha256": "9ec5106a5fb5f0e34661ac2ecd017bc8b7d527401633b6fa237418688afd2397"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-list-scenarios.md",
+    "path": "arga/docs/api-reference/get-list-scenarios.md",
+    "description": "GET List scenarios: List your saved scenarios",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 754,
+    "sha256": "fcb2b04992efd81f6bffa778b5425f30ee359b33156951b78f1f127ec05920b0"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-get-a-scenario.md",
+    "path": "arga/docs/api-reference/get-get-a-scenario.md",
+    "description": "GET Get a scenario: Retrieve one scenario",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 340,
+    "sha256": "7c9d73bfff8e8b9be70f57501379fe5e4e030c1e2a3c29c99ec236367410df7a"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-list-scenario-long-runs.md",
+    "path": "arga/docs/api-reference/get-list-scenario-long-runs.md",
+    "description": "GET List scenario long runs: List the latest active twin quickstart run for each saved scenario",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2484,
+    "sha256": "57d2c5cb07ef5ab3e66113e0f3ec592d12ad2c96af5712cd1955d75a144299bf"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/put-update-a-scenario.md",
+    "path": "arga/docs/api-reference/put-update-a-scenario.md",
+    "description": "PUT Update a scenario: Update reusable twin seed data",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1013,
+    "sha256": "ae64cec980a5f15b90ea519a24e52cd31c967d1596032634883b4230d05a81b6"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/browser-agent-create-run.md",
+    "path": "arga/docs/api-reference/browser-agent-create-run.md",
+    "description": "POST Create a runner run: Run the browser agent against a reachable application URL",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1014,
+    "sha256": "6d2ea986ccf13f87813bcf5476d57941f0bef5ab858819869c954299db7326ee"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/browser-agent-rerun.md",
+    "path": "arga/docs/api-reference/browser-agent-rerun.md",
+    "description": "POST Rerun a runner run: Rerun a browser test from its saved TestConfig",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 733,
+    "sha256": "426fcc76669f795a5d22b3da4cc44b08af42c4c79a4ae43f429927f228617854"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/delete-delete-a-scenario.md",
+    "path": "arga/docs/api-reference/delete-delete-a-scenario.md",
+    "description": "DELETE Delete a scenario: Delete a saved scenario",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 413,
+    "sha256": "e3283509e9384404c7f0cafbb4dd1a8f3ef38e4911fb2c923d9ba8779125ee92"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/browser-agent-get-run.md",
+    "path": "arga/docs/api-reference/browser-agent-get-run.md",
+    "description": "GET Get a runner run: Retrieve a runner run",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 374,
+    "sha256": "209fc765ec4593024b5bfa2f33c5b3a2fd27d400291c7bb705aba9955a317e4a"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/browser-agent-list-runs.md",
+    "path": "arga/docs/api-reference/browser-agent-list-runs.md",
+    "description": "GET List runner runs: List recent runner runs",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 341,
+    "sha256": "9376d8608eb7689bd861a1381a17de145ec696f00e33d487c28e9760c9a35131"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/browser-agent-update-config.md",
+    "path": "arga/docs/api-reference/browser-agent-update-config.md",
+    "description": "PATCH Update runner config: Edit a run's TestConfig",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 514,
+    "sha256": "3c750530471b92429c81b1c3dbcab0b6f6307a017d47cb3b183d3edcdebed57a"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/browser-agent-get-artifact.md",
+    "path": "arga/docs/api-reference/browser-agent-get-artifact.md",
+    "description": "GET Get runner artifact: Download an artifact from a runner run",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 416,
+    "sha256": "bedf2568227de0e5944128b5a829aeec89a1735a23dad8bf85cde59f938bf376"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/browser-agent-send-message.md",
+    "path": "arga/docs/api-reference/browser-agent-send-message.md",
+    "description": "POST Send runner message: Append instructions to a running runner run",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 569,
+    "sha256": "6f454fa3bb4561533b61780714dc127dec8dd1ebde6887f4adaebed98c57fd82"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/browser-agent-stream.md",
+    "path": "arga/docs/api-reference/browser-agent-stream.md",
+    "description": "WEBSOCKET Stream runner events: Subscribe to run progress events",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 429,
+    "sha256": "9a11a06f0e2c83b7f5d890c2d49351197aac98233b9468865053450f77397710"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/post-save-a-runner-test.md",
+    "path": "arga/docs/api-reference/post-save-a-runner-test.md",
+    "description": "POST Save a test: Create a reusable browser-agent test",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1584,
+    "sha256": "0925683c0c27b4f9e9bd289050187b4649585e973e49bdf9f0d97ecc235aba28"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-get-a-saved-runner-test.md",
+    "path": "arga/docs/api-reference/get-get-a-saved-runner-test.md",
+    "description": "GET Get a test: Retrieve a saved test",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 325,
+    "sha256": "151db541eab489a71c98d79361b04b5235bbe77bc5860cede7aee43aa94a7b8e"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-list-saved-runner-tests.md",
+    "path": "arga/docs/api-reference/get-list-saved-runner-tests.md",
+    "description": "GET List tests: List saved browser-agent tests",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 517,
+    "sha256": "f6b3425099f7c6a73e82c41288d290d209ad94a31e0162af5b69a609a3d6384e"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/patch-update-a-saved-runner-test.md",
+    "path": "arga/docs/api-reference/patch-update-a-saved-runner-test.md",
+    "description": "PATCH Update a test: Update a saved browser-agent test",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 401,
+    "sha256": "2335c32e3938f6e87c3078b420d78a02e55c6b61d63e03fef6f916a207491a12"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/post-run-a-saved-runner-test.md",
+    "path": "arga/docs/api-reference/post-run-a-saved-runner-test.md",
+    "description": "POST Run a test: Execute a saved browser-agent test",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1301,
+    "sha256": "c6f8b93eb34e33b02b0981761e58fd5b1a5158aed7a5083bb6b3867020d9a1c7"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/delete-delete-a-saved-runner-test.md",
+    "path": "arga/docs/api-reference/delete-delete-a-saved-runner-test.md",
+    "description": "DELETE Delete a test: Delete a saved browser-agent test",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 414,
+    "sha256": "6419f3c86208075d27bdd70f44898bc66e2309860cff7313e10863be58d9bd57"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/ci-github-install.md",
+    "path": "arga/docs/api-reference/ci-github-install.md",
+    "description": "POST Install PR Test Runs: Register a repository for GitHub-triggered tests",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 619,
+    "sha256": "23a8e5fcb57ad31afc5d2ed8869d10e86f9f41a09cb95a77bee55fd0935315d1"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/ci-github-config.md",
+    "path": "arga/docs/api-reference/ci-github-config.md",
+    "description": "GET Get PR Test Run config: Read repository test-run settings",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 641,
+    "sha256": "b1cd929633d50f010c5611e6a04dc040464de4001e22aac7897a04b5ccd495ee"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/ci-list-validation-runs.md",
+    "path": "arga/docs/api-reference/ci-list-validation-runs.md",
+    "description": "GET List CI validation runs: List GitHub validation runs",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 683,
+    "sha256": "ffd78d72c6bd40d272b1f844313663fd1df743ac5a09c0242d4e6d7b03edafcd"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/ci-github-save-config.md",
+    "path": "arga/docs/api-reference/ci-github-save-config.md",
+    "description": "POST Save PR Test Run config: Create or update repository test-run settings",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1152,
+    "sha256": "bdfd28310430849704802d9bd4a916e9dc9df65a7806a27c7068e15080672ea1"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/patch-toggle-github-repo-validation.md",
+    "path": "arga/docs/api-reference/patch-toggle-github-repo-validation.md",
+    "description": "PATCH Toggle GitHub CI config: Enable or disable GitHub validation",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 723,
+    "sha256": "00b31c978eaafe24838aa6d79c534759f230df97f572139472dfc2f4f7a11dcb"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/ci-github-enabled.md",
+    "path": "arga/docs/api-reference/ci-github-enabled.md",
+    "description": "GET List enabled GitHub CI repos: List repositories with CI validation enabled",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 398,
+    "sha256": "2899f732ea8b0b7f1580223123f4c9bfb707aad462e11e3ece5f96462c2ac933"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/ci-start-pr-validation.md",
+    "path": "arga/docs/api-reference/ci-start-pr-validation.md",
+    "description": "POST Start a PR Test Run: Legacy endpoint for manually starting a repository run",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1052,
+    "sha256": "ecf3ece83a0f36d75324a67ede5178655a4a5163c462edb5719131048d1d1645"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-get-run-details.md",
+    "path": "arga/docs/api-reference/get-get-run-details.md",
+    "description": "GET Get validation run details: Fetch a validation run summary",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 359,
+    "sha256": "fce1f56029ca1d7719b21a0ca0b11589b27960f0f48f337c3bcd616c8350165f"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-get-run-logs.md",
+    "path": "arga/docs/api-reference/get-get-run-logs.md",
+    "description": "GET Get validation run logs: Fetch logs for a validation run",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 658,
+    "sha256": "46cef17a39bcd6c34243ddc417e618832c16bc16b3ebc0054b4c8e357eb25a59"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-stream-validation-results.md",
+    "path": "arga/docs/api-reference/get-stream-validation-results.md",
+    "description": "GET Stream validation results: Stream validation run events with SSE",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 405,
+    "sha256": "4ad647e6168475ad74f282d025271cc2bacbffc886214fbfb1914366acc794c9"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/overview.md",
+    "path": "arga/docs/sdks/overview.md",
+    "description": "Overview: Official Python and TypeScript clients for Arga",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2263,
+    "sha256": "a26c94cfcfc282d1a1f4cf2401af5dd24ff15e7f34edf6f0c1b62287264c902f"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/python.md",
+    "path": "arga/docs/sdks/python.md",
+    "description": "Python SDK: Install and use the Arga Python SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1688,
+    "sha256": "68eea2d3816573c4240cd558ed698a1c1d4d9f01d1678fd919204c0ecaef911e"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/post-cancel-a-validation-run.md",
+    "path": "arga/docs/api-reference/post-cancel-a-validation-run.md",
+    "description": "POST Cancel a validation run: Cancel a running validation",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 347,
+    "sha256": "c2d99eea14d2328ab68e23926df3a32aec0d889abc25ad5025e205458f3097bc"
+  },
+  {
+    "url": "https://docs.argalabs.com/api-reference/get-get-a-run-artifact.md",
+    "path": "arga/docs/api-reference/get-get-a-run-artifact.md",
+    "description": "GET Get validation run artifact: Download an artifact from a validation run",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 419,
+    "sha256": "29e02840886a1cd815a1c26eb8ea80fc5aa4c46228882b1d64537884060e7a1e"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/python/scenarios.md",
+    "path": "arga/docs/sdks/python/scenarios.md",
+    "description": "Python scenarios: Create reusable scenarios and seed twin runs with the Python SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2756,
+    "sha256": "ff43a37c7c8e1dd9d1453d0c3b441b6947d4fc86d3350713f8014145312207c0"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/python/twins.md",
+    "path": "arga/docs/sdks/python/twins.md",
+    "description": "Python twins: Provision and manage Twin Runs with the Python SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1737,
+    "sha256": "b95ce01eae854de0e208572a03d7261937cb95bc92259f391a80eb97becea048"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/python/errors.md",
+    "path": "arga/docs/sdks/python/errors.md",
+    "description": "Python errors and clients: Handle Python SDK errors and manage client lifecycles",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1006,
+    "sha256": "5e7a07913b8ff32fd0ebb3442bdd0e782b077dcf072f5dd7122a767f4b48153d"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/python/examples.md",
+    "path": "arga/docs/sdks/python/examples.md",
+    "description": "Python examples: Reference material for the Python SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1550,
+    "sha256": "55f6d3845d8bf2d5add0c7125f16488480a4efd49d54c355a59b9772730c23da"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/typescript/runs.md",
+    "path": "arga/docs/sdks/typescript/runs.md",
+    "description": "TypeScript runs: Start and inspect URL runs with the TypeScript SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1698,
+    "sha256": "9ff5e7522da8dda3bb57ad1a3f3fae6fe0f79d727c2cf1b15b0fa30c030b755f"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/typescript.md",
+    "path": "arga/docs/sdks/typescript.md",
+    "description": "TypeScript SDK: Install and use the Arga TypeScript SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1429,
+    "sha256": "ac7f6ebb9ea887a761b7f21e39b449cf1c5e5782891d3b7fd92869f04e6c1197"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/typescript/twins.md",
+    "path": "arga/docs/sdks/typescript/twins.md",
+    "description": "TypeScript twins: Provision and manage Twin Runs with the TypeScript SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1744,
+    "sha256": "97f0e7b287d73f6d15614feeba01eb750122ea43513ea93871f5bf72068d8419"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/python/runs.md",
+    "path": "arga/docs/sdks/python/runs.md",
+    "description": "Python runs: Start and inspect URL runs with the Python SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1708,
+    "sha256": "1da4a5babb2b66c858d3411dda83a82168f46b2b21e5d08caf56f94472a73991"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/typescript/scenarios.md",
+    "path": "arga/docs/sdks/typescript/scenarios.md",
+    "description": "TypeScript scenarios: Create reusable scenarios and seed twin runs with the TypeScript SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2948,
+    "sha256": "16b30e118afa11d25f22c5dda69e579507c2788840be0e323236e4249eb17adf"
+  },
+  {
+    "url": "https://docs.argalabs.com/llms-full.txt",
+    "path": "arga/docs/_llms-full.txt",
+    "description": "Complete raw documentation bundle",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 341575,
+    "sha256": "25c3c28a552d8183162e49970b0376b60efb2ff6a8dd6b5b800e5d2d3840b28d"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/typescript/errors.md",
+    "path": "arga/docs/sdks/typescript/errors.md",
+    "description": "TypeScript error handling: Handle API errors from the TypeScript SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 583,
+    "sha256": "5348afc8515af40eaa4df504969957d54fcf5db0cecdde41189e869a054dd2a2"
+  },
+  {
+    "url": "https://docs.argalabs.com/sdks/typescript/examples.md",
+    "path": "arga/docs/sdks/typescript/examples.md",
+    "description": "TypeScript examples: Reference material for the TypeScript SDK",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1618,
+    "sha256": "41539e5dfc8d064597a64f7f8e35e87a02925406734e6e22d16856b8c2770c14"
+  },
+  {
+    "url": "https://docs.argalabs.com/features/google-workspace-cli.md",
+    "path": "arga/docs/features/google-workspace-cli.md",
+    "description": "Use the Google Workspace CLI with Arga twins: Configure gws to use separate Arga Drive, Docs, and Sheets APIs with synchronized run-scoped state",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4309,
+    "sha256": "c80f91af2f9f3e2a9ae7188bb071286ffd0a51a3230e572f59a98d1aeba6c51c"
+  },
+  {
+    "url": "https://docs.uselemma.ai/getting-started/introduction.md",
+    "path": "lemma/docs/getting-started/introduction.md",
+    "description": "Introduction: Find, investigate, and fix failures in production AI agents",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2923,
+    "sha256": "a0573a14620b864196192eb1039232ac3a966c1fbdbfb9c9c696f2fa375251d3"
+  },
+  {
+    "url": "https://docs.argalabs.com/AGENTS.md",
+    "path": "arga/docs/AGENTS.md",
+    "description": "AGENTS",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 787,
+    "sha256": "0122a52ea29b94bf1f4cb62fadcd2936180fd2f2b145bcc4ec60447de8e80d5d"
+  },
+  {
+    "url": "https://docs.uselemma.ai/platform/overview.md",
+    "path": "lemma/docs/platform/overview.md",
+    "description": "Overview: How Lemma turns a trace into an issue, and where projects and agents fit",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 7369,
+    "sha256": "ad9f36c3b5bd7893cec6e26af3b74fdc2d113a3d72bebc3f46cbd0e67402670c"
+  },
+  {
+    "url": "https://docs.uselemma.ai/platform/issues.md",
+    "path": "lemma/docs/platform/issues.md",
+    "description": "Issues: Recurring failure patterns Lemma detects from trace evidence",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4984,
+    "sha256": "6152e9b8e5da4e8bc30a49b12566fa789ea393aaeffb482cbc994b2ef65fc796"
+  },
+  {
+    "url": "https://docs.uselemma.ai/platform/concepts.md",
+    "path": "lemma/docs/platform/concepts.md",
+    "description": "Concepts: Traces, issues, artifacts, and agents in the Lemma dashboard",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3616,
+    "sha256": "fe326137ee83b9a8c49c3599c848f52f71cfdb7d71f95bcf91fbaef3e2c2aeb1"
+  },
+  {
+    "url": "https://docs.uselemma.ai/platform/traces.md",
+    "path": "lemma/docs/platform/traces.md",
+    "description": "Traces: Search, filter, and inspect ready traces in the Lemma dashboard",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4528,
+    "sha256": "7bea7a65e2a619b94dd2fc21c1dfb80b8cb9632e54ee52cbbd75daae93081027"
+  },
+  {
+    "url": "https://docs.uselemma.ai/platform/artifacts.md",
+    "path": "lemma/docs/platform/artifacts.md",
+    "description": "Artifacts: Per-agent context, understanding documents, and decision-flow diagrams",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4183,
+    "sha256": "889fabb54fb8a53778661259297f5621d5daf9997d8bc7a04b4fab04acd76c45"
+  },
+  {
+    "url": "https://docs.uselemma.ai/connections/overview.md",
+    "path": "lemma/docs/connections/overview.md",
+    "description": "Overview: Connect Lemma findings to Slack, Linear, MCP, and webhooks",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3532,
+    "sha256": "0b8f778e9dc951c1725a6ecfcb7cfb46ec802d8f22aa50b4a674ad58b7f6ea0c"
+  },
+  {
+    "url": "https://docs.uselemma.ai/connections/mcp.md",
+    "path": "lemma/docs/connections/mcp.md",
+    "description": "Lemma MCP server: Connect a coding agent to Lemma, or connect an external MCP server into Lemma",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5840,
+    "sha256": "fb755e6fa246986fb136f6f8de7a15250bff6b4b935bb7e9da3779e60e61a5a9"
+  },
+  {
+    "url": "https://docs.uselemma.ai/platform/analytics.md",
+    "path": "lemma/docs/platform/analytics.md",
+    "description": "Analytics: Project-level volume, latency, errors, tools, models, and estimated cost",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4781,
+    "sha256": "95234d5e45f98b9f7c07bcfb66e93409e058793eeaedbcca076115dc4ac3b254"
+  },
+  {
+    "url": "https://docs.uselemma.ai/connections/slack.md",
+    "path": "lemma/docs/connections/slack.md",
+    "description": "Slack: Issue alerts and Issue Briefs in your Slack workspace, plus the Lemma support channel",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3375,
+    "sha256": "e712b4d64d6ce54269dbec7eea2476da8979d9828bc3e5aeab79a9a55db13a58"
+  },
+  {
+    "url": "https://docs.uselemma.ai/connections/webhooks.md",
+    "path": "lemma/docs/connections/webhooks.md",
+    "description": "Webhooks: Receive signed HTTP POST requests for issue lifecycle events",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 6313,
+    "sha256": "4a93143deafac52ce4291cff24267450eae36b50591aa336504de55a2fec34e4"
+  },
+  {
+    "url": "https://docs.uselemma.ai/connections/linear.md",
+    "path": "lemma/docs/connections/linear.md",
+    "description": "Linear: Create, link, and unlink Linear tickets from Lemma issues",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4723,
+    "sha256": "97aa528a97a7514912efef30933f17caa6a48fa0a754b8cab54618b94eb4d8b8"
+  },
+  {
+    "url": "https://docs.uselemma.ai/platform/inspect.md",
+    "path": "lemma/docs/platform/inspect.md",
+    "description": "Inspect: Ask Lemma about this project's traces, issues, artifacts, and settings",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5318,
+    "sha256": "23ec1612c3ea4bb9009c45fbce2a51350600fe78b2c6ef6eaa85e2d544474c76"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/setup.md",
+    "path": "lemma/docs/tracing/instrumentation/setup.md",
+    "description": "Quickstart: Install the Lemma SDK and send your first complete agent trace",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 7509,
+    "sha256": "275f34193f2a532ffce80d1d651a2b84e26f76aa2d95ca2d8627223eb7247ce8"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/concepts.md",
+    "path": "lemma/docs/tracing/instrumentation/concepts.md",
+    "description": "Concepts: Core SDK concepts and terminology in Lemma",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5321,
+    "sha256": "41de05ff1c0dbf52f9b36ce7e864e9c2ba2b2c4484b16c5a61a84525da68ffb4"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/instrument-an-agent.md",
+    "path": "lemma/docs/tracing/instrumentation/instrument-an-agent.md",
+    "description": "Instrument an agent: Build a complete Lemma trace one piece at a time",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 10596,
+    "sha256": "3ecc7f56ceeb018f8ad028f31a63eb0d11cb36d19c678eaeb74ee78d428cdbee"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/traces.md",
+    "path": "lemma/docs/tracing/instrumentation/traces.md",
+    "description": "Agent traces: Wrap one agent execution in one trace with input and output",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 11138,
+    "sha256": "a17888205de38e7c0553d4fde1d62ea4d45326311a466567c57a86118f76c83e"
+  },
+  {
+    "url": "https://docs.uselemma.ai/integrations/openai-agents.md",
+    "path": "lemma/docs/integrations/openai-agents.md",
+    "description": "OpenAI Agents SDK: Record OpenAI Agents SDK traces with Lemma",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 6923,
+    "sha256": "56d552b77a191f66ae8042c86d2afa2b9fceca69d13f39d15cb008c7ee151e44"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/context.md",
+    "path": "lemma/docs/tracing/instrumentation/context.md",
+    "description": "Threads & context: Group multi-turn conversations, attach users, and add custom metadata",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4358,
+    "sha256": "bd752d6d52e5a289bef9b08fcb62563e3b5b9292e2fb592a6f93851887f90f2e"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/generations.md",
+    "path": "lemma/docs/tracing/instrumentation/generations.md",
+    "description": "Generations: Capture LLM calls with model, prompt, completion, and timing",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 6974,
+    "sha256": "27bec459604b28ebee24d529ffaee104883b02cf0fbf4ec0513d0a46e7f9fae2"
+  },
+  {
+    "url": "https://docs.uselemma.ai/integrations/vercel-ai.md",
+    "path": "lemma/docs/integrations/vercel-ai.md",
+    "description": "Vercel AI SDK: Record Vercel AI SDK model calls and tool executions with Lemma",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 6913,
+    "sha256": "e3c9d795814770ca65e94c3e076a80ec95d980c5148a6d3e4908beaec670a441"
+  },
+  {
+    "url": "https://docs.uselemma.ai/integrations/langchain.md",
+    "path": "lemma/docs/integrations/langchain.md",
+    "description": "LangChain: Record LangChain runs with Lemma callback handlers",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5022,
+    "sha256": "b1651f20003df01cabab7dbf58124dabcfd4a8098de1cb21714bf0e7f72e46bd"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/spans.md",
+    "path": "lemma/docs/tracing/instrumentation/spans.md",
+    "description": "Spans: Trace retrieval, ranking, and app logic as child spans",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4752,
+    "sha256": "a22b5abbd269f0e4dd3eff883089abbf515ddb12fe54a764f14f208292e73a20"
+  },
+  {
+    "url": "https://docs.uselemma.ai/integrations/langgraph.md",
+    "path": "lemma/docs/integrations/langgraph.md",
+    "description": "LangGraph: Record LangGraph graph runs with Lemma callback handlers",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5091,
+    "sha256": "03b7bb805aba1363d7d35cfe7eb875ea0e6683c75099fe8265664fcd80d46202"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/tool-calls.md",
+    "path": "lemma/docs/tracing/instrumentation/tool-calls.md",
+    "description": "Tool calls: Record tool invocations as child spans with arguments and results",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 7815,
+    "sha256": "127da25fc0aba86775e76506c85b42b7ea6fa63dbb82952a655b2241c05d5669"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/instrumentation/cross-process-turns.md",
+    "path": "lemma/docs/tracing/instrumentation/cross-process-turns.md",
+    "description": "Cross-process turns: Record a host and sandbox as one Lemma trace",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 8427,
+    "sha256": "c545d7bc23e15ecd5d7da8643a64c87d65e692a56bc8385e04816f9017eb7e5c"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/troubleshooting/debug-mode.md",
+    "path": "lemma/docs/tracing/troubleshooting/debug-mode.md",
+    "description": "Debug mode: Use SDK runtime logs to debug trace delivery and trace shape",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 10087,
+    "sha256": "2885bfc68a53447d647d788c38f5fae86e74b4ecbdb992cdd21130a96ed596b4"
+  },
+  {
+    "url": "https://docs.uselemma.ai/tracing/troubleshooting/common-issues.md",
+    "path": "lemma/docs/tracing/troubleshooting/common-issues.md",
+    "description": "Common issues: Troubleshoot missing traces and trace-quality issues: lost context, invisible tools, blank input/output, and unsupported shapes",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 15794,
+    "sha256": "52b4dc8f18fa8efc121cc641ac83de32ea04bcbf16205e14fabfe3afcbf61b71"
+  },
+  {
+    "url": "https://docs.uselemma.ai/reference/trace-contract.md",
+    "path": "lemma/docs/reference/trace-contract.md",
+    "description": "Trace contract: What clients send to Lemma, what ingest requires, and which fields unlock product behavior",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 31595,
+    "sha256": "24df5764bb1e39529cdc13340b5e6e65d8b4cf3b410160346883d2d30bb2a369"
+  },
+  {
+    "url": "https://docs.uselemma.ai/guides/examples.md",
+    "path": "lemma/docs/guides/examples.md",
+    "description": "Runnable examples: The same Lemma docs chat agent, instrumented once per first-party stack",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4091,
+    "sha256": "bca8a66bbe844e80b7fb7dcac679e35c593143cb1c59bfd80b85f52dc3f5f0b8"
+  },
+  {
+    "url": "https://docs.uselemma.ai/guides/building-high-quality-traces.md",
+    "path": "lemma/docs/guides/building-high-quality-traces.md",
+    "description": "Building high-quality traces: The ideal instrumentation path, with bad \u2192 better \u2192 best examples for structure, timing, nesting, generations, and tools",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 16826,
+    "sha256": "2d22e3dc84e744af6004cb250f417b1b06f27fbe3adb7b3957fda840a7f5540a"
+  },
+  {
+    "url": "https://docs.uselemma.ai/integrations/mastra.md",
+    "path": "lemma/docs/integrations/mastra.md",
+    "description": "Mastra: Record Mastra agent and workflow runs with Lemma",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 6467,
+    "sha256": "7187ef72cf5da8508babece5f1b114d906cbbe84235f6a557d123d4800904898"
+  },
+  {
+    "url": "https://docs.uselemma.ai/reference/analytics-telemetry.md",
+    "path": "lemma/docs/reference/analytics-telemetry.md",
+    "description": "Analytics telemetry: Required SDK attributes for Analytics widgets, coverage semantics, and upgrade behavior",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 7062,
+    "sha256": "92bf8ec88d920db9e391eb3434540928847e0c74cb1aba028883257e8b664c65"
+  },
+  {
+    "url": "https://docs.uselemma.ai/guides/migrations/raindrop.md",
+    "path": "lemma/docs/guides/migrations/raindrop.md",
+    "description": "From Raindrop to Lemma: Map Raindrop's event- and signal-centric model onto Lemma's trace contract, and re-instrument your agent to emit conforming Lemma traces",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 14070,
+    "sha256": "c1406b4b8fa105d16f5828e9fee88fb7a785a93711f2dde59a35a9f81f7d9353"
+  },
+  {
+    "url": "https://docs.uselemma.ai/guides/instrumenting-multi-turn-agents.md",
+    "path": "lemma/docs/guides/instrumenting-multi-turn-agents.md",
+    "description": "Instrumenting multi-turn agents: Give each conversation turn its own trace and link the turns with a shared thread id",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 13341,
+    "sha256": "07ba781f6b8dd656aeb16802503c8fd3cf322bc49c3e270a9115b743837e995b"
+  },
+  {
+    "url": "https://docs.uselemma.ai/guides/migrations/langfuse.md",
+    "path": "lemma/docs/guides/migrations/langfuse.md",
+    "description": "From Langfuse to Lemma: Keep your existing Langfuse instrumentation and add Lemma SDK tracing alongside it to produce the Lemma trace contract",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 11038,
+    "sha256": "ea264a6946b6911f84d793632ab9386dac20364f20cfca27723101372820fad5"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/create-project.md",
+    "path": "lemma/docs/api-reference/projects/create-project.md",
+    "description": "Create project: Create a project for the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2915,
+    "sha256": "51561ad7c0a03ae4ae23b192684710b9afe59a48f64a579bb3018ae1b87c0dee"
+  },
+  {
+    "url": "https://docs.uselemma.ai/guides/migrations/opentelemetry.md",
+    "path": "lemma/docs/guides/migrations/opentelemetry.md",
+    "description": "From OpenTelemetry to Lemma: Keep your existing OpenTelemetry instrumentation and add Lemma SDK tracing alongside it to produce the Lemma trace contract",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 11284,
+    "sha256": "582a79a01739071d78452b0aeadc2dae6a3adf727a75a8066aa9227856e5cfe5"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/reorder-projects.md",
+    "path": "lemma/docs/api-reference/projects/reorder-projects.md",
+    "description": "Reorder projects: Persist project ordering for the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1856,
+    "sha256": "83bc73f2cbb05a7a005d87e39ed108dcb75d2612701b8dd9d2830b9ce0eb3edc"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/list-projects.md",
+    "path": "lemma/docs/api-reference/projects/list-projects.md",
+    "description": "List projects: Returns projects available to the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2970,
+    "sha256": "d08d09ebf901b7e3b605fc1855e9e3d5dc33923faa499d7757db8f4c0f3d88a2"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/get-project.md",
+    "path": "lemma/docs/api-reference/projects/get-project.md",
+    "description": "Get project: Returns a single project if it belongs to the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2716,
+    "sha256": "aea235357f7f14ba97bdc65d95e83f22192ecc21973211038ae98e98890ee0f1"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/update-project.md",
+    "path": "lemma/docs/api-reference/projects/update-project.md",
+    "description": "Update project: Update a project for the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3499,
+    "sha256": "0a863540640056546ce97da52bd9584d64bca79c907090ee627b428082d7a9bd"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/get-instrumentation-diagnostics-settings.md",
+    "path": "lemma/docs/api-reference/projects/get-instrumentation-diagnostics-settings.md",
+    "description": "Get instrumentation diagnostics settings: Returns the instrumentation-diagnostics settings for a project owned by the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2183,
+    "sha256": "fd95c929cc2a9cd7dcfdda0322f33881f8ec5c766506550be786cbee0303a555"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/list-instrumentation-diagnostics-findings.md",
+    "path": "lemma/docs/api-reference/projects/list-instrumentation-diagnostics-findings.md",
+    "description": "List instrumentation diagnostics findings: Returns the complete active instrumentation-diagnostics findings for a project owned by the authenticated tenant. Empty when the rollout gate or project preference is off.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 8570,
+    "sha256": "98975780836a3dbb311f6dc7bd5edf8166885cc49f9af5bd6a03487cebaf9cfc"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/get-project-analytics.md",
+    "path": "lemma/docs/api-reference/projects/get-project-analytics.md",
+    "description": "Get project analytics: Returns one analytics payload selected by the required view discriminator. Specialized views do not compute unrequested panels. Cost figures are Lemma estimates from observed token counts and public LiteLLM list prices \u2014 not invoice amounts. Backfilled rows carry the price as of the backfill run, no\u2026",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 49429,
+    "sha256": "157d9eafe53615e189c0b918cb288c13ce948b4d0e3da811958c4bce4b04fe52"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/update-project-briefs-settings.md",
+    "path": "lemma/docs/api-reference/projects/update-project-briefs-settings.md",
+    "description": "Update project briefs settings: Enable or disable Slack briefs and optionally set cadence for the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3086,
+    "sha256": "d74ab7303fdf8aba06706a8440aaf2ca3af0ec6e88d9dd06a9fbe4ecffa7b29e"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/get-project-briefs-settings.md",
+    "path": "lemma/docs/api-reference/projects/get-project-briefs-settings.md",
+    "description": "Get project briefs settings: Returns the Slack briefs settings for a project owned by the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2218,
+    "sha256": "0da10e0cb2b94568f0b831142f8297b44d3acd543b984eb28312b86f3fb7b5a7"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/inspect-project-setup-status.md",
+    "path": "lemma/docs/api-reference/projects/inspect-project-setup-status.md",
+    "description": "Inspect project setup status: Returns setup state, scope, permissions, and stable blocker codes without exposing credentials or provider-private data.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 44913,
+    "sha256": "260b0218c8dbd826d305f4ec9e92e96f7b1a16d2c991bdc7aa8493218442c532"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/projects/update-instrumentation-diagnostics-settings.md",
+    "path": "lemma/docs/api-reference/projects/update-instrumentation-diagnostics-settings.md",
+    "description": "Update instrumentation diagnostics settings: Enable or disable the instrumentation-diagnostics digest for the authenticated tenant.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2882,
+    "sha256": "0f9fefde4a4f151217e3bf46904139ffb7705f3607cc90148ed91d364c156047"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/artifacts/list-project-artifacts.md",
+    "path": "lemma/docs/api-reference/artifacts/list-project-artifacts.md",
+    "description": "List project artifacts: Returns Agent understanding and uploaded artifacts for a project, scoped to the selected agent.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5416,
+    "sha256": "69beaf23cce5af6c3be355e8684eccdb020986f4fc9657074a7754094d3fcc9c"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/artifacts/upload-project-artifact.md",
+    "path": "lemma/docs/api-reference/artifacts/upload-project-artifact.md",
+    "description": "Upload project artifact: Upload an agent-scoped .txt or .md file (text/plain or text/markdown).",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3499,
+    "sha256": "721a7e41fbd1decdf2661059de15130339d9da4aac431ca556e41be4d0bd8733"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/artifacts/get-agent-understanding-version.md",
+    "path": "lemma/docs/api-reference/artifacts/get-agent-understanding-version.md",
+    "description": "Get Agent understanding version: Returns the Agent understanding content and metadata for a specific project, agent, and version.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3528,
+    "sha256": "ebab0013c07fa25ff8b41b8e5d9e829bfd7bce75483cf85e54338a149b73f3c7"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/artifacts/list-agent-understanding-versions.md",
+    "path": "lemma/docs/api-reference/artifacts/list-agent-understanding-versions.md",
+    "description": "List Agent understanding versions: Returns Agent understanding version metadata for a project and agent, newest first. The response omits artifact content.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2919,
+    "sha256": "80a7352e4d8c9541487fc54acba7b230333508911876e44d3702b1cfa39899b4"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/artifacts/regenerate-project-artifacts.md",
+    "path": "lemma/docs/api-reference/artifacts/regenerate-project-artifacts.md",
+    "description": "Regenerate project artifacts: Starts Agent understanding and diagram regeneration for a tenant-owned project and optional agent. Clients should poll list_project_artifacts for a new latest_version to observe completion.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2485,
+    "sha256": "92241688e4c1ab8688109076b190e4fa00f5eba83893be4e24a31ae521916ba1"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/artifacts/get-uploaded-project-artifact-content.md",
+    "path": "lemma/docs/api-reference/artifacts/get-uploaded-project-artifact-content.md",
+    "description": "Get uploaded project artifact content: Returns stored text content and metadata for one uploaded text artifact.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2941,
+    "sha256": "045ffc6977ebefa00fd650f93d195baf2089601797b3fbd82105fd472a248372"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/artifacts/delete-project-artifact.md",
+    "path": "lemma/docs/api-reference/artifacts/delete-project-artifact.md",
+    "description": "Delete project artifact: Deletes one uploaded project artifact.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 1754,
+    "sha256": "34643e77232dc9eb656c0f37849a71c556fc5c2ca22d2f88640efee977732c56"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/search-traces-structural.md",
+    "path": "lemma/docs/api-reference/traces/search-traces-structural.md",
+    "description": "Search traces (structural): Structural search over traces and span attributes. Distinct from evidence search, which searches visible span content.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 8733,
+    "sha256": "3c0c167255c7d00769837eb98005e3385c2bcca3eb5b28d848d95c21635c2551"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/search-trace-evidence.md",
+    "path": "lemma/docs/api-reference/traces/search-trace-evidence.md",
+    "description": "Search trace evidence: Search visible span content, grouped into trace-level results. Distinct from structural search.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 13207,
+    "sha256": "31ccaf26df4d1184edfda9e2912c8dad406fe728cb0e63f5beee93bca3475329"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/discover-trace-search-facets.md",
+    "path": "lemma/docs/api-reference/traces/discover-trace-search-facets.md",
+    "description": "Discover trace search facets: Returns curated, bounded facets for the active trace-search context.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 11766,
+    "sha256": "e58529f091286315659d576c537e085bb296dc9ecde95d4fb133d72055782b6a"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/list-trace-agent-names.md",
+    "path": "lemma/docs/api-reference/traces/list-trace-agent-names.md",
+    "description": "List trace agent names: Returns agent names seen in project traces.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2268,
+    "sha256": "195f44e1c441c70ce26b0803a5205f193274521c586cc7ae62dd030df5cbb8a1"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/list-traces.md",
+    "path": "lemma/docs/api-reference/traces/list-traces.md",
+    "description": "List traces: Canonical first-party dashboard list with cursor pagination and independent has_error/has_issues filters. Kept separate from GET /traces because that legacy window list uses a different backend and response shape.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 11381,
+    "sha256": "d091f80f77ef14eaf324f709f672b2478ea2d438563212f1f0f791d1f2dc2d3f"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/check-ready-traces.md",
+    "path": "lemma/docs/api-reference/traces/check-ready-traces.md",
+    "description": "Check ready traces: Returns whether a project has ready traces.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2206,
+    "sha256": "edd3b19d3bb0e31bf9f8affd5b10c0bcf2c08f685c33b101b0b1763e10eeaa97"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/check-per-trace-ingest-status.md",
+    "path": "lemma/docs/api-reference/traces/check-per-trace-ingest-status.md",
+    "description": "Check per-trace ingest status: Returns whether a specific otel_trace_id is queued (`enqueued`), stored (`ingested`), ready (`ready`), or not found (`not_found`).",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2928,
+    "sha256": "d1ee15c7b4e11aef5afa78d0f2fccd2f28eb466d90a946dd4113f2ef48ea79c2"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/bulk-delete-traces.md",
+    "path": "lemma/docs/api-reference/traces/bulk-delete-traces.md",
+    "description": "Bulk delete traces: Delete multiple traces for a project.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2297,
+    "sha256": "98fba9789c681ceaee9fa7e983f27fd333576dc5094e9cb51c6662a97a7c9032"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/get-trace.md",
+    "path": "lemma/docs/api-reference/traces/get-trace.md",
+    "description": "Get trace: Loads a single trace with spans and stats. Pass expand=context to return the agent context bundle (row, stats, spans, and issue occurrences) instead of the default detail payload. Default (no expand) responds with the get_trace detail schema; expand=context responds with the get_trace_context bundle\u2026",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 14048,
+    "sha256": "9f2761cc74ba83900477eb61d2bee8ab037f077cb3d7294d71ec15926348cbe7"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/delete-trace.md",
+    "path": "lemma/docs/api-reference/traces/delete-trace.md",
+    "description": "Delete trace: Delete a trace for a project.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2006,
+    "sha256": "a4483c056dbc9184bb9b62f60969f81d5423b113734293a77cae516f76295c0b"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/list-thread-traces.md",
+    "path": "lemma/docs/api-reference/traces/list-thread-traces.md",
+    "description": "List thread traces: Thread traversal for a ready trace. scope=all (default) returns every ready member oldest first using the threadTraces schema; scope=neighbors returns previous/next ids using the threadTraceNeighbors schema. Empty for standalone traces.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 9442,
+    "sha256": "0e89ea8d6e7021886478429e5d4dcc0ad82cb02295c0b1b65689faa2ea05ea3b"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/list-trace-issue-occurrences.md",
+    "path": "lemma/docs/api-reference/traces/list-trace-issue-occurrences.md",
+    "description": "List trace issue occurrences: Returns issue occurrence evidence linked to a ready trace.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4557,
+    "sha256": "b0330c82e74fe199ce6b9b0705ed2b34ba9a4feb6f489542c015f63cebde541f"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/list-thread-issue-summaries.md",
+    "path": "lemma/docs/api-reference/traces/list-thread-issue-summaries.md",
+    "description": "List thread issue summaries: Batch-fetch issue extraction completion and dev issues for thread_ids (join key for eval trial_hash).",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5400,
+    "sha256": "b9881d7b6af5be70a255fac96ca3d402f428a57eecf1e8d07ebc7173ea72be2c"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/create-issue-tag.md",
+    "path": "lemma/docs/api-reference/issues/create-issue-tag.md",
+    "description": "Create issue tag: Create a project-scoped issue tag. Names are normalized; duplicate normalized names return the existing tag with 200.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2810,
+    "sha256": "4bf6d2de6a3e7efab21246841097f42e4c2756773ae9d1f34c258c2f70b89f9d"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/list-issue-tags.md",
+    "path": "lemma/docs/api-reference/issues/list-issue-tags.md",
+    "description": "List issue tags: List project-scoped issue tags in normalized name order.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2658,
+    "sha256": "aa3b180db5a8dc9f7c330e8aa95fcf8d0ac3887c226c5d2b1ca7fc4d392d81be"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/list-issues.md",
+    "path": "lemma/docs/api-reference/issues/list-issues.md",
+    "description": "List issues: List issues for a project. By default, returns issues at or above the frequency cutoff. Pass expanded=true for less-common issues and include_context=true for dashboard metric context. expand=dashboard and projection=dashboard are deprecated aliases.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 27875,
+    "sha256": "cbe0dffba76cee69b208c78ac5c4861428422c09ddda4f913174cb0208274145"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/traces/list-trace-spans.md",
+    "path": "lemma/docs/api-reference/traces/list-trace-spans.md",
+    "description": "List trace spans: Returns spans for a ready trace in start-time order. Optional limit/offset pages the result and include_attributes/include_events=false drop the payload-heavy span keys. Default returns every span with all fields. The bare array is intentional (continuation is detected by a short or empty page, no t\u2026",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5426,
+    "sha256": "a11186b5e6896108e775b0fbfc97c05c651e07b4c4516b2ff9b6e0851e710da2"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/patch-issue.md",
+    "path": "lemma/docs/api-reference/issues/patch-issue.md",
+    "description": "Patch issue: Apply exactly one scalar mutation: status (with optional dismissal fields), flagged, or user_id assignee. Empty, mixed, or incompatible bodies are rejected before any write. start-review stays on its dedicated route.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4019,
+    "sha256": "f91e7bf8ba722282631d0e2e19467c3a4181caee19e676dc3826a2a8128552f5"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/get-issue-markdown.md",
+    "path": "lemma/docs/api-reference/issues/get-issue-markdown.md",
+    "description": "Get issue markdown: Build markdown for an issue.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2323,
+    "sha256": "2a614d7b11cc29f69406229ad262e7dd2ff64382e7ef3ce47668b3ad65d2e918"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/get-issue.md",
+    "path": "lemma/docs/api-reference/issues/get-issue.md",
+    "description": "Get issue: Get a single issue. The validation field is null when no validation row exists; when present it contains status, evidence_summary, and validated_at.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 9981,
+    "sha256": "31f0e69107570cef525f75e1729a7ef1e0fa9fe64c80ec8f17450d8364b21b31"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/get-issues-in-bulk.md",
+    "path": "lemma/docs/api-reference/issues/get-issues-in-bulk.md",
+    "description": "Get issues in bulk: Public REST + MCP batch issue read. First-party dashboard and platform-api load issues one-at-a-time via get_issue / list_issues. Fetch many issues by id. One invalid or unauthorized id does not hide the rest of the batch. Results preserve input order. Mixed results are HTTP 200.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 15555,
+    "sha256": "9c34df06aafacf217d69594764aded5f1adbc47f6f15d3cd5615d4e02eaa1592"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/start-issue-review.md",
+    "path": "lemma/docs/api-reference/issues/start-issue-review.md",
+    "description": "Start issue review: Set status to in_progress and assign the acting user when the issue is unassigned, in one atomic write. An existing assignee is preserved; an issue already in progress is returned unchanged.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3491,
+    "sha256": "064ec52a8810316220500ec80547c8df489bbe357de7f861a10686b19d2d690d"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/merge-issues.md",
+    "path": "lemma/docs/api-reference/issues/merge-issues.md",
+    "description": "Merge issues: Merge one active same-agent issue into this issue. The loser is dismissed as a merged duplicate; its occurrences are immediately moved onto the survivor.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 3809,
+    "sha256": "322ed8293d90f94c76ba9ac4bfd879de85c02fa10c3e408b356a53a6fc79ac92"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/mutate-issues-in-batch.md",
+    "path": "lemma/docs/api-reference/issues/mutate-issues-in-batch.md",
+    "description": "Mutate issues in batch: Apply one discriminated batch mutation: status, start-review, flag, assignee, or tag. Mixed item-level failures return HTTP 200. Successful items are not rolled back.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 7647,
+    "sha256": "dbf52a8ae9f133024bfa07bb6e88b06a576a150bc46c5f8ef9eb0c4457eff32c"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/delete-issue-tag.md",
+    "path": "lemma/docs/api-reference/issues/delete-issue-tag.md",
+    "description": "Delete issue tag: Delete a project-scoped tag and cascade removal from all issues.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2100,
+    "sha256": "2271ea9fd59fe43b3b6d8066687ac43de4c6a241fbebfbca3f20ac7bbbcd65fd"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/detach-issue-tag.md",
+    "path": "lemma/docs/api-reference/issues/detach-issue-tag.md",
+    "description": "Detach issue tag: Detach a tag from an issue idempotently.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2074,
+    "sha256": "4866a6570fd0604d788c5b3e1b09c627ed4fb76fe8c3bcaa9594c7c23f494885"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/attach-issue-tag.md",
+    "path": "lemma/docs/api-reference/issues/attach-issue-tag.md",
+    "description": "Attach issue tag: Attach a tag to an issue idempotently.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 2064,
+    "sha256": "dc1b5d3e3e4ea0a8232dceff1c2cb53ce9db27b85b4d455c12cafc7d539e0944"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/get-issue-metric-series.md",
+    "path": "lemma/docs/api-reference/issues/get-issue-metric-series.md",
+    "description": "Get issue metric series: Returns zero-filled daily occurrence buckets for an issue over the last 30 days.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4140,
+    "sha256": "16b5ad724c2567583745eab907c99aebbf1ae80b80b21f4bb9f9539b017bb82c"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/insights/list-insights.md",
+    "path": "lemma/docs/api-reference/insights/list-insights.md",
+    "description": "List insights: List project-scoped insights. Empty projects return an empty list. Pass limit and offset to page; defaults match issues (50 / max 200).",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4535,
+    "sha256": "df6d9bd8572499e105759517f3ca58e1760fc35e756139d9f9b249f08eb3746f"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/insights/get-insight.md",
+    "path": "lemma/docs/api-reference/insights/get-insight.md",
+    "description": "Get insight: Get a single insight for a project, including assigned member issues. Unauthorized or unknown projects return 404.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 6895,
+    "sha256": "ad57f6f2eeb82a043de43069a610183d26868e35340a9a59d79e0188f26d7fca"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/linear-tickets/inspect-linear-connection.md",
+    "path": "lemma/docs/api-reference/linear-tickets/inspect-linear-connection.md",
+    "description": "Inspect Linear connection: Returns retained Linear connection health and project defaults. Disabled rollout state does not remove stored history.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5227,
+    "sha256": "0ce127f8d4004d38ec5690fc6126fc020074bc2e650dd233a2018ae9bf24c466"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/issues/list-issue-occurrences.md",
+    "path": "lemma/docs/api-reference/issues/list-issue-occurrences.md",
+    "description": "List issue occurrences: List occurrences for an issue. Pass release to filter; empty string matches unreleased occurrences.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 6428,
+    "sha256": "91684ecbcfdeef93fb5e344ceff0284bf91c8e68cb7ec6f3e357064600f715e0"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/linear-tickets/inspect-issue-linear-ticket.md",
+    "path": "lemma/docs/api-reference/linear-tickets/inspect-issue-linear-ticket.md",
+    "description": "Inspect issue Linear ticket",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 8792,
+    "sha256": "2274c7e343000f8eb717923c08ca9de7901c9c3fbddfb0a6440153af4ba7f716"
+  },
+  {
+    "url": "https://userlens.io/llms.txt",
+    "path": "userlens/llms.txt",
+    "description": "Product overview for language models",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 8637,
+    "sha256": "178dd3fd2f65c32b07c2ca4f5ba20d1a5ddeafbede4f3d2d5d644bc0a71c84e4"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/linear-tickets/unlink-linear-ticket.md",
+    "path": "lemma/docs/api-reference/linear-tickets/unlink-linear-ticket.md",
+    "description": "Unlink Linear ticket",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 8786,
+    "sha256": "1603ca3c39567b9e87a95f22ad65f8f6d7ea55e6fe5b670b8b7bd6f0edb3d1c5"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/linear-tickets/create-linear-ticket.md",
+    "path": "lemma/docs/api-reference/linear-tickets/create-linear-ticket.md",
+    "description": "Create Linear ticket",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 17213,
+    "sha256": "90f86537de432650ffb4bda68d51a6eaeb375ce3d96de388b9897e990830c06f"
+  },
+  {
+    "url": "https://docs.uselemma.ai/llms-full.txt",
+    "path": "lemma/docs/_llms-full.txt",
+    "description": "Complete raw documentation bundle",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 299410,
+    "sha256": "7c093029ae6ddec9443703ea77045522a4da3da9c958d2772f8c56b14c4f608d"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/linear-tickets/preview-exact-linear-ticket.md",
+    "path": "lemma/docs/api-reference/linear-tickets/preview-exact-linear-ticket.md",
+    "description": "Preview exact Linear ticket",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5259,
+    "sha256": "27509cf113cfd91ebb4bb2081a7c3de93f1aa7c78f342e3996912d673063c3ae"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/linear-tickets/link-confirmed-linear-ticket.md",
+    "path": "lemma/docs/api-reference/linear-tickets/link-confirmed-linear-ticket.md",
+    "description": "Link confirmed Linear ticket",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 9501,
+    "sha256": "8ac8582ba1e89c22ac954c2a06dbc83cc91b29dd9eb1b5ec1f4a3552f22269a2"
+  },
+  {
+    "url": "https://www.getclera.com/llms.txt",
+    "path": "clera/llms.txt",
+    "description": "Optional product overview for language models",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 11401,
+    "sha256": "2d208175e2e3674955427e87e2195c83320925c30ac1a758ad2c06b59b90dab6"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/github-repositories/get-github-connection.md",
+    "path": "lemma/docs/api-reference/github-repositories/get-github-connection.md",
+    "description": "Get GitHub connection: Returns retained GitHub connection health and last-known repository identity. Disabled rollout state does not remove stored history.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 5088,
+    "sha256": "2e8b7c6ea37ee69b84dd6ac83cad428f979862784f129eade8c893f69d8ef2c2"
+  },
+  {
+    "url": "https://docs.uselemma.ai/api-reference/linear-tickets/inspect-compact-linear-ticket-states.md",
+    "path": "lemma/docs/api-reference/linear-tickets/inspect-compact-linear-ticket-states.md",
+    "description": "Inspect compact Linear ticket states: Returns no ticket history or workspace directory; only active compact states for the requested project issues.",
+    "fetched": "2026-09-13T06:16:36.235744+00:00",
+    "status": "ok",
+    "bytes": 4046,
+    "sha256": "0011d035ebf74a4fe7e542ee741778b63a06cf9abc8ff75cd6d368e53e37f17e"
+  }
+]

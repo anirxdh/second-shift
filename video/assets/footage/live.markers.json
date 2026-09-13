@@ -1,0 +1,82 @@
+{
+  "firstFrameTs": 1789337392.157327,
+  "t0": 1789337392.134,
+  "markers": [
+    {
+      "t": 0,
+      "label": "recording start (Before state)"
+    },
+    {
+      "t": 1.6,
+      "label": "screenshot before.png"
+    },
+    {
+      "t": 10.4,
+      "label": "clicked Plan (Marco Diaz, All day)"
+    },
+    {
+      "t": 12.69,
+      "label": "plan ready"
+    },
+    {
+      "t": 19.26,
+      "label": "screenshot after.png"
+    },
+    {
+      "t": 20.78,
+      "label": "B -> Before"
+    },
+    {
+      "t": 23.28,
+      "label": "B -> After"
+    },
+    {
+      "t": 26.3,
+      "label": "M map open"
+    },
+    {
+      "t": 28.37,
+      "label": "screenshot map.png"
+    },
+    {
+      "t": 30.57,
+      "label": "M map close"
+    },
+    {
+      "t": 43.09,
+      "label": "scrolled plan panel to bottom"
+    },
+    {
+      "t": 47.61,
+      "label": "scrolled back to top"
+    },
+    {
+      "t": 48.93,
+      "label": "screenshot approve.png"
+    },
+    {
+      "t": 49.07,
+      "label": "clicked Approve"
+    },
+    {
+      "t": 76.59,
+      "label": "writes done (ab-done visible)"
+    },
+    {
+      "t": 77.57,
+      "label": "screenshot verified.png"
+    },
+    {
+      "t": 87.63,
+      "label": "scrolled to trace"
+    },
+    {
+      "t": 89.2,
+      "label": "screenshot trace.png"
+    },
+    {
+      "t": 94.7,
+      "label": "recording stop"
+    }
+  ]
+}

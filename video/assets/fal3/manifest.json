@@ -1,0 +1,51 @@
+{
+  "model": "fal-ai/flux-pro/v1.1-ultra (aspect 16:9, 2752x1536)",
+  "generator": "video/scripts/fal_gen.py via fal_gen_warm.py (warm terminal STYLE/SCENES)",
+  "palette": "near-black + warm charcoal shadows, ivory highlights, coral-orange accent #D97757, soft amber glows, muted steel-blue dawn sky; no text",
+  "postprocess": "center-crop to 16:9 (2731x1536), downscale to 640x360 (box/area), nearest-neighbor x3 to 1920x1080 for crisp pixels; smooth/ = same crop, Lanczos to 1920x1080",
+  "images": {
+    "1": {
+      "file": "video/assets/fal3/1.png",
+      "smooth": "video/assets/fal3/smooth/1.png",
+      "raw": "video/work/fal2/ultra_1.png",
+      "source_url": "https://v3b.fal.media/files/b/0aaa5019/cQhmd3QAjEUOPyofZhOjE_96b840c801f6482d9b177afc31eeedb5.png",
+      "prompt": "16-bit pixel art. A quiet American suburban street at 6:45 AM dawn, wide cinematic view. Muted steel-blue sky just beginning to warm to pale cream and soft amber at the horizon, a few stars still visible. Small single-story houses with one or two warm lit windows, streetlamps still glowing amber, bare sidewalks. A white HVAC service van with a ladder rack parked at the curb in front of a house, a small coral-orange light on the van, no writing on the van. Long warm charcoal shadows, still and silent. Full-bleed image, no borders. 16-bit pixel art, detailed retro video game background art, crisp hard-edged pixels, limited warm palette: near-black and warm charcoal shadows, ivory and cream highlights, one warm coral-orange accent light (#D97757), soft amber glows, muted steel-blue dawn sky. No green, no purple, no neon. Calm, crafted, cinematic, quiet mood. Absolutely no text, no letters, no numbers, no words, no signs, no logos."
+    },
+    "2": {
+      "file": "video/assets/fal3/2.png",
+      "smooth": "video/assets/fal3/smooth/2.png",
+      "raw": "video/work/fal2/ultra_2.png",
+      "source_url": "https://v3b.fal.media/files/b/0aaa5033/D_NFmpGU00JIr5RzaU1jz_e60ec69b5cbd4b09a8b194fbd4543a08.png",
+      "prompt": "16-bit pixel art. Close-up of a smartphone lying face-up on a dark charcoal kitchen counter before sunrise. The phone screen lights up with an incoming message notification drawn only as simple glowing coral-orange bars, its warm light spilling onto the countertop. A plain, unmarked cream coffee mug and a ring of keys beside it. A window in the background shows a muted steel-blue dawn sky over rooftops. Full-bleed image filling the whole frame, no black borders, no letterboxing. 16-bit pixel art, detailed retro video game background art, crisp hard-edged pixels, limited warm palette: near-black and warm charcoal shadows, ivory and cream highlights, one warm coral-orange accent light (#D97757), soft amber glows, muted steel-blue dawn sky. No green, no purple, no neon. Calm, crafted, cinematic, quiet mood. Absolutely no text, no letters, no numbers, no words, no signs, no logos."
+    },
+    "3": {
+      "file": "video/assets/fal3/3.png",
+      "smooth": "video/assets/fal3/smooth/3.png",
+      "raw": "video/work/fal3raw/ultra_3_c.png",
+      "raw_clean": "video/work/fal3raw/ultra_3_c_clean.png",
+      "source_url": "https://v3b.fal.media/files/b/0aaa5051/Yg5C1zJdPh6efXyDDta0p_0f4f1ad7f15e41fabd3a9a38cf30dfc0.png",
+      "prompt": "16-bit pixel art. Interior of a small field-service dispatch office at dawn, wide view. In the foreground, a dispatcher desk with a dark monitor, a headset and a plain cream coffee mug, an empty office chair. On the wall, a large job board with a neat grid of plain blank cards with no writing. Almost every card is calm ivory cream. Only four cards, all in the same row, are bright glowing red, the only red things in the room, clearly standing out as a problem. A warm pendant lamp above the board, dawn light through window blinds, deep warm charcoal shadows. Full-bleed image, no borders. 16-bit pixel art, detailed retro video game background art, crisp hard-edged pixels, limited warm palette: near-black and warm charcoal shadows, ivory and cream highlights, one warm coral-orange accent light (#D97757), soft amber glows, muted steel-blue dawn sky. No green, no purple, no neon. Calm, crafted, cinematic, quiet mood. Absolutely no text, no letters, no numbers, no words, no signs, no logos.",
+      "note": "3rd attempt (first two had only one red card / a washed-out coral gradient). A small desk box showing letter-like PI marks was painted over with flat box color before pixelation."
+    },
+    "4": {
+      "file": "video/assets/fal3/4.png",
+      "smooth": "video/assets/fal3/smooth/4.png",
+      "raw": "video/work/fal2/ultra_4.png",
+      "source_url": "https://v3b.fal.media/files/b/0aaa5032/Rr633LyxsHh7Vjy-IUZb6_d5dbccf8652b4aa1b8b362d6722587ae.png",
+      "prompt": "16-bit pixel art. A calm night-shift dispatch console in a dark room, wide shot. A large retro monitor on a desk glowing with a tidy grid of small ivory and coral-orange blocks in neat rows, warm coral-orange light spilling across the desk, a keyboard and a mug. Through a big window behind, a crescent moon in a muted steel-blue sky over a sleeping town and a small parked service van under an amber streetlamp. Peaceful, everything under control. Full-bleed image, no borders. 16-bit pixel art, detailed retro video game background art, crisp hard-edged pixels, limited warm palette: near-black and warm charcoal shadows, ivory and cream highlights, one warm coral-orange accent light (#D97757), soft amber glows, muted steel-blue dawn sky. No green, no purple, no neon. Calm, crafted, cinematic, quiet mood. Absolutely no text, no letters, no numbers, no words, no signs, no logos."
+    }
+  },
+  "video": {
+    "file": "video/assets/fal3/1.mp4",
+    "model": "fal-ai/kling-video/v2.5-turbo/pro/image-to-video",
+    "source_image": "image 1 (warm, video/work/fal2/ultra_1.png)",
+    "source_image_url": "https://v3b.fal.media/files/b/0aaa5019/cQhmd3QAjEUOPyofZhOjE_96b840c801f6482d9b177afc31eeedb5.png",
+    "raw": "video/work/fal2/i2v_kling25.mp4 (1924x1076); alt video/work/fal2/i2v_kling21.mp4 (1284x716, stronger push-in)",
+    "duration_s": 5.04,
+    "fps": 24,
+    "size": "1920x1080",
+    "codec": "h264 yuv420p crf16, no audio",
+    "postprocess": "crop 1912x1076, scale 640x360 area, nearest-neighbor to 1920x1080 (same as stills)",
+    "prompt": "Slow, gentle camera push-in along a quiet suburban street at dawn. The sky brightens very slightly, streetlamps glow softly, a light breeze barely moves the bare tree branches. The parked van stays still. No people, no cars moving, no text. Calm, still, cinematic pixel-art animation."
+  }
+}

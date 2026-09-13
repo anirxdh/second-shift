@@ -1,0 +1,104 @@
+{
+  "video": "/Users/anirudh/Desktop/MultiApp-Ai-Agent-hack/video/assets/footage4/reliability.mp4",
+  "firstFrameEpoch": 1789338584.722177,
+  "videoSize": [
+    1920,
+    1080
+  ],
+  "markers": [
+    {
+      "t": -0.05,
+      "label": "recording start (Before state, page loaded)"
+    },
+    {
+      "t": 1.52,
+      "label": "screenshot reliability_01_start.png"
+    },
+    {
+      "t": 3.72,
+      "label": "picked Marco Diaz, All day"
+    },
+    {
+      "t": 4.46,
+      "label": "clicked Plan (Marco Diaz, All day)"
+    },
+    {
+      "t": 5.4,
+      "label": "plan ready (board animates, vans drive)"
+    },
+    {
+      "t": 8.61,
+      "label": "screenshot reliability_02_plan.png"
+    },
+    {
+      "t": 8.65,
+      "label": "L lab open"
+    },
+    {
+      "t": 12.36,
+      "label": "armed crash after a Calendar write"
+    },
+    {
+      "t": 13.9,
+      "label": "screenshot reliability_03_lab_armed.png"
+    },
+    {
+      "t": 14.51,
+      "label": "lab closed"
+    },
+    {
+      "t": 16.38,
+      "label": "clicked Approve"
+    },
+    {
+      "t": 16.84,
+      "label": "crashed banner"
+    },
+    {
+      "t": 18.23,
+      "label": "screenshot reliability_04_crashed.png"
+    },
+    {
+      "t": 20.89,
+      "label": "clicked Resume"
+    },
+    {
+      "t": 21.47,
+      "label": "resumed: 36/36"
+    },
+    {
+      "t": 22.61,
+      "label": "screenshot reliability_05_resumed_36.png"
+    },
+    {
+      "t": 25.21,
+      "label": "recording stop"
+    }
+  ],
+  "clicks": [
+    {
+      "t": 4.33,
+      "x": 246,
+      "y": 1040,
+      "label": "Plan"
+    },
+    {
+      "t": 12.24,
+      "x": 372,
+      "y": 456,
+      "label": "Arm crash after a Calendar write"
+    },
+    {
+      "t": 16.14,
+      "x": 1698,
+      "y": 995,
+      "label": "Approve"
+    },
+    {
+      "t": 20.75,
+      "x": 1697,
+      "y": 994,
+      "label": "Resume"
+    }
+  ]
+}

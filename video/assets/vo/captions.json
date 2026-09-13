@@ -1,0 +1,264 @@
+{
+  "S1": [
+    {
+      "text": "Six forty-five A.M.",
+      "start": 0.03,
+      "end": 2.15
+    },
+    {
+      "text": "Marco, one of only two gas-certified HVAC techs",
+      "start": 2.17,
+      "end": 6.1
+    },
+    {
+      "text": "at Bayside Home Services,",
+      "start": 6.12,
+      "end": 7.97
+    },
+    {
+      "text": "just called in sick.",
+      "start": 7.99,
+      "end": 9.32
+    },
+    {
+      "text": "Four customers are expecting him today,",
+      "start": 9.34,
+      "end": 11.69
+    },
+    {
+      "text": "including a contract job at eleven.",
+      "start": 11.71,
+      "end": 13.88
+    },
+    {
+      "text": "We can't predict the day.",
+      "start": 13.9,
+      "end": 15.48
+    },
+    {
+      "text": "But we can be ready for it.",
+      "start": 15.5,
+      "end": 17.22
+    },
+    {
+      "text": "This is Second Shift.",
+      "start": 17.24,
+      "end": 19.17
+    }
+  ],
+  "S2": [
+    {
+      "text": "Second Shift lives",
+      "start": 0.03,
+      "end": 0.95
+    },
+    {
+      "text": "in the tools the crew already uses:",
+      "start": 0.97,
+      "end": 3.19
+    },
+    {
+      "text": "Slack, Google Sheets, Google Calendar,",
+      "start": 3.21,
+      "end": 6.0
+    },
+    {
+      "text": "and Gmail.",
+      "start": 6.02,
+      "end": 7.18
+    },
+    {
+      "text": "An AI model reads the call-out.",
+      "start": 7.2,
+      "end": 9.94
+    },
+    {
+      "text": "Everything after that is code.",
+      "start": 9.96,
+      "end": 12.36
+    },
+    {
+      "text": "It reads every job,",
+      "start": 12.38,
+      "end": 14.03
+    },
+    {
+      "text": "skill, and promised arrival window from Sheets,",
+      "start": 14.05,
+      "end": 17.17
+    },
+    {
+      "text": "and everyone's real day from Calendar.",
+      "start": 17.19,
+      "end": 19.93
+    }
+  ],
+  "S3": [
+    {
+      "text": "A constraint solver re-plans the whole crew",
+      "start": 0.03,
+      "end": 2.5
+    },
+    {
+      "text": "in milliseconds.",
+      "start": 2.52,
+      "end": 3.68
+    },
+    {
+      "text": "Watch the chain move.",
+      "start": 3.7,
+      "end": 5.33
+    },
+    {
+      "text": "Wei is the only other gas-certified tech,",
+      "start": 5.35,
+      "end": 8.35
+    },
+    {
+      "text": "but he's booked.",
+      "start": 8.37,
+      "end": 9.56
+    },
+    {
+      "text": "So his plumbing job goes to Ana,",
+      "start": 9.58,
+      "end": 12.11
+    },
+    {
+      "text": "which frees Wei for the eleven o'clock contract.",
+      "start": 12.13,
+      "end": 15.1
+    },
+    {
+      "text": "Rosa's AC repair goes to Priya,",
+      "start": 15.12,
+      "end": 17.89
+    },
+    {
+      "text": "still inside her promised window.",
+      "start": 17.91,
+      "end": 19.9
+    },
+    {
+      "text": "One job has no legal slot,",
+      "start": 19.92,
+      "end": 22.08
+    },
+    {
+      "text": "so instead of faking it,",
+      "start": 22.1,
+      "end": 23.6
+    },
+    {
+      "text": "that customer gets a reschedule request.",
+      "start": 23.62,
+      "end": 26.05
+    }
+  ],
+  "S4": [
+    {
+      "text": "An independent checker re-verifies every rule.",
+      "start": 0.03,
+      "end": 3.26
+    },
+    {
+      "text": "The dispatcher sees exactly what will be written,",
+      "start": 3.28,
+      "end": 6.08
+    },
+    {
+      "text": "and approves.",
+      "start": 6.1,
+      "end": 7.26
+    },
+    {
+      "text": "Right before writing, Second Shift re-reads Calendar",
+      "start": 7.28,
+      "end": 10.51
+    },
+    {
+      "text": "and Sheets,",
+      "start": 10.53,
+      "end": 11.33
+    },
+    {
+      "text": "and stops if anything changed.",
+      "start": 11.35,
+      "end": 13.58
+    },
+    {
+      "text": "Then it writes to all four apps",
+      "start": 13.6,
+      "end": 15.65
+    },
+    {
+      "text": "through a ledger,",
+      "start": 15.67,
+      "end": 16.78
+    },
+    {
+      "text": "so a retry never double-books or double-emails anyone.",
+      "start": 16.8,
+      "end": 20.9
+    }
+  ],
+  "S5": [
+    {
+      "text": "Then it reads everything back.",
+      "start": 0.05,
+      "end": 2.47
+    },
+    {
+      "text": "Thirty-six of thirty-six checks passed,",
+      "start": 2.49,
+      "end": 5.05
+    },
+    {
+      "text": "on real Google and Slack.",
+      "start": 5.07,
+      "end": 7.14
+    },
+    {
+      "text": "We crash it mid-run on purpose,",
+      "start": 7.16,
+      "end": 9.14
+    },
+    {
+      "text": "and it resumes without a single duplicate.",
+      "start": 9.16,
+      "end": 11.68
+    },
+    {
+      "text": "Twenty-six reliability scenarios pass,",
+      "start": 11.7,
+      "end": 14.66
+    },
+    {
+      "text": "and it understood fifteen of fifteen test messages,",
+      "start": 14.68,
+      "end": 18.41
+    },
+    {
+      "text": "including a prompt injection.",
+      "start": 18.43,
+      "end": 20.45
+    }
+  ],
+  "S6": [
+    {
+      "text": "Plans break.",
+      "start": 0.05,
+      "end": 1.41
+    },
+    {
+      "text": "Your day doesn't have to.",
+      "start": 1.43,
+      "end": 3.65
+    },
+    {
+      "text": "Second Shift.",
+      "start": 3.67,
+      "end": 4.76
+    }
+  ]
+}

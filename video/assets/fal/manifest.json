@@ -1,0 +1,40 @@
+{
+  "model": "fal-ai/flux-pro/v1.1-ultra (aspect 16:9, 2752x1536)",
+  "postprocess": "downscale to 640x360 (area) then nearest-neighbor x3 to 1920x1080 for crisp pixels; image 2 cropped to remove letterbox bars first",
+  "images": {
+    "1": {
+      "file": "video/assets/fal/1.png",
+      "smooth": "video/assets/fal/smooth/1.png",
+      "source_url": "https://v3b.fal.media/files/b/0aaa4fda/dLHC8GwWQG2_hcoTBjMZh_bdb14b2a3cea4d7eb8da32e6399c80e1.png",
+      "prompt": "A quiet American suburban street at 6:45 AM dawn, wide cinematic view. Pale lavender and navy sky just beginning to brighten at the horizon, a few stars still visible. Small single-story houses with one or two warm lit windows, streetlamps still glowing, bare sidewalks. A white HVAC service van with a ladder rack parked at the curb in front of a house, no writing on the van. Long cool shadows, still and silent. 16-bit pixel art, detailed retro video game background art, crisp hard-edged pixels, limited palette: deep indigo-navy night blues, muted slate purple shadows, soft phosphor-cream highlights, one acid lime-green accent light, small warm amber glows. Calm, crafted, cinematic, quiet mood. Absolutely no text, no letters, no numbers, no words, no signs, no logos."
+    },
+    "2": {
+      "file": "video/assets/fal/2.png",
+      "smooth": "video/assets/fal/smooth/2.png",
+      "source_url": "https://v3b.fal.media/files/b/0aaa4fe2/m1NNcjq_XPidVN7441TIX_e0a2f7283a964807854cba838020cbf5.png",
+      "prompt": "16-bit pixel art. Close-up of a smartphone lying face-up on a dark kitchen counter before sunrise. The phone screen lights up with an incoming message notification drawn only as simple glowing lime-green bars, its light spilling onto the countertop. A plain, unmarked coffee mug and a ring of keys beside it. A window in the background shows a cool blue dawn sky over rooftops. Full-bleed image filling the whole frame, no black borders, no letterboxing. 16-bit pixel art, detailed retro video game background art, crisp hard-edged pixels, limited palette: deep indigo-navy night blues, muted slate purple shadows, soft phosphor-cream highlights, one acid lime-green accent light, small warm amber glows. Calm, crafted, cinematic, quiet mood. Absolutely no text, no letters, no numbers, no words, no signs, no logos."
+    },
+    "3": {
+      "file": "video/assets/fal/3.png",
+      "smooth": "video/assets/fal/smooth/3.png",
+      "source_url": "https://v3b.fal.media/files/b/0aaa4fe2/0QOP2-HSKDF3FmDFxJ0zn_85fe69e8fb1a4c5cae0d427f332705e7.png",
+      "prompt": "16-bit pixel art. Interior of a small field-service dispatch office at dawn. In the foreground, a dispatcher's desk with a monitor, a headset and a plain coffee mug, an empty office chair. On the wall, a large job board holding a neat grid of blank colored cards, plain solid rectangles with no writing, in blue, amber and mint green; about five of the cards glow alarm red. Dawn light through window blinds, moody navy shadows. Full-bleed image, no borders. 16-bit pixel art, detailed retro video game background art, crisp hard-edged pixels, limited palette: deep indigo-navy night blues, muted slate purple shadows, soft phosphor-cream highlights, one acid lime-green accent light, small warm amber glows. Calm, crafted, cinematic, quiet mood. Absolutely no text, no letters, no numbers, no words, no signs, no logos."
+    },
+    "4": {
+      "file": "video/assets/fal/4.png",
+      "smooth": "video/assets/fal/smooth/4.png",
+      "source_url": "https://v3b.fal.media/files/b/0aaa4fe7/cQCJtLS1FTcLv9aKTJug4_fd457a0d537e487eab6e4d8c86defa15.png",
+      "prompt": "16-bit pixel art. A calm night-shift dispatch console in a dark room, wide shot. A large retro monitor on a desk glowing with a tidy grid of small colored blocks in neat rows, lime-green light spilling across the desk, a keyboard and a mug. Through a big window behind, a crescent moon over a sleeping town and a small parked service van under a streetlamp. Peaceful, everything under control. Full-bleed image, no borders. 16-bit pixel art, detailed retro video game background art, crisp hard-edged pixels, limited palette: deep indigo-navy night blues, muted slate purple shadows, soft phosphor-cream highlights, one acid lime-green accent light, small warm amber glows. Calm, crafted, cinematic, quiet mood. Absolutely no text, no letters, no numbers, no words, no signs, no logos."
+    }
+  },
+  "video": {
+    "file": "video/assets/fal/1.mp4",
+    "model": "fal-ai/kling-video/v2.5-turbo/pro/image-to-video",
+    "source_image": "image 1",
+    "duration_s": 5.04,
+    "fps": 24,
+    "size": "1920x1080",
+    "postprocess": "same pixelation filter as stills",
+    "prompt": "Slow, gentle camera push-in along a quiet suburban street at dawn. The sky brightens very slightly, streetlamps glow softly, a light breeze barely moves the bare tree branches. The parked van stays still. No people, no cars moving, no text. Calm, still, cinematic pixel-art animation."
+  }
+}

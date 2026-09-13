@@ -1,0 +1,38 @@
+{
+  "format": { "width": 1920, "height": 1080, "fps": 30 },
+  "palette": {
+    "ink": "#0c0f1d",
+    "panel": "#141934",
+    "text": "#eeebdc",
+    "brand": "#d4ff3f",
+    "shadow": "#05060d",
+    "slate": "#8d93b8",
+    "accent1": "#5b8cff",
+    "accent2": "#3ff0a6"
+  },
+  "fonts": {
+    "caption": "../../web/fonts/JetBrainsMono-Variable.ttf",
+    "captionWeight": 700,
+    "placeholder": "../../web/fonts/Silkscreen-Bold.ttf"
+  },
+  "captions": {
+    "enabled": true,
+    "y": 930,
+    "size": 46,
+    "maxWords": 7,
+    "maxChars": 46,
+    "fill": "#eeebdc"
+  },
+  "timing": {
+    "startPad": 0.0,
+    "lead": 0.35,
+    "tail": 0.6,
+    "xfade": 0.3
+  },
+  "encode": { "preset": "veryfast", "crf": "20", "threads": 8 },
+  "music": {
+    "file": "audio/music.mp3",
+    "volume": 0.10
+  },
+  "output": "out/second_shift.mp4"
+}

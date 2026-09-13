@@ -1,0 +1,58 @@
+{
+  "firstFrameTs": 1789337272.290646,
+  "t0": 1789337272.279,
+  "markers": [
+    {
+      "t": 0,
+      "label": "recording start (Before state)"
+    },
+    {
+      "t": 2.01,
+      "label": "clicked Plan (Marco Diaz, All day)"
+    },
+    {
+      "t": 2.08,
+      "label": "plan ready"
+    },
+    {
+      "t": 4.59,
+      "label": "L lab open"
+    },
+    {
+      "t": 6.23,
+      "label": "armed calcrash"
+    },
+    {
+      "t": 8.04,
+      "label": "lab closed"
+    },
+    {
+      "t": 8.88,
+      "label": "clicked Approve"
+    },
+    {
+      "t": 8.92,
+      "label": "crashed"
+    },
+    {
+      "t": 10.78,
+      "label": "screenshot crash.png"
+    },
+    {
+      "t": 12.33,
+      "label": "clicked Resume"
+    },
+    {
+      "t": 12.39,
+      "label": "resumed done"
+    },
+    {
+      "t": 13.49,
+      "label": "screenshot resumed.png"
+    },
+    {
+      "t": 16.99,
+      "label": "recording stop"
+    }
+  ]
+}
