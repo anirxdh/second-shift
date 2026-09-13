@@ -6,6 +6,8 @@ When a field technician calls out sick, Second Shift re-plans the whole crew's d
 
 **▶ Demo video (1:03):** [watch on YouTube](https://youtu.be/fXl8JSo9rTc) · [download (subtitled)](https://github.com/anirxdh/second-shift/raw/main/video/release/second-shift-demo-v3-female.mp4) · [no-subtitles version](https://github.com/anirxdh/second-shift/raw/main/video/release/second-shift-demo-v3-female-nosubs.mp4) · [captions .srt](video/release/second-shift-demo-v3-female.srt)
 
+Version submitted before the 4:00 PM deadline: [youtu.be/ZyVJ2nfkAkc](https://youtu.be/ZyVJ2nfkAkc)
+
 Built for the Multi-App AI Agent Hackathon, September 13, 2026.
 
 ## Overview
