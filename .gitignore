@@ -39,3 +39,7 @@ video/qa*/
 video/**/raw/
 video/**/raw_*/
 video/*.log
+# Keep only the final release renders in git
+video/*.mp4
+video/release/*-v1*
+video/assets/apps/

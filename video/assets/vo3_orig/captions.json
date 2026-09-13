@@ -1,0 +1,284 @@
+{
+  "S1": [
+    {
+      "text": "It's six forty-five",
+      "start": 0.04,
+      "end": 1.65
+    },
+    {
+      "text": "in the morning.",
+      "start": 1.67,
+      "end": 3.12
+    },
+    {
+      "text": "Marco just called in sick.",
+      "start": 3.14,
+      "end": 5.73
+    },
+    {
+      "text": "Four customers are waiting",
+      "start": 5.75,
+      "end": 7.38
+    },
+    {
+      "text": "for him today.",
+      "start": 7.4,
+      "end": 8.86
+    },
+    {
+      "text": "Who covers his jobs?",
+      "start": 8.88,
+      "end": 11.4
+    },
+    {
+      "text": "Figuring that out",
+      "start": 11.42,
+      "end": 12.49
+    },
+    {
+      "text": "by hand takes an hour.",
+      "start": 12.51,
+      "end": 14.86
+    },
+    {
+      "text": "Second Shift does it",
+      "start": 14.88,
+      "end": 16.37
+    },
+    {
+      "text": "in seconds.",
+      "start": 16.39,
+      "end": 17.55
+    }
+  ],
+  "S2": [
+    {
+      "text": "Someone posts in Slack:",
+      "start": 0.04,
+      "end": 2.81
+    },
+    {
+      "text": "Marco is out.",
+      "start": 2.83,
+      "end": 4.53
+    },
+    {
+      "text": "Second Shift reads it,",
+      "start": 4.55,
+      "end": 6.35
+    },
+    {
+      "text": "then looks at every job",
+      "start": 6.37,
+      "end": 8.09
+    },
+    {
+      "text": "and every calendar.",
+      "start": 8.11,
+      "end": 9.86
+    }
+  ],
+  "S3": [
+    {
+      "text": "It builds a new plan.",
+      "start": 0.04,
+      "end": 2.22
+    },
+    {
+      "text": "Watch the trucks move.",
+      "start": 2.24,
+      "end": 4.41
+    },
+    {
+      "text": "Wei can do Marco's",
+      "start": 4.43,
+      "end": 6.31
+    },
+    {
+      "text": "big gas job,",
+      "start": 6.33,
+      "end": 7.95
+    },
+    {
+      "text": "but he's busy.",
+      "start": 7.97,
+      "end": 9.65
+    },
+    {
+      "text": "So Ana takes",
+      "start": 9.67,
+      "end": 10.94
+    },
+    {
+      "text": "Wei's small job,",
+      "start": 10.96,
+      "end": 12.7
+    },
+    {
+      "text": "and Wei takes Marco's.",
+      "start": 12.72,
+      "end": 15.04
+    },
+    {
+      "text": "One job can't",
+      "start": 15.06,
+      "end": 16.46
+    },
+    {
+      "text": "be saved today,",
+      "start": 16.48,
+      "end": 18.25
+    },
+    {
+      "text": "so that customer is asked",
+      "start": 18.27,
+      "end": 19.85
+    },
+    {
+      "text": "to pick a new time.",
+      "start": 19.87,
+      "end": 21.61
+    }
+  ],
+  "S4": [
+    {
+      "text": "Nothing changes until",
+      "start": 0.04,
+      "end": 1.77
+    },
+    {
+      "text": "a person says yes.",
+      "start": 1.79,
+      "end": 3.91
+    },
+    {
+      "text": "One click,",
+      "start": 3.93,
+      "end": 5.14
+    },
+    {
+      "text": "and it updates the calendars",
+      "start": 5.16,
+      "end": 7.0
+    },
+    {
+      "text": "and the job sheet,",
+      "start": 7.02,
+      "end": 8.53
+    },
+    {
+      "text": "messages the team in Slack,",
+      "start": 8.55,
+      "end": 10.95
+    },
+    {
+      "text": "and emails the customers.",
+      "start": 10.97,
+      "end": 13.16
+    }
+  ],
+  "S5": [
+    {
+      "text": "Then it double-checks every change.",
+      "start": 0.05,
+      "end": 3.15
+    },
+    {
+      "text": "Thirty-six out of thirty-six.",
+      "start": 3.17,
+      "end": 6.53
+    },
+    {
+      "text": "If it crashes halfway,",
+      "start": 6.55,
+      "end": 8.99
+    },
+    {
+      "text": "it finishes",
+      "start": 9.01,
+      "end": 10.06
+    },
+    {
+      "text": "without sending anything twice.",
+      "start": 10.08,
+      "end": 13.16
+    },
+    {
+      "text": "And you can ask:",
+      "start": 13.18,
+      "end": 14.89
+    },
+    {
+      "text": "what if Wei",
+      "start": 14.91,
+      "end": 15.84
+    },
+    {
+      "text": "doesn't show up?",
+      "start": 15.86,
+      "end": 17.35
+    },
+    {
+      "text": "It shows you,",
+      "start": 17.37,
+      "end": 18.81
+    },
+    {
+      "text": "before it happens.",
+      "start": 18.83,
+      "end": 20.8
+    }
+  ],
+  "S6": [
+    {
+      "text": "Sick days,",
+      "start": 0.04,
+      "end": 1.23
+    },
+    {
+      "text": "flat tires, no-shows.",
+      "start": 1.25,
+      "end": 4.28
+    },
+    {
+      "text": "They'll keep happening.",
+      "start": 4.3,
+      "end": 6.48
+    },
+    {
+      "text": "Now they take seconds",
+      "start": 6.5,
+      "end": 8.4
+    },
+    {
+      "text": "to fix,",
+      "start": 8.42,
+      "end": 9.86
+    },
+    {
+      "text": "not an hour.",
+      "start": 9.88,
+      "end": 11.57
+    },
+    {
+      "text": "We can't predict the day.",
+      "start": 11.59,
+      "end": 14.05
+    },
+    {
+      "text": "But we can be ready",
+      "start": 14.07,
+      "end": 15.7
+    },
+    {
+      "text": "for it.",
+      "start": 15.72,
+      "end": 16.78
+    },
+    {
+      "text": "Second Shift.",
+      "start": 16.8,
+      "end": 18.06
+    }
+  ]
+}

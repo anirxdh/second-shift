@@ -96,9 +96,10 @@ t_title = add('title', 3.0)
 card = Image.new('RGBA', (1180, 470), (0, 0, 0, 0)); d = ImageDraw.Draw(card)
 d.rounded_rectangle([0, 0, 1179, 469], 22, fill=INK + (228,), outline=CORAL, width=6)
 ov(card, 960, 470, 3.35, 11.5)
-ov(pill('Marco is sick.', SILK(76), IVORY, (0, 0, 0, 0), pad=(10, 8)), 960, 335, 3.4, 11.5)
-ov(pill('4 customers are waiting.', SILK(56), IVORY, (0, 0, 0, 0), pad=(10, 8)), 960, 460, 6.0, 11.5)
-ov(pill('Who covers?', SILK(92), CORAL, (0, 0, 0, 0), pad=(10, 8)), 960, 590, 9.1, 11.5)
+ov(pill('6:45 AM', MONO(150), CORAL, (0, 0, 0, 0), pad=(10, 8)), 960, 460, 0.3, 3.3)
+ov(pill('Marco is sick.', MONO(80), IVORY, (0, 0, 0, 0), pad=(10, 8)), 960, 335, 3.4, 11.5)
+ov(pill('4 customers are waiting.', MONO(62), IVORY, (0, 0, 0, 0), pad=(10, 8)), 960, 460, 6.0, 11.5)
+ov(pill('Who covers?', MONO(96), CORAL, (0, 0, 0, 0), pad=(10, 8)), 960, 590, 9.1, 11.5)
 
 # S2 + S3 live continuous
 s2 = add('clip', 10.2, src=LIVE, ss=0.0, speed=1.0); vo_starts['S2'] = s2 + 0.15
