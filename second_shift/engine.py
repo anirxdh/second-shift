@@ -496,10 +496,10 @@ class Engine:
             o, tech = view["plan"]["objective"], company.tech(absence.tech_id)
             lost = [company.job(j).customer for j in view["plan"]["unassigned"]
                     if company.job(j).tech_id == tech.id]
-            text = (f"What-if: if {tech.name} is out, the plan covers {o['displaced_covered']} of {o['displaced']} of "
-                    f"their jobs" + (f"; {', '.join(lost)} would need rescheduling" if lost else "") +
-                    f"; {o['customer_notices']} customers would be emailed. Nothing has changed. "
-                    "Dispatch can make it real in the app.")
+            fn = tech.name.split()[0]
+            text = (f"Preview only: if {fn} is out, {o['displaced_covered']} of {fn}'s {o['displaced']} visits can be covered"
+                    + (f", and {', '.join(lost)} would need a new time" if lost else "")
+                    + ". Nothing has changed.")
             self._reply(run_id, f"whatif:{msg.ts}", text)
             self.ledger.mark_seen(msg.ts, "simulated")
             return {"outcome": "simulated", "plan_id": view["id"], "run_id": run_id}
@@ -508,14 +508,16 @@ class Engine:
         span = "today" if absence.start <= tech.shift_start and absence.end >= tech.shift_end else \
             f"{fmt(max(absence.start, tech.shift_start))}-{fmt(min(absence.end, tech.shift_end))}"
         o = view["plan"]["objective"]
+        first_name = tech.name.split()[0]
         if view["status"] == "proposed":
-            result = (f"Proposed plan covers {o['displaced_covered']} of {o['displaced']} affected jobs"
-                      f"{f', {o['unassigned']} need' + ('s' if o['unassigned'] == 1 else '') + ' rescheduling' if o['unassigned'] else ''}; "
-                      f"{o['customer_notices']} customers would be emailed. Nothing changes until dispatch approves.")
+            lost = o["unassigned"]
+            result = (f"I found a plan: {o['displaced_covered']} of {first_name}'s {o['displaced']} visits go to teammates"
+                      + (f", and {lost} customer{'s' if lost != 1 else ''} will be asked to pick a new time" if lost else "")
+                      + ". Nothing changes until you approve.")
         else:
-            result = "I couldn't produce a plan that passes every rule, so nothing will change. Dispatch, please check the app."
+            result = "I couldn't find a plan that follows every rule, so nothing will change. Please check the app."
         link = os.getenv("APP_URL", "")
-        self._reply(run_id, f"ack:{msg.ts}", f"Got it: planning around {tech.name} ({span}). {result}"
+        self._reply(run_id, f"ack:{msg.ts}", f"Got it. {first_name} is out ({span}). {result}"
                                              f"{f' Review: {link}' if link else ''}")
         self.ledger.mark_seen(msg.ts, "planned")
         return {"outcome": "planned", "plan_id": view["id"], "run_id": run_id}

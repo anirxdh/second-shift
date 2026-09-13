@@ -57,7 +57,7 @@ flowchart LR
 | Hard failure | Stops, pins the failing write, never reports success | `permanent_error_is_honest` |
 | "Success" that isn't | Read-back of every booking, sheet row, Slack post and email, plus the rule checker on the real calendars | `verification_catches_tampering` |
 | Sheet and Calendar disagree | Calendar is the schedule of record; conflicts are reported | `sheet_calendar_conflict` |
-| Emailing real people during a demo | The Gmail adapter refuses any address that isn't a plus-alias of the demo inbox | unit test |
+| Emailing real people during a demo | The Gmail adapter refuses any address that isn't the demo inbox or a plus-alias of it | unit tests (`test_gmail_guard_*`, `test_gmail_send_*`) |
 
 Every run leaves a step-by-step trace (read, parse, guard, solve, check, re-check, each write with attempts, verify) with timings, shown in the app.
 

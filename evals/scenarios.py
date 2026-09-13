@@ -423,7 +423,7 @@ def whatif_from_slack():
     reply = ports.chat.bot_posts()[-1][0].text if ports.chat.bot_posts() else ""
     f: list[str] = []
     ok = check(out["outcome"] == "simulated", f"outcome {out['outcome']}", f)
-    ok &= check(reply.startswith("What-if:") and "Nothing has changed" in reply, f"reply: {reply[:90]}...", f)
+    ok &= check(reply.startswith("Preview only:") and "Nothing has changed" in reply, f"reply: {reply[:90]}...", f)
     ok &= check(not ports.mail.sent and ports.calendar.version == before["calendar_version"], "no emails, calendar untouched", f)
     return ok, f
 

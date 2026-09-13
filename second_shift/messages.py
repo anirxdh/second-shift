@@ -55,9 +55,9 @@ def tech_day_message(company: Company, plan: Plan, tech_id: str) -> str | None:
     if any(a.tech_id == tech_id and a.start <= 0 and a.end >= 1440 for a in plan.absences):
         covered = [c for c in plan.changes if c.from_tech == tech_id and c.kind == "reassigned"]
         missed = [c for c in plan.changes if c.from_tech == tech_id and c.kind == "unassigned"]
-        lines = [f"{mention} feel better. Your day is handled:"]
+        lines = [f"{mention} feel better! Your visits are covered:"]
         lines += [f"• {c.job_id} {company.job(c.job_id).customer} → {company.tech(c.to_tech).name}" for c in covered]
-        lines += [f"• {c.job_id} {company.job(c.job_id).customer} → customer asked to reschedule" for c in missed]
+        lines += [f"• {c.job_id} {company.job(c.job_id).customer} → we asked them to pick a new time" for c in missed]
         return "\n".join(lines)
 
     mine = sorted((a for a in plan.assignments if a.tech_id == tech_id), key=lambda a: a.start)
@@ -66,15 +66,15 @@ def tech_day_message(company: Company, plan: Plan, tech_id: str) -> str | None:
     lost = [c for c in plan.changes if c.from_tech == tech_id and c.to_tech != tech_id and c.kind != "unchanged"]
     if not touched and not lost:
         return None
-    lines = [f"{mention} your day changed. Updated route:"]
+    lines = [f"{mention} your day changed. Here's your new route:"]
     for a in mine:
         job = company.job(a.job_id)
         c = changes[a.job_id]
         tag = ""
         if c.kind == "reassigned":
-            tag = f"  ← NEW (was {company.tech(c.from_tech).name if c.from_tech else 'unassigned'})"
+            tag = f"  ← NEW, covering for {company.tech(c.from_tech).name.split()[0] if c.from_tech else 'the team'}"
         elif c.kind == "retimed":
-            tag = f"  ← moved from {fmt(c.from_start)}"
+            tag = f"  ← was {fmt(c.from_start)}"
         lines.append(f"• {fmt(a.start)} {job.id} {job.customer}, {job.zone}: {job.service}{tag}")
     for c in lost:
         where = f"moved to {company.tech(c.to_tech).name}" if c.to_tech else "needs rescheduling (customer asked)"
@@ -84,15 +84,15 @@ def tech_day_message(company: Company, plan: Plan, tech_id: str) -> str | None:
 
 def dispatch_summary(company: Company, plan: Plan, notices: int) -> str:
     o = plan.objective
-    out_names = ", ".join(sorted({company.tech(a.tech_id).name for a in plan.absences if a.reason == "callout"}))
+    out = sorted({company.tech(a.tech_id).name.split()[0] for a in plan.absences if a.reason == "callout"})
+    who = " and ".join(out) or "the team"
+    lost = [company.job(j) for j in plan.unassigned if company.job(j).tech_id]
     lines = [
-        f"*Second Shift plan {plan.id} executed.* Covering for {out_names}.",
-        f"• {o['displaced_covered']}/{o['displaced']} affected jobs covered, "
-        f"{o['reassigned']} reassigned, {o['retimed']} retimed inside their windows",
-        f"• {notices} customers emailed",
+        f":white_check_mark: *Done. {who}'s day is covered.*",
+        f"• {o['displaced_covered']} of {o['displaced']} visits moved to teammates",
+        f"• Calendars and the job sheet are updated, {notices} customers emailed",
+        "• Every change was double-checked after writing",
     ]
-    for job_id in plan.unassigned:
-        job = company.job(job_id)
-        if job.tech_id:
-            lines.append(f"• :warning: {job.id} {job.customer} could not be covered; reschedule request sent")
+    for job in lost:
+        lines.append(f"• :warning: {job.customer} ({job.id}) couldn't be covered today, so we asked them to pick a new time")
     return "\n".join(lines)
